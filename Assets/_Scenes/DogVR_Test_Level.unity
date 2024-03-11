@@ -668,6 +668,169 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73808061}
   m_CullTransparentMesh: 1
+--- !u!1 &85193012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 85193013}
+  - component: {fileID: 85193015}
+  - component: {fileID: 85193014}
+  m_Layer: 3
+  m_Name: Right Hand Physics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &85193013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85193012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 377959231}
+  m_Father: {fileID: 3209519326144330097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!153 &85193014
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85193012}
+  m_ConnectedBody: {fileID: 7696847260009887575}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 2
+  m_YMotion: 2
+  m_ZMotion: 2
+  m_AngularXMotion: 2
+  m_AngularYMotion: 2
+  m_AngularZMotion: 2
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_YDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ZDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 1
+  m_AngularXDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_AngularYZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_SlerpDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 1
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &85193015
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85193012}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1 &90615743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,6 +4898,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47ad6ac315a3ea428b59e2cac6f2a2e, type: 3}
+--- !u!1 &377959230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377959231}
+  - component: {fileID: 377959232}
+  m_Layer: 3
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377959231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377959230}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 85193013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &377959232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377959230}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09, y: 0.08486813, z: 0.12255554}
+  m_Center: {x: 0.00000046729843, y: -0.017565928, z: -0.06872227}
 --- !u!1 &378286925
 GameObject:
   m_ObjectHideFlags: 0
@@ -9813,6 +10029,59 @@ MonoBehaviour:
   m_Image: {fileID: 2018379307}
   m_CanvasGroup: {fileID: 0}
   m_IgnoreAlpha: 0
+--- !u!1 &720408476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720408477}
+  - component: {fileID: 720408478}
+  m_Layer: 3
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &720408477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720408476}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1229206043}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &720408478
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720408476}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09, y: 0.08486813, z: 0.12255554}
+  m_Center: {x: 0.00000046729843, y: -0.017565928, z: -0.06872227}
 --- !u!1 &726588374
 GameObject:
   m_ObjectHideFlags: 0
@@ -11564,6 +11833,169 @@ Transform:
   - {fileID: 941582946}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &837437351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837437352}
+  - component: {fileID: 837437354}
+  - component: {fileID: 837437353}
+  m_Layer: 3
+  m_Name: Head Physics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &837437352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837437351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1088287289}
+  m_Father: {fileID: 3209519326144330097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!153 &837437353
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837437351}
+  m_ConnectedBody: {fileID: 7696847260009887575}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 2
+  m_YMotion: 2
+  m_ZMotion: 2
+  m_AngularXMotion: 0
+  m_AngularYMotion: 0
+  m_AngularZMotion: 0
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_YDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ZDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 1
+  m_AngularXDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_AngularYZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_SlerpDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 1
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &837437354
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837437351}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!1 &841128059
 GameObject:
   m_ObjectHideFlags: 0
@@ -14822,6 +15254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6598815579406187026, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
+      propertyPath: m_CameraTransform
+      value: 
+      objectReference: {fileID: 2622132688443867839}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14868,7 +15304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14951,6 +15387,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085374340}
   m_CullTransparentMesh: 1
+--- !u!1 &1088287288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1088287289}
+  - component: {fileID: 1088287290}
+  m_Layer: 3
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1088287289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088287288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 837437352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1088287290
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088287288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1096069510
 GameObject:
   m_ObjectHideFlags: 0
@@ -16781,6 +17270,169 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1229206042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229206043}
+  - component: {fileID: 1229206045}
+  - component: {fileID: 1229206044}
+  m_Layer: 3
+  m_Name: Left Hand Physics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229206043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229206042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 720408477}
+  m_Father: {fileID: 3209519326144330097}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!153 &1229206044
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229206042}
+  m_ConnectedBody: {fileID: 7696847260009887575}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 2
+  m_YMotion: 2
+  m_ZMotion: 2
+  m_AngularXMotion: 2
+  m_AngularYMotion: 2
+  m_AngularZMotion: 2
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_YDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ZDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 1
+  m_AngularXDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_AngularYZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_SlerpDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 1
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &1229206045
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229206042}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1001 &1243163577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20146,7 +20798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495848442}
   - component: {fileID: 1495848443}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Body Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23610,7 +24262,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -2.3712596e+29, z: 8.02e-43, w: -9.5817054e+32}
+  m_BoundingSphereOverride: {x: 2.75506e-40, y: 0, z: 0, w: 3.4e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -27205,7 +27857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7375147620355764367}
   - component: {fileID: 8841288034521382342}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Link End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27395,7 +28047,7 @@ GameObject:
   - component: {fileID: 3187248809181060596}
   - component: {fileID: 7318436920404059466}
   - component: {fileID: 4617145011525375125}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27413,7 +28065,7 @@ GameObject:
   - component: {fileID: 4096081253003475187}
   - component: {fileID: 3776163270747818485}
   - component: {fileID: 2870047897598624320}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Up Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27577,7 +28229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201834278646464591}
   - component: {fileID: 4391323899410772853}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Link End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27593,10 +28245,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3209519326144330097}
-  - component: {fileID: 3209519326144330098}
   - component: {fileID: 3209519326144330099}
-  m_Layer: 0
-  m_Name: Complete XR Origin Physics Rig
+  - component: {fileID: 3209519326144330100}
+  m_Layer: 3
+  m_Name: Physics Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28204,7 +28856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6457256968156903680}
   - component: {fileID: 3013106144752099837}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: DirectionsGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28277,8 +28929,8 @@ GameObject:
   - component: {fileID: 6050359811567516867}
   - component: {fileID: 7223150883233569092}
   - component: {fileID: 3475358804587633529}
-  m_Layer: 0
-  m_Name: Capsule
+  m_Layer: 3
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28447,7 +29099,7 @@ GameObject:
   - component: {fileID: 5060581239294324765}
   - component: {fileID: 6223886924732374055}
   - component: {fileID: 2788440230327993212}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Teleport Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28480,7 +29132,7 @@ GameObject:
   - component: {fileID: 4103931860027734437}
   - component: {fileID: 638102392819123375}
   - component: {fileID: 5690380145826623374}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Right Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28496,7 +29148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3825024792906539363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Universal Controller Materials Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28549,7 +29201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 904497816167461298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28585,7 +29237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6414455671401593669}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28612,7 +29264,7 @@ GameObject:
   - component: {fileID: 3423071336087203263}
   - component: {fileID: 2375136272043581560}
   - component: {fileID: 6555777536101801832}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28666,7 +29318,7 @@ GameObject:
   - component: {fileID: 7152062133336086745}
   - component: {fileID: 7249330264186488313}
   - component: {fileID: 1312226846950300192}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28684,7 +29336,7 @@ GameObject:
   - component: {fileID: 908765729835235280}
   - component: {fileID: 7767199421901971655}
   - component: {fileID: 2510702386891017995}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28700,7 +29352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1529650122142250742}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooltip Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28718,7 +29370,7 @@ GameObject:
   - component: {fileID: 2062300982034927893}
   - component: {fileID: 3480128932920315268}
   - component: {fileID: 1852442446676446655}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28752,7 +29404,7 @@ GameObject:
   - component: {fileID: 6882265736799197901}
   - component: {fileID: 3896593646322105402}
   - component: {fileID: 8179138287459542605}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Radial Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29769,7 +30421,7 @@ GameObject:
   - component: {fileID: 4024879613990795090}
   - component: {fileID: 2289024540123487084}
   - component: {fileID: 7669500295940084904}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Poke Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29849,7 +30501,7 @@ GameObject:
   - component: {fileID: 3518308358825020778}
   - component: {fileID: 6334076072768112059}
   - component: {fileID: 6167072019746818660}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29926,7 +30578,7 @@ GameObject:
   - component: {fileID: 880396842169232838}
   - component: {fileID: 1611340756701975000}
   - component: {fileID: 3831079234421501000}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Radial Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29942,7 +30594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1146428209613118471}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30105,7 +30757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8552068607938649377}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30248,7 +30900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6510610129199314364}
   - component: {fileID: 7646504072349994698}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Locomotion System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30408,7 +31060,7 @@ GameObject:
   - component: {fileID: 8319461037640190005}
   - component: {fileID: 5176092658713493509}
   - component: {fileID: 1968817865801263422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Poke Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30431,7 +31083,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 5979032650971664808}
   m_CameraFloorOffsetObject: {fileID: 6583555549359138404}
   m_RequestedTrackingOriginMode: 1
-  m_CameraYOffset: 0.5
+  m_CameraYOffset: 0.75
 --- !u!1 &1092014027182423660
 GameObject:
   m_ObjectHideFlags: 0
@@ -30441,7 +31093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3482345018818043630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Universal Controller Materials Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30759,7 +31411,7 @@ GameObject:
   - component: {fileID: 2061593698339597979}
   - component: {fileID: 7764489206182098384}
   - component: {fileID: 8838770807991716146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30824,7 +31476,7 @@ GameObject:
   - component: {fileID: 4200899410616111769}
   - component: {fileID: 1687900970945763619}
   - component: {fileID: 2591682174763339003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31036,7 +31688,7 @@ GameObject:
   - component: {fileID: 7927599347550307016}
   - component: {fileID: 3323325752286832467}
   - component: {fileID: 3803861336903328602}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lazy Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31098,7 +31750,7 @@ GameObject:
   - component: {fileID: 5351476024008582960}
   - component: {fileID: 1308444940505620715}
   - component: {fileID: 5067578969264152406}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Down Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31116,7 +31768,7 @@ GameObject:
   - component: {fileID: 5115060576131435921}
   - component: {fileID: 8979110109372863504}
   - component: {fileID: 1174313251266974657}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31134,7 +31786,7 @@ GameObject:
   - component: {fileID: 5341135549700090916}
   - component: {fileID: 4016244798713622498}
   - component: {fileID: 4059492505093223804}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31254,7 +31906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1248818034403475226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31270,7 +31922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6863117794266569089}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31289,7 +31941,7 @@ GameObject:
   - component: {fileID: 6664625397881577508}
   - component: {fileID: 6213273731629037632}
   - component: {fileID: 1322960931011244456}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31527,7 +32179,7 @@ GameObject:
   - component: {fileID: 5169533110438991168}
   - component: {fileID: 3324449923538502212}
   - component: {fileID: 6335627377275679762}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Radial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31755,7 +32407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5582425163007721385}
   - component: {fileID: 1272236700776669813}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Affordance Callout Turn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31796,7 +32448,7 @@ GameObject:
   - component: {fileID: 6578677997688896981}
   - component: {fileID: 6044302494625483047}
   - component: {fileID: 8719277856958377425}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gaze Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31814,7 +32466,7 @@ GameObject:
   - component: {fileID: 5436399403346033528}
   - component: {fileID: 4065084940709713972}
   - component: {fileID: 334815447883319557}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31832,7 +32484,7 @@ GameObject:
   - component: {fileID: 5692624890097911009}
   - component: {fileID: 4537146512616150754}
   - component: {fileID: 3393177881028639283}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31931,7 +32583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6157199354727132837}
   - component: {fileID: 7761147333319225998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Affordance Callout Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31951,7 +32603,7 @@ GameObject:
   - component: {fileID: 312844699603734546}
   - component: {fileID: 291551827195896643}
   - component: {fileID: 3045975124077821268}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ray Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31982,7 +32634,7 @@ GameObject:
   - component: {fileID: 4053865709624021}
   - component: {fileID: 2038038798451151364}
   - component: {fileID: 5725817027595528004}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32000,7 +32652,7 @@ GameObject:
   - component: {fileID: 2401998594541467234}
   - component: {fileID: 3233213990570652411}
   - component: {fileID: 8353923669583290330}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32083,7 +32735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1676668023864252053}
   - component: {fileID: 2907083126444453587}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: DirectionsGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32100,7 +32752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575772581571710335}
   - component: {fileID: 9026772177847122475}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Link End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32362,7 +33014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocomotionProvider: {fileID: 7586386759107341151}
   m_MinHeight: 0
-  m_MaxHeight: Infinity
+  m_MaxHeight: 1
 --- !u!1 &2011487990366014550
 GameObject:
   m_ObjectHideFlags: 0
@@ -32374,7 +33026,7 @@ GameObject:
   - component: {fileID: 5867590113515385217}
   - component: {fileID: 1835625710049884460}
   - component: {fileID: 3144605996687786752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32406,7 +33058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9083950951159563879}
   - component: {fileID: 2222747824571151519}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: XR Interaction Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32450,7 +33102,7 @@ GameObject:
   - component: {fileID: 4620063099841294047}
   - component: {fileID: 8006255262147776285}
   - component: {fileID: 6869867065912660579}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32590,7 +33242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 121936445561595208}
   - component: {fileID: 8745000845030671712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Joystick Affordances Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32606,7 +33258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6673114122087437368}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32635,9 +33287,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 880218899053683293}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -23}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2188585159764773989
@@ -32712,7 +33364,7 @@ GameObject:
   - component: {fileID: 3095872880302765367}
   - component: {fileID: 3010821209918710984}
   - component: {fileID: 2622634131287215580}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33160,7 +33812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7068981473801710272}
   - component: {fileID: 48329234972395411}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Link End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33200,7 +33852,7 @@ GameObject:
   - component: {fileID: 8460320837830733292}
   - component: {fileID: 5621922966014221170}
   - component: {fileID: 173828791808209603}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33220,7 +33872,7 @@ GameObject:
   - component: {fileID: 4509930962965481354}
   - component: {fileID: 8228794157866183578}
   - component: {fileID: 5232131052690410052}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33312,7 +33964,7 @@ GameObject:
   - component: {fileID: 3450150650000900579}
   - component: {fileID: 1602029017764011356}
   - component: {fileID: 9205610467091932098}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Radial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33379,7 +34031,6 @@ Transform:
   m_Children:
   - {fileID: 4457480930930758012}
   - {fileID: 469260779289165291}
-  - {fileID: 3870730328136674075}
   m_Father: {fileID: 7924980579671161940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2622634131287215580
@@ -33509,7 +34160,7 @@ GameObject:
   - component: {fileID: 5707221365803707835}
   - component: {fileID: 1919245358203808375}
   - component: {fileID: 8912770173515141514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThumbStick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33858,7 +34509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2799876604735865454
@@ -34046,7 +34697,7 @@ GameObject:
   - component: {fileID: 6170197373699751667}
   - component: {fileID: 8475219041135628830}
   - component: {fileID: 2801786283133821884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34157,7 +34808,7 @@ GameObject:
   - component: {fileID: 7885989859300814149}
   - component: {fileID: 6908393016022280085}
   - component: {fileID: 6918350131618287800}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34294,7 +34945,7 @@ GameObject:
   - component: {fileID: 6599154310384128864}
   - component: {fileID: 7711948767851987068}
   - component: {fileID: 980290110809549403}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThumbStick_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34427,7 +35078,7 @@ GameObject:
   - component: {fileID: 5519054364382729184}
   - component: {fileID: 5504545999499682630}
   - component: {fileID: 7309913469262586365}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34486,7 +35137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9003939451866404394}
   - component: {fileID: 8605370712309185608}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Poke Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34506,7 +35157,7 @@ GameObject:
   - component: {fileID: 4276248389520000850}
   - component: {fileID: 7429185528297834878}
   - component: {fileID: 1826390532239940447}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ray Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34735,7 +35386,7 @@ Transform:
   m_GameObject: {fileID: 233517372622978993}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: -0.304, y: 0, z: -0.054}
+  m_LocalPosition: {x: -1.696, y: 0, z: -0.034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34743,35 +35394,12 @@ Transform:
   - {fileID: 1045264417172603921}
   - {fileID: 9083950951159563879}
   - {fileID: 5017737457539423412}
+  - {fileID: 3870730328136674075}
+  - {fileID: 1229206043}
+  - {fileID: 85193013}
+  - {fileID: 837437352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
---- !u!54 &3209519326144330098
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233517372622978993}
-  serializedVersion: 4
-  m_Mass: 4
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 2
 --- !u!114 &3209519326144330099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34785,9 +35413,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHead: {fileID: 2622132688443867839}
+  leftController: {fileID: 2221331340802367875}
+  rightController: {fileID: 8353010419063486347}
+  headJoint: {fileID: 837437353}
+  leftHandJoint: {fileID: 1229206044}
+  rightHandJoint: {fileID: 85193014}
   bodyCollider: {fileID: 1495848443}
-  bodyHeightMin: 0.5
-  bodyHeightMax: 2
+  bodyHeightMin: 0.1
+  bodyHeightMax: 1
+--- !u!114 &3209519326144330100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233517372622978993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a724adb3132f5149aa6f4d8b8f79dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  moveInputSource:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Move Input Source
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ff914748-2e63-4afe-a8cc-931b06e504f1
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  rb: {fileID: 7696847260009887575}
+  directionSource: {fileID: 2622132688443867839}
 --- !u!33 &3233213990570652411
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34827,7 +35487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5296621239847861109}
   - component: {fileID: 2880495841390296379}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Joystick Rotation Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34929,7 +35589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1145609444645693791}
   - component: {fileID: 8006530843872398693}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Affordance Callout Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34952,7 +35612,7 @@ GameObject:
   - component: {fileID: 3157028822165945338}
   - component: {fileID: 3677452125695328150}
   - component: {fileID: 5032380872545617380}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35753,7 +36413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2292895971781708298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35801,7 +36461,7 @@ GameObject:
   - component: {fileID: 271445049591688532}
   - component: {fileID: 6172903723972246797}
   - component: {fileID: 7322659814127891541}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThumbStick_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36219,7 +36879,7 @@ GameObject:
   - component: {fileID: 317833649029370689}
   - component: {fileID: 1503196904072656076}
   - component: {fileID: 8892944578681419839}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36265,12 +36925,12 @@ Transform:
   m_GameObject: {fileID: 6709699649594188582}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0.06}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0.059999973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8816820930355712445}
-  m_Father: {fileID: 2622132688443867839}
+  m_Father: {fileID: 3209519326144330097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3888705106037216319
 GameObject:
@@ -36281,7 +36941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7187134909639693829}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36307,7 +36967,7 @@ GameObject:
   - component: {fileID: 2012115989316859760}
   - component: {fileID: 8873213501730685780}
   - component: {fileID: 1878238411310262549}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36325,7 +36985,7 @@ GameObject:
   - component: {fileID: 9066806707250594960}
   - component: {fileID: 2607117409564130823}
   - component: {fileID: 8053191887555928964}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PokePointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36341,7 +37001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3174702092622160472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooltip Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36373,7 +37033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5399697142651843266}
   - component: {fileID: 4864431157687196462}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left Controller Stabilized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36666,13 +37326,13 @@ GameObject:
   m_Component:
   - component: {fileID: 810370818838818897}
   - component: {fileID: 2334903835906879975}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Poke Interactor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4096081253003475187
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36722,7 +37382,7 @@ GameObject:
   - component: {fileID: 1311807268620756076}
   - component: {fileID: 7992621318656885240}
   - component: {fileID: 3103028431057981394}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36900,7 +37560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2743154697057817795}
   - component: {fileID: 1172597687612680205}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right Controller Stabilized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37128,7 +37788,7 @@ GameObject:
   - component: {fileID: 1762925145464075863}
   - component: {fileID: 7562663406512706922}
   - component: {fileID: 909197940087681677}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Grab Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37302,7 +37962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 44.7, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4476780772829214315
@@ -37316,7 +37976,7 @@ GameObject:
   - component: {fileID: 1635513255644517481}
   - component: {fileID: 4603688104360405947}
   - component: {fileID: 552611240135042380}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37654,7 +38314,7 @@ GameObject:
   - component: {fileID: 5934111180647589697}
   - component: {fileID: 7860835502349638034}
   - component: {fileID: 2918723908798505954}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37677,7 +38337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!120 &4603688104360405947
@@ -37943,7 +38603,7 @@ GameObject:
   - component: {fileID: 1568415185176809051}
   - component: {fileID: 2545526128674594641}
   - component: {fileID: 5691703269174912599}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37967,7 +38627,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5020527218822738341}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left Controller Stabilized Attach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38012,7 +38672,7 @@ GameObject:
   - component: {fileID: 7433699158351884798}
   - component: {fileID: 56148694160689504}
   - component: {fileID: 3745326976541923448}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Poke Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38061,7 +38721,7 @@ GameObject:
   - component: {fileID: 5442445017606335097}
   - component: {fileID: 4171271829227043789}
   - component: {fileID: 3049632542005273920}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38098,7 +38758,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9112176541528859512}
   - component: {fileID: 7636561158931574350}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Affordance Callout Blink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38116,7 +38776,7 @@ GameObject:
   - component: {fileID: 3998465003059661645}
   - component: {fileID: 3032605697458966295}
   - component: {fileID: 2329333350884525697}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38142,7 +38802,7 @@ GameObject:
   - component: {fileID: 9061389439354780209}
   - component: {fileID: 1149229887344046518}
   - component: {fileID: 1867541429660609541}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Left Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38996,7 +39656,7 @@ GameObject:
   - component: {fileID: 4881045854840571553}
   - component: {fileID: 2651863907924277527}
   - component: {fileID: 3759083519325653459}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39087,7 +39747,7 @@ GameObject:
   - component: {fileID: 2624566294730661580}
   - component: {fileID: 4178384432436389491}
   - component: {fileID: 1224572486009576175}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39264,7 +39924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5843720544750732999}
   - component: {fileID: 2535636983011833079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Affordance Callout Grab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39492,9 +40152,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1092792731062772401}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44.7, y: -23}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 44.7, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5394366058689514441
@@ -39506,7 +40166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3185777259240056326}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooltip Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39600,7 +40260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7922436672750180559}
   - component: {fileID: 7411258145277140186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Poke Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39618,7 +40278,7 @@ GameObject:
   - component: {fileID: 8707910692956214597}
   - component: {fileID: 1854449660935266775}
   - component: {fileID: 1164916660662538184}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39635,7 +40295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5054938156069830897}
   - component: {fileID: 8032649009498831630}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Link End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40012,7 +40672,7 @@ GameObject:
   - component: {fileID: 5064342068921015321}
   - component: {fileID: 693900122601730873}
   - component: {fileID: 3049524255582867730}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40196,7 +40856,7 @@ GameObject:
   - component: {fileID: 4411386716391567608}
   - component: {fileID: 4976519295381515412}
   - component: {fileID: 5615630757753851308}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40229,7 +40889,7 @@ GameObject:
   - component: {fileID: 515940924627138962}
   - component: {fileID: 6503705251638531982}
   - component: {fileID: 2295718342163919321}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40493,7 +41153,8 @@ GameObject:
   - component: {fileID: 2007470348677277736}
   - component: {fileID: 694074534481857035}
   - component: {fileID: 6869285746758028709}
-  m_Layer: 2
+  - component: {fileID: 7696847260009887575}
+  m_Layer: 3
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40511,7 +41172,7 @@ GameObject:
   - component: {fileID: 4259918026955734772}
   - component: {fileID: 6486288506453259610}
   - component: {fileID: 2896287509176014074}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40823,7 +41484,7 @@ GameObject:
   - component: {fileID: 6787016205634270206}
   - component: {fileID: 5807252691005179184}
   - component: {fileID: 3793407423399895855}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button_Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40840,7 +41501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4631348092664820115}
   - component: {fileID: 1445882005089382748}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Affordance Callout Smooth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40968,7 +41629,7 @@ GameObject:
   - component: {fileID: 8066705788485719220}
   - component: {fileID: 5708296196638992515}
   - component: {fileID: 6620704527924364990}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Turn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41489,7 +42150,7 @@ GameObject:
   - component: {fileID: 6680535000095347304}
   - component: {fileID: 4120452930996634295}
   - component: {fileID: 9024988088739327798}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41534,7 +42195,7 @@ GameObject:
   - component: {fileID: 1359955720405749247}
   - component: {fileID: 5935888147720119864}
   - component: {fileID: 8765030812463486873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41552,7 +42213,7 @@ GameObject:
   - component: {fileID: 5017737457539423412}
   - component: {fileID: 6323285409589835279}
   - component: {fileID: 4414657185517498048}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41570,7 +42231,7 @@ GameObject:
   - component: {fileID: 2339180849490651024}
   - component: {fileID: 7519586400793245411}
   - component: {fileID: 2799876604735865454}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41646,7 +42307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6827716068263685360}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooltip Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41680,7 +42341,7 @@ GameObject:
   - component: {fileID: 5860696435757460375}
   - component: {fileID: 4713155590851987341}
   - component: {fileID: 2437936082047616639}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThumbStick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41822,7 +42483,7 @@ GameObject:
   - component: {fileID: 4685190015501299246}
   - component: {fileID: 5115092910095997732}
   - component: {fileID: 8325887995063622519}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Down Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41859,9 +42520,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2346687614234323213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -23}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &6510610129199314364
@@ -41909,7 +42570,7 @@ GameObject:
   - component: {fileID: 5026240992741023987}
   - component: {fileID: 386066520205837922}
   - component: {fileID: 2867894920907169148}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42062,7 +42723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7924980579671161940}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42093,7 +42754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5100362012429803294}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: XRController_Thumbstick_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42255,7 +42916,7 @@ GameObject:
   - component: {fileID: 7907917664939300964}
   - component: {fileID: 4284271430062145518}
   - component: {fileID: 4540419898889810201}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42287,7 +42948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2703292935197249045}
   - component: {fileID: 2681808413318935357}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Link End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42303,13 +42964,144 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3870730328136674075}
-  m_Layer: 2
-  m_Name: Nose
+  - component: {fileID: 6709699649594188584}
+  - component: {fileID: 6709699649594188583}
+  m_Layer: 3
+  m_Name: Nose Physics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!153 &6709699649594188583
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709699649594188582}
+  m_ConnectedBody: {fileID: 7696847260009887575}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 2
+  m_YMotion: 2
+  m_ZMotion: 2
+  m_AngularXMotion: 0
+  m_AngularYMotion: 0
+  m_AngularZMotion: 0
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_YDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ZDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 1
+  m_AngularXDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_AngularYZDrive:
+    serializedVersion: 4
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_SlerpDrive:
+    serializedVersion: 4
+    positionSpring: 5000
+    positionDamper: 50
+    maximumForce: 3.4028233e+38
+    useAcceleration: 0
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 1
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!54 &6709699649594188584
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709699649594188582}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!4 &6730653284308094344
 Transform:
   m_ObjectHideFlags: 0
@@ -42335,7 +43127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978115023795755046}
   - component: {fileID: 7586386759107341151}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42352,7 +43144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770186062364412392}
   - component: {fileID: 3193987202233907614}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Climb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42406,7 +43198,7 @@ GameObject:
   - component: {fileID: 5454415801603057409}
   - component: {fileID: 1056626815231337933}
   - component: {fileID: 4231731615657025264}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42453,7 +43245,7 @@ GameObject:
   - component: {fileID: 429607344683245596}
   - component: {fileID: 2139982590428455684}
   - component: {fileID: 5149524131471954602}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42499,7 +43291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5410802204903194357}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: XRController_Thumbstick_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42661,7 +43453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4683145391003088320}
   - component: {fileID: 8258900220181359587}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Joystick Affordances Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42706,7 +43498,7 @@ GameObject:
   - component: {fileID: 4380896794528385687}
   - component: {fileID: 4135935322049837391}
   - component: {fileID: 8709937662841875492}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lazy Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42760,7 +43552,7 @@ GameObject:
   - component: {fileID: 3541462443003438335}
   - component: {fileID: 1326006006642721934}
   - component: {fileID: 2031365502631937022}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42911,7 +43703,7 @@ GameObject:
   - component: {fileID: 7566803979426695110}
   - component: {fileID: 6430055542061557178}
   - component: {fileID: 7708753092344556292}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Controller_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42954,7 +43746,7 @@ GameObject:
   - component: {fileID: 8619459831253716260}
   - component: {fileID: 6189468790397507313}
   - component: {fileID: 6649960695505366007}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PokePointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42970,7 +43762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6122864634101234499}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooltip Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42988,7 +43780,7 @@ GameObject:
   - component: {fileID: 354463998587418943}
   - component: {fileID: 5160701648171297355}
   - component: {fileID: 3265254477954647363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lazy Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43106,7 +43898,7 @@ GameObject:
   - component: {fileID: 2605391497007095935}
   - component: {fileID: 1061181759624596421}
   - component: {fileID: 5005292331293790112}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43122,7 +43914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1841772863680171090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43370,7 +44162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1046411902771981321}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooltip Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43452,7 +44244,7 @@ GameObject:
   - component: {fileID: 8873225349914874547}
   - component: {fileID: 6774708130828047568}
   - component: {fileID: 8154307610697170047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lazy Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43469,7 +44261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045264417172603921}
   - component: {fileID: 2360173345214149590}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Input Action Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43535,7 +44327,7 @@ GameObject:
   - component: {fileID: 8277575776999143235}
   - component: {fileID: 1574795022396199850}
   - component: {fileID: 2551960712677177036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lazy Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43656,6 +44448,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.76072, z: 0}
+--- !u!54 &7696847260009887575
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5979032650971664808}
+  serializedVersion: 4
+  m_Mass: 4
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 2
 --- !u!23 &7708753092344556292
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -43759,7 +44578,7 @@ GameObject:
   - component: {fileID: 3700279173214899840}
   - component: {fileID: 6766330019018829345}
   - component: {fileID: 8740177804291472747}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43780,7 +44599,7 @@ GameObject:
   - component: {fileID: 104359641950084020}
   - component: {fileID: 2034322377619907223}
   - component: {fileID: 234749010141275886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Teleport Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44080,7 +44899,7 @@ GameObject:
   - component: {fileID: 2346306463741809132}
   - component: {fileID: 4547483967209478338}
   - component: {fileID: 5263727369918187305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button_Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44172,7 +44991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6730653284308094344}
   - component: {fileID: 8664434810189996272}
-  m_Layer: 2
+  m_Layer: 3
   m_Name: Teleportation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44211,7 +45030,7 @@ GameObject:
   - component: {fileID: 1024091557095747530}
   - component: {fileID: 8134761143493917594}
   - component: {fileID: 4532754815294526758}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Controller_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44260,7 +45079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1255368209058394083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooltip Target Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44377,7 +45196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5155999785126666184}
   - component: {fileID: 8832469675899957241}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Link End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44401,7 +45220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4374518530031225732}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right Controller Stabilized Attach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44476,7 +45295,7 @@ GameObject:
   - component: {fileID: 7761042020005311807}
   - component: {fileID: 4221595958421612188}
   - component: {fileID: 8324333511483253833}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44519,9 +45338,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 919373994872469764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -23}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: 0}
   m_SizeDelta: {x: 0, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8258900220181359587
@@ -44738,7 +45557,7 @@ GameObject:
   - component: {fileID: 6632531475299848200}
   - component: {fileID: 8480590969416291006}
   - component: {fileID: 9080736593407568443}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Direct Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44874,7 +45693,7 @@ GameObject:
   - component: {fileID: 1765369624672554245}
   - component: {fileID: 4388751698806760363}
   - component: {fileID: 4041626148625159361}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Up Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44950,7 +45769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7693604618857267110}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Link Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45072,7 +45891,7 @@ GameObject:
   - component: {fileID: 8337276729105038387}
   - component: {fileID: 7219238244965813443}
   - component: {fileID: 2951063163584387956}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45119,7 +45938,7 @@ GameObject:
   - component: {fileID: 6162172069767281335}
   - component: {fileID: 934514335374731893}
   - component: {fileID: 4834757528840421119}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45135,7 +45954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7059871963490445350}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gaze Stabilized Attach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45249,7 +46068,7 @@ GameObject:
   - component: {fileID: 8296588810541565302}
   - component: {fileID: 4939529623760308947}
   - component: {fileID: 7163057998461435417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PokePointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45267,7 +46086,7 @@ GameObject:
   - component: {fileID: 378004659125834730}
   - component: {fileID: 120883521660555704}
   - component: {fileID: 6168393878114484452}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TouchPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45339,7 +46158,7 @@ GameObject:
   - component: {fileID: 5912435813419477062}
   - component: {fileID: 8682637759696734136}
   - component: {fileID: 1133059408861704796}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Left Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45362,7 +46181,7 @@ GameObject:
   - component: {fileID: 4901747574067108050}
   - component: {fileID: 2733981295559028385}
   - component: {fileID: 4052977053564879687}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45393,7 +46212,7 @@ GameObject:
   - component: {fileID: 6465251341032651391}
   - component: {fileID: 2188585159764773989}
   - component: {fileID: 6968872697246385938}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lazy Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45410,7 +46229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1175249406377861764}
   - component: {fileID: 235945880303851917}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Joystick Rotation Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45487,7 +46306,7 @@ GameObject:
   - component: {fileID: 6052152329568140089}
   - component: {fileID: 8541106564371405820}
   - component: {fileID: 6468791826502809636}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Right Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45550,7 +46369,7 @@ GameObject:
   - component: {fileID: 8921597005245291618}
   - component: {fileID: 7861324996795824484}
   - component: {fileID: 9057534643071453870}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lazy Tooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45568,7 +46387,7 @@ GameObject:
   - component: {fileID: 1776483614136438342}
   - component: {fileID: 4187499648585394882}
   - component: {fileID: 6462354314731534845}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TouchPad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45604,7 +46423,7 @@ GameObject:
   - component: {fileID: 7508629343064323232}
   - component: {fileID: 197155001297127686}
   - component: {fileID: 1364761041545906519}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TunnelingVignette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45767,7 +46586,7 @@ GameObject:
   - component: {fileID: 949127055437908381}
   - component: {fileID: 3154324506271145046}
   - component: {fileID: 4911559818501735082}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TunnelingVignette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45915,7 +46734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3528369179891896611}
   - component: {fileID: 7245450044558168311}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Affordance Callout Click
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45933,7 +46752,7 @@ GameObject:
   - component: {fileID: 4199777118976157847}
   - component: {fileID: 9115262657938376914}
   - component: {fileID: 5096710218306974994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Button_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47187,7 +48006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2412430288596738361}
   - component: {fileID: 2831493548986267846}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Gaze Stabilized
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47207,7 +48026,7 @@ GameObject:
   - component: {fileID: 9005857656590734394}
   - component: {fileID: 9024444165316917068}
   - component: {fileID: 294589908125244475}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -47230,7 +48049,7 @@ GameObject:
   - component: {fileID: 1896149755281051720}
   - component: {fileID: 5760142215847901769}
   - component: {fileID: 4528676355159934551}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Tooltip Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47248,7 +48067,7 @@ GameObject:
   - component: {fileID: 1063831811415323883}
   - component: {fileID: 997348901161719870}
   - component: {fileID: 1115217825444692334}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Direct Interactor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
