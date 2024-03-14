@@ -27,12 +27,24 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _METALLICGLOSSMAP
+  - _MK_ARTISTIC_ANIMATION_STUTTER
+  - _MK_DETAIL_BLEND_MIX
+  - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
+  - _MK_LIGHT_CEL
+  - _MK_NORMAL_MAP
+  - _MK_OCCLUSION_MAP
+  - _MK_RECEIVE_SHADOWS
+  - _MK_SPECULAR_ISOTROPIC
+  - _MK_WRAPPED_DIFFUSE
   - _NORMALMAP
+  - _RECEIVESHADOWS_ON
+  - _WRAPPEDLIGHTING_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    IGNOREPROJECTOR: False
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -48,7 +60,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cutoff: 0.51
+    - _Cutoff: 0.5
     - _Glossiness: 0.64000005
     - _Mode: 1
     - _UseAoMap: 0
