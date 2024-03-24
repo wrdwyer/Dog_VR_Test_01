@@ -39,6 +39,8 @@ namespace Sisus.ComponentNames.EditorOnly
             var buttonRect = position;
             buttonRect.height = 0f;
             var windowSize = position.size;
+            window.minSize = position.size;
+            window.maxSize = position.size;
 
             window.ShowAsDropDown(buttonRect, windowSize);
         }

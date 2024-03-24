@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9752b0c8e144801967e6897679604b, type: 3}
+  m_Name: vHierarchy Data
+  m_EditorClassIdentifier: 
+  sceneDatasByGuid:
+    keys:
+    - 25cb0e2d4d92ef74f8af5acebabaec33
+    values:
+    - goDatasByGlobalId:
+        keys:
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-817075155-0
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-233517372622978993-0
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-2046629158-0
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1783572213-0
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1530404176-0
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1761965637-0
+        values:
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Rigidbody Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: PreMatCube
+      goDatasByInstanceId:
+        keys: 04bc0000f4c0000086c000009abf0000d0be00008cbf0000
+        values:
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Rigidbody Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: PreMatCube

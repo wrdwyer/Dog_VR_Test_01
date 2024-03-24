@@ -854,8 +854,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Dog_VR_Test_01
-  metroPackageVersion: 
+  metroPackageName: DogVRTest01
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -863,7 +863,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Dog_VR_Test_01
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Dog_VR_Test_01
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

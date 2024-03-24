@@ -2600,6 +2600,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "RightHand Stand/Crouch",
+            "id": "df7fc817-2151-47d4-89af-9f64f647e4e1",
+            "actions": [
+                {
+                    "name": "Crouch",
+                    "type": "Button",
+                    "id": "3b552337-607f-4d5c-990a-1ae9ef283d1a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "356c32db-a5ec-4732-8df1-1eb17ae3c753",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5153d342-82dd-4642-9e1d-b7d4b04d2556",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7ecc999-a76d-4ffc-8557-8664fca67089",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

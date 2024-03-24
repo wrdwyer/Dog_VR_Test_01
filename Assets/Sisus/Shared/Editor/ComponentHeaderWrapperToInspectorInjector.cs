@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using JetBrains.Annotations;
+using System.Diagnostics.CodeAnalysis;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -32,7 +32,7 @@ namespace Sisus.Shared.EditorOnly
 			}
 		}
 
-		private static void AfterGameObjectHeaderGUI([NotNull] Editor gameObjectEditor)
+		private static void AfterGameObjectHeaderGUI([DisallowNull] Editor gameObjectEditor)
 		{
 			foreach((Editor editor, IMGUIContainer header) editorAndHeader in GetComponentHeaderElementsFromEditorWindowOf(gameObjectEditor))
 			{
@@ -43,17 +43,12 @@ namespace Sisus.Shared.EditorOnly
 				}
 
 				var component = editorAndHeader.editor.target as Component;
-				if(component == null || editorAndHeader.header is null)
-				{
-					continue;
-				}
-
-				var renameableComponentEditor = new ComponentHeaderWrapper(editorAndHeader.header, component, true);
-				editorAndHeader.header.onGUIHandler = renameableComponentEditor.DrawWrappedHeaderGUI;
+				var componentHeaderWrapper = new ComponentHeaderWrapper(editorAndHeader.header, component, true);
+				editorAndHeader.header.onGUIHandler = componentHeaderWrapper.DrawWrappedHeaderGUI;
 			}
 		}
 
-		private static void AfterComponentPropertiesHeaderGUI([NotNull] Editor componentEditor)
+		private static void AfterComponentPropertiesHeaderGUI([DisallowNull] Editor componentEditor)
 		{
 			if(!(GetComponentHeaderElementFromPropertyEditorOf(componentEditor) is (Editor editor, IMGUIContainer header)))
 			{
@@ -67,8 +62,8 @@ namespace Sisus.Shared.EditorOnly
 			}
 
 			var component = editor.target as Component;
-			var renameableComponentEditor = new ComponentHeaderWrapper(header, component, false);
-			header.onGUIHandler = renameableComponentEditor.DrawWrappedHeaderGUI;
+			var componentHeaderWrapper = new ComponentHeaderWrapper(header, component, false);
+			header.onGUIHandler = componentHeaderWrapper.DrawWrappedHeaderGUI;
 		}
 	}
 }

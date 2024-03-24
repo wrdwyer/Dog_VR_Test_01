@@ -1,4 +1,7 @@
+using System;
 using System.Reflection;
+using System.Text;
+using Sisus.Shared.EditorOnly;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -10,20 +13,24 @@ namespace Sisus.ComponentNames.EditorOnly
     [CustomPropertyDrawer(typeof(UnityEventBase), true)]
     public class RenameableUnityEventDrawer : PropertyDrawer
     {
+        private static readonly FieldInfo attributeField;
+        private static readonly FieldInfo fieldInfoField;
+        private static readonly FieldInfo textField;
+
         private UnityEventDrawer wrappedDrawer;
-        
-        private UnityEventDrawer WrappedDrawer
-        {
-            get
-            {
-                if(wrappedDrawer == null)
-                {
-                    CreateWrapperDrawer();
-                }
-                
-                return wrappedDrawer;
-            }
-        }
+
+        static RenameableUnityEventDrawer()
+		{
+            attributeField = typeof(PropertyDrawer).GetField("m_Attribute", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+            fieldInfoField = typeof(PropertyDrawer).GetField("m_FieldInfo", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+            textField = typeof(UnityEventDrawer).GetField("m_Text", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
+
+            #if DEV_MODE
+            Debug.Assert(attributeField != null);
+            Debug.Assert(fieldInfoField != null);
+            Debug.Assert(textField != null);
+            #endif
+		}
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
@@ -32,7 +39,7 @@ namespace Sisus.ComponentNames.EditorOnly
                 OnLeftMouseDown(position, property);
             }
 
-            WrappedDrawer.OnGUI(position, property, label);
+            GetOrCreateWrappedDrawer(label.text).OnGUI(position, property, label);
 
             #if DEV_MODE
             if(Event.current.control)
@@ -65,36 +72,83 @@ namespace Sisus.ComponentNames.EditorOnly
             return functionDropdownRect;
         }
 
-        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
-        {
-			return WrappedDrawer.GetPropertyHeight(property, label);
-        }
-
-		public override bool CanCacheInspectorGUI(SerializedProperty property)
-        {
-            return WrappedDrawer.CanCacheInspectorGUI(property);
-        }
-
 		public override VisualElement CreatePropertyGUI(SerializedProperty property)
         {
-            return WrappedDrawer.CreatePropertyGUI(property);
-        }
-
-		private void CreateWrapperDrawer()
-        {
-            wrappedDrawer = new UnityEventDrawer();
-
-			var attributeField = typeof(PropertyDrawer).GetField("m_Attribute", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
-			if(attributeField != null)
+            var rootVisualElement = GetOrCreateWrappedDrawer(property.displayName).CreatePropertyGUI(property);
+            if(rootVisualElement is null)
 			{
-				attributeField.SetValue(wrappedDrawer, attribute);
+                return null;
 			}
 
-            var fieldInfoField = typeof(PropertyDrawer).GetField("m_FieldInfo", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public);
-            if(fieldInfoField != null)
+            foreach(var child in rootVisualElement.Children())
+			{
+                if(child is Label label)
+				{
+                    label.text = property.displayName + GetNameSuffix(property);
+                    return rootVisualElement;
+				}
+			}
+
+            return rootVisualElement;
+        }
+
+		private string GetNameSuffix(SerializedProperty property)
+		{
+            if(property.GetMemberType() is not Type eventType)
+			{
+                return "";
+			}
+
+            for(var type = eventType; type != null; type = type.BaseType)
+			{
+                if(!type.IsGenericType)
+				{
+                    continue;
+				}
+
+                var typeDefinition = type.GetGenericTypeDefinition();
+                if(typeDefinition != typeof(UnityEvent<>)
+                    && typeDefinition != typeof(UnityEvent<,>)
+                    && typeDefinition != typeof(UnityEvent<,,>)
+                    && typeDefinition != typeof(UnityEvent<,,,>))
+				{
+                    continue;
+				}
+
+                var sb = new StringBuilder();
+                sb.Append(" <color=grey>(");
+                var genericArguments = type.GetGenericArguments();
+                sb.Append(ObjectNames.NicifyVariableName(genericArguments[0].ToHumanReadableString()));
+                int argumentCount = genericArguments.Length;
+				for(int i = 1; i < argumentCount; i++)
+				{
+                    sb.Append(", ");
+                    sb.Append(ObjectNames.NicifyVariableName(genericArguments[i].ToHumanReadableString()));
+				}
+
+                sb.Append(")</color>");
+                return sb.ToString();
+			}
+
+            return "";
+		}
+
+		private UnityEventDrawer GetOrCreateWrappedDrawer(string label)
+        {
+            if(wrappedDrawer is null)
             {
-                fieldInfoField.SetValue(wrappedDrawer, fieldInfo);
+                wrappedDrawer = new UnityEventDrawer();
+			    attributeField?.SetValue(wrappedDrawer, attribute);
+                fieldInfoField?.SetValue(wrappedDrawer, fieldInfo);
+                textField?.SetValue(wrappedDrawer, label);
             }
+                
+            return wrappedDrawer;
+        }
+
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+			return GetOrCreateWrappedDrawer(label.text).GetPropertyHeight(property, label);
         }
 
         private void OnLeftMouseDown(Rect propertyRect, SerializedProperty property)
