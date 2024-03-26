@@ -15,6 +15,7 @@ MonoBehaviour:
   sceneDatasByGuid:
     keys:
     - 25cb0e2d4d92ef74f8af5acebabaec33
+    - 
     values:
     - goDatasByGlobalId:
         keys:
@@ -38,7 +39,7 @@ MonoBehaviour:
         - iColor: 0
           icon: PreMatCube
       goDatasByInstanceId:
-        keys: 04bc0000f4c0000086c000009abf0000d0be00008cbf0000
+        keys: 50bc000040c10000d2c00000e6bf00001cbf0000d8bf000012bb0000
         values:
         - iColor: 0
           icon: AvatarMask On Icon
@@ -52,3 +53,11 @@ MonoBehaviour:
           icon: AvatarMask On Icon
         - iColor: 0
           icon: PreMatCube
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []
