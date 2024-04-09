@@ -26,6 +26,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1530404176-0
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1761965637-0
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1445718971-0
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1465366333-0
         values:
         - iColor: 0
           icon: AvatarMask On Icon
@@ -38,11 +39,13 @@ MonoBehaviour:
         - iColor: 0
           icon: AvatarMask On Icon
         - iColor: 0
-          icon: PreMatCube
+          icon: AvatarMask On Icon
         - iColor: 0
           icon: 
+        - iColor: 0
+          icon: AvatarMask On Icon
       goDatasByInstanceId:
-        keys: e2ce0000bed4000036d4000022d3000032d2000014d30000ccd10000
+        keys: bad0000010d7000088d6000050d500004cd4000042d50000ced300002499ffff
         values:
         - iColor: 0
           icon: AvatarMask On Icon
@@ -55,9 +58,11 @@ MonoBehaviour:
         - iColor: 0
           icon: AvatarMask On Icon
         - iColor: 0
-          icon: PreMatCube
+          icon: AvatarMask On Icon
         - iColor: 0
           icon: 
+        - iColor: 0
+          icon: AvatarMask On Icon
     - goDatasByGlobalId:
         keys: []
         values: []
