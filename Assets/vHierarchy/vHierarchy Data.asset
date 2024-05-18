@@ -27,6 +27,10 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1761965637-0
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1445718971-0
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1465366333-0
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-4592956391713993908-712532302
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-8189171603400248655-712532302
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-3462571325970164595-712532302
+        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-2999543171182741336-1068054149
         values:
         - iColor: 0
           icon: AvatarMask On Icon
@@ -44,8 +48,16 @@ MonoBehaviour:
           icon: 
         - iColor: 0
           icon: AvatarMask On Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
       goDatasByInstanceId:
-        keys: bad0000010d7000088d6000050d500004cd4000042d50000ced300002499ffff
+        keys: 18d400002ada00008ed9000078d800008ad700006ad8000014d700003ad70000e4d70000aed2000026d00000f2dfffff
         values:
         - iColor: 0
           icon: AvatarMask On Icon
@@ -63,6 +75,14 @@ MonoBehaviour:
           icon: 
         - iColor: 0
           icon: AvatarMask On Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
     - goDatasByGlobalId:
         keys: []
         values: []

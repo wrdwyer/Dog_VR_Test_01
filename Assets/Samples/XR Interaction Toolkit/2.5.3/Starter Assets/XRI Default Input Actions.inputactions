@@ -2620,7 +2620,7 @@
                     "path": "<XRController>{RightHand}/primaryButton",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
-                    "groups": "Generic XR Controller",
+                    "groups": "",
                     "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -2633,6 +2633,34 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "LeftHand Copper Sniff",
+            "id": "b9730662-4b6b-474c-bdb1-e26bff7446fa",
+            "actions": [
+                {
+                    "name": "CopperSniff",
+                    "type": "Button",
+                    "id": "89f9194a-5ed9-41f4-9797-ee8f0f6c808c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2f42bee5-88a8-497c-a98f-b17ce1bd69c5",
+                    "path": "<XRController>{LeftHand}/triggerButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CopperSniff",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

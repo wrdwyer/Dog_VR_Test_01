@@ -1,0 +1,70 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VRTemplate;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
+namespace DogVR.Actions
+    {
+    public class DigForObject : MonoBehaviour
+        {
+        [SerializeField] float dirtReductionAmount = -0.035f;
+        [SerializeField] int digsToRevealObject = 10;
+        [SerializeField] Transform digMound;
+        [SerializeField] GameObject objectToReveal;
+        [SerializeField] ParticleSystem dirtParticleSystem;
+        private int _digCount = 0;
+        private float _moundPosition;
+        private float _objectPosition;
+        private float _amountToMove;
+
+        void Start()
+            {
+            _amountToMove = dirtReductionAmount / digsToRevealObject;
+            _moundPosition = digMound.localPosition.y;
+            _objectPosition = objectToReveal.transform.localPosition.y;
+            }
+
+        private void OnTriggerEnter(Collider other)
+            {
+            if (other.CompareTag("PhysicsHand"))
+                {
+                Dig();
+                }
+            }
+
+        void Dig()
+            {
+            if (_digCount < digsToRevealObject)
+                {
+                RevealObject();
+                }
+            else
+                {
+                EnableXRcomponents();
+                }
+
+            }
+
+        // RevealObject method to reveal an object by playing a particle system, adjusting positions, and updating object visibility.
+        private void RevealObject()
+            {
+            dirtParticleSystem.Play();
+            _moundPosition += _amountToMove;
+            digMound.localPosition = new Vector3(0, _moundPosition, 0);
+            _objectPosition -= _amountToMove;
+            objectToReveal.transform.localPosition = new Vector3(0, _objectPosition, 0);
+            _digCount++;
+            }
+
+        // Enable XR components on the object to reveal.
+        private void EnableXRcomponents()
+            {
+            objectToReveal.GetComponent<XRGrabInteractable>().enabled = true;
+            objectToReveal.GetComponent<RayAttachModifier>().enabled = true;
+            objectToReveal.GetComponent<Rigidbody>().isKinematic = false;
+            }
+
+        }
+    }
