@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GeneralStates:
     LoadedProjectGUID:
-      valueInternal: 
+      valueInternal: dbeddaff17dadda43a8c99a4596083f0
     RecentlyOpenedProjectPath:
       valueInternal: Assets\_Animations\Pigeon
     RecentlyOpenedProjectGUIDsList:
+    - valueInternal: dbeddaff17dadda43a8c99a4596083f0
+    - valueInternal: 84c44032edc02544190a138d853df681
+    - valueInternal: 3d94b6663c2360349a3f5546ce5499e3
     - valueInternal: 554a72644b443c140b7ae780f81d8166
