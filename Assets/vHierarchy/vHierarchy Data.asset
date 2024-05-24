@@ -16,6 +16,7 @@ MonoBehaviour:
     keys:
     - 25cb0e2d4d92ef74f8af5acebabaec33
     - 
+    - 4ad62315b266cce488d728e4feae8880
     values:
     - goDatasByGlobalId:
         keys:
@@ -57,35 +58,72 @@ MonoBehaviour:
         - iColor: 0
           icon: StandaloneInputModule Icon
       goDatasByInstanceId:
-        keys: 18d400002ada00008ed9000078d800008ad700006ad8000014d700003ad70000e4d70000aed2000026d00000f2dfffff
-        values:
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: Rigidbody Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys: []
         values: []
       goDatasByInstanceId:
         keys: 
         values: []
+    - goDatasByGlobalId:
+        keys:
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1935399629-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-742104627-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-458124343-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-2085039294-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1644703290-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-165579791-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1709292848-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1243768564-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6409799678157659721-2133471449
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-8178555892895103855-2133471449
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-8399591428280512493-2133471449
+        values:
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 3
+          icon: 
+        - iColor: 0
+          icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 6
+          icon: 
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: BoxCollider Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+      goDatasByInstanceId:
+        keys: 961f01004cf0000022e50000522501004214010018d90000ae16010044040100e87fffffe47fffff507bffff
+        values:
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 3
+          icon: 
+        - iColor: 0
+          icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 6
+          icon: 
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: BoxCollider Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
