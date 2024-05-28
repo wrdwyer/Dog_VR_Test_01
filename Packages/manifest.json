@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.meta.xr.sdk.all": "65.0.0",
     "com.tripolygon.umodeler-x": "file:com.tripolygon.umodeler-x-0.19.7/com.tripolygon.umodeler-x-0.19.7.tgz",
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.cinemachine": "2.9.7",
@@ -18,8 +19,6 @@
     "com.unity.xr.interaction.toolkit": "2.5.4",
     "com.unity.xr.management": "4.4.1",
     "com.unity.xr.meta-openxr": "1.0.1",
-    "com.unity.xr.oculus": "4.2.0",
-    "com.unity.xr.openxr": "1.10.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

@@ -90,7 +90,7 @@ MonoBehaviour:
           icon: 
         - iColor: 3
           icon: 
-        - iColor: 0
+        - iColor: 4
           icon: 
         - iColor: 5
           icon: 
@@ -103,7 +103,7 @@ MonoBehaviour:
         - iColor: 0
           icon: StandaloneInputModule Icon
       goDatasByInstanceId:
-        keys: 961f01004cf0000022e50000522501004214010018d90000ae16010044040100e87fffffe47fffff507bffff
+        keys: 4e410100da0b010052ff00007e480100c0340100f8f100006a370100922201002cd6ffff2ad6ffff96d1ffff
         values:
         - iColor: 8
           icon: 
@@ -115,7 +115,7 @@ MonoBehaviour:
           icon: 
         - iColor: 3
           icon: 
-        - iColor: 0
+        - iColor: 4
           icon: 
         - iColor: 5
           icon: 
