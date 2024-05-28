@@ -15,10 +15,8 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638521711472638652
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
+  lastModified: 638524818691378543
+  FileSizes: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -35,13 +33,14 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 786194973082624831}
   - {fileID: -221426105785716485}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 4912780811252007295}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638521711472670221
+  cacheTime: 638524818691403760
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -58,8 +57,35 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638521711472670221
+  lastModified: 638524818691403760
   FileSizes:
-  - Name: Desktop
-    Value: 712
+  - Name: 
+    Value: 758
   Exists: 1
+--- !u!114 &4912780811252007295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/New Event
+  m_EditorClassIdentifier: 
+  Path: event:/New Event
+  Guid:
+    Data1: 748083304
+    Data2: 1279851948
+    Data3: -1873714518
+    Data4: 777596015
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2174

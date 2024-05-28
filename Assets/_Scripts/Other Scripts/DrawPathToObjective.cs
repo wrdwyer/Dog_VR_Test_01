@@ -6,6 +6,9 @@ using UnityEngine.Splines;
 using UnityEngine.Pool;
 using UnityEngine.InputSystem;
 using System;
+using Unity.VisualScripting;
+using UnityEngine.XR.Interaction.Toolkit;
+using HutongGames.PlayMaker.Actions;
 
 namespace DogVR.Actions
     {
@@ -16,9 +19,9 @@ namespace DogVR.Actions
         [SerializeField]
         [Required("Objective Required")]
         private GameObject Objective = null;
-        [SerializeField]
-        [Required("Player Required")]
-        private GameObject Player;
+        //[SerializeField]
+        //[Required("Player Required")]
+        private GameObject Player = null;
         [SerializeField]
         [Required("Controller Input Action Required")]
         public InputActionReference CopperSniffInput = null;
@@ -55,11 +58,12 @@ namespace DogVR.Actions
         [SerializeField] private int maxSize = 100;
 
         private void Awake()
-            {
+            {                    
             objectPool = new ObjectPool<Projectile>(CreateProjectile,
                 OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
                 collectionCheck, defaultCapacity, maxSize);
             Triangulation = NavMesh.CalculateTriangulation();
+            Player = GameObject.FindWithTag("Player");
             ClearSpline();
             }
 
@@ -71,6 +75,7 @@ namespace DogVR.Actions
                     {
                     if (CopperSniffInput.action.WasPressedThisFrame())
                         {
+                        ClearSpline();  
                         CallDrawNavMechPath();
                         FireProjectile();
                         }
@@ -149,8 +154,8 @@ namespace DogVR.Actions
         private void CallDrawNavMechPath()
             {
             ClearSpline();
-            GameObject playerPosition = Player;
-            DrawNaveMeshPath(playerPosition, Objective);
+            Vector3 playerPosition = new Vector3(0, 0, 0) + Player.transform.position;
+            DrawNaveMeshPath(Objective);
             }
 
         [Button("Clear Spline")]
@@ -161,6 +166,7 @@ namespace DogVR.Actions
                 spline.RemoveSplineAt(0);
                 spline.Splines = null;
                 }
+            
             }
 
         [Button("Fire Projectile")]
@@ -189,8 +195,9 @@ namespace DogVR.Actions
             }
         */
 
-        public void DrawNaveMeshPath(GameObject Player, GameObject Objective)
+        public void DrawNaveMeshPath(GameObject Objective)
             {
+            Player = GameObject.FindWithTag("Player");
             NavMeshPath path = new NavMeshPath();
             if (NavMesh.CalculatePath(Player.transform.position, Objective.transform.position, NavMesh.AllAreas, path))
                 {
@@ -202,7 +209,7 @@ namespace DogVR.Actions
                 }
             else
                 {
-                Debug.LogError($"Unable to calculate a path on the NavMesh between {Player.transform.position} and {Objective.transform.position}!");
+                Debug.LogError($"Unable to calculate a path on the NavMesh between {Player} and {Objective.transform.position}!");
                 }
             CreateSpline(path.corners);
             }
