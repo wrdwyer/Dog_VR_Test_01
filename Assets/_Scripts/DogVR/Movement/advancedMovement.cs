@@ -8,6 +8,7 @@ namespace DogVR.Movement
         {
 
         public InputActionReference jumpButton = null;
+        
         public CharacterController charController;
         public float jumpHeight;
         private float gravityValue = -9.81f;

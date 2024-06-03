@@ -1,9 +1,8 @@
-using System;
-using System.Collections;
+
 using UnityEngine;
-using UnityEngine.UI;
+
 using TMPro;
-using UnityEditor.Build;
+
 
 
 namespace Unity6Test

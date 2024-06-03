@@ -79,6 +79,9 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6409799678157659721-2133471449
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-8178555892895103855-2133471449
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-8399591428280512493-2133471449
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1571159436252377544-2133471449
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1571159435874840887-2133471449
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-4878183264634875606-2133471449
         values:
         - iColor: 8
           icon: 
@@ -101,9 +104,15 @@ MonoBehaviour:
         - iColor: 0
           icon: BoxCollider Icon
         - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 4
+          icon: StandaloneInputModule Icon
+        - iColor: 4
+          icon: StandaloneInputModule Icon
+        - iColor: 4
           icon: StandaloneInputModule Icon
       goDatasByInstanceId:
-        keys: 4e410100da0b010052ff00007e480100c0340100f8f100006a370100922201002cd6ffff2ad6ffff96d1ffff
+        keys: 50350100dcff000054f30000803c0100c2280100fae500006c2b010094160100a813ffffa613ffff120fffff8a13ffff6a11ffff0814ffff
         values:
         - iColor: 8
           icon: 
@@ -126,4 +135,10 @@ MonoBehaviour:
         - iColor: 0
           icon: BoxCollider Icon
         - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 4
+          icon: StandaloneInputModule Icon
+        - iColor: 4
+          icon: StandaloneInputModule Icon
+        - iColor: 4
           icon: StandaloneInputModule Icon

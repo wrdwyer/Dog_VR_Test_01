@@ -9,22 +9,22 @@ namespace DogVR.Movement
         {
         
         private Vector3 defaultPositionY;
-        private Transform camera;
+        private Transform _camera;
         private void Awake()
             {
-            camera = GetComponent<Transform>();
-            defaultPositionY = camera.transform.localPosition;
+            _camera = GetComponent<Transform>();
+            defaultPositionY = _camera.transform.localPosition;
             Debug.Log(defaultPositionY);
             }
             
         public void SetCameraHeightY()
             { 
-            camera.transform.localPosition = defaultPositionY;
+            _camera.transform.localPosition = defaultPositionY;
             }
 
         public void SetCameraCrouchHeightY(float crouchOffsetY)
             {
-            camera.transform.localPosition = new Vector3(0, crouchOffsetY, 0);
+            _camera.transform.localPosition = new Vector3(0, crouchOffsetY, 0);
             }
         }
     }

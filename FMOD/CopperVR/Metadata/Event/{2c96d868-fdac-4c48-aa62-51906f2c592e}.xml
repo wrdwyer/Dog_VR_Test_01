@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{2c96d868-fdac-4c48-aa62-51906f2c592e}">
 		<property name="name">
-			<value>New Event</value>
+			<value>Bark</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{0aace05a-7e63-4234-9cab-575b3c9860ac}" />
 	<object class="GroupTrack" id="{5bd4301e-8d8f-4141-9797-e15a9d979436}">
 		<relationship name="modules">
-			<destination>{9671471c-199b-4ee9-ac61-4874b9369d67}</destination>
+			<destination>{11a5e175-88c6-4a9a-af80-ba90f100bd2f}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{e849d32a-c407-4df1-8ba3-9954e7999bd5}</destination>
@@ -68,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{c4a64174-ee54-49de-aa87-a3e33921bcf5}">
 		<relationship name="modules">
-			<destination>{9671471c-199b-4ee9-ac61-4874b9369d67}</destination>
+			<destination>{11a5e175-88c6-4a9a-af80-ba90f100bd2f}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{d4af6c17-0b47-4e2d-b005-a7ea733f0227}">
@@ -88,12 +88,15 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7fd5306e-92ea-450f-9ec0-b57b7648c744}" />
-	<object class="SingleSound" id="{9671471c-199b-4ee9-ac61-4874b9369d67}">
+	<object class="SingleSound" id="{11a5e175-88c6-4a9a-af80-ba90f100bd2f}">
 		<property name="length">
-			<value>2.1747291666666668</value>
+			<value>0.69855936046113853</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.022586472872194854</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{0faac2e6-1090-457e-b90c-cec5b3f37d66}</destination>
+			<destination>{1a61c23b-591e-4fbe-9071-8fbde27f9ec5}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{e849d32a-c407-4df1-8ba3-9954e7999bd5}">
@@ -158,7 +161,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -167,7 +169,6 @@
 		<property name="name">
 			<value>Atten. Range</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -176,7 +177,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>

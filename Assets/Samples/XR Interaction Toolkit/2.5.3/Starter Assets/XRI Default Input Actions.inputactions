@@ -2611,6 +2611,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Bark",
+                    "type": "Button",
+                    "id": "3a6c9fef-ea9b-44cf-8770-28ed75d153b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -2633,6 +2642,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1af16901-b963-4333-b5a7-b63bcae913d0",
+                    "path": "<XRController>{RightHand}/triggerButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bark",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638524818691378543
+  lastModified: 638529502065869709
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -34,13 +34,13 @@ MonoBehaviour:
   - {fileID: 786194973082624831}
   - {fileID: -221426105785716485}
   EditorEvents:
-  - {fileID: 4912780811252007295}
+  - {fileID: 2710268564956372275}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638524818691403760
+  cacheTime: 638529502065890410
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -57,12 +57,12 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638524818691403760
+  lastModified: 638529502065890410
   FileSizes:
   - Name: 
-    Value: 758
+    Value: 754
   Exists: 1
---- !u!114 &4912780811252007295
+--- !u!114 &2710268564956372275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,9 +72,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/New Event
+  m_Name: event:/Bark
   m_EditorClassIdentifier: 
-  Path: event:/New Event
+  Path: event:/Bark
   Guid:
     Data1: 748083304
     Data2: 1279851948
@@ -88,4 +88,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2174
+  Length: 698
