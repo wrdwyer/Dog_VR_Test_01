@@ -2676,11 +2676,39 @@
                 {
                     "name": "",
                     "id": "2f42bee5-88a8-497c-a98f-b17ce1bd69c5",
-                    "path": "<XRController>{LeftHand}/triggerButton",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "CopperSniff",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map",
+            "id": "c28b08e3-b734-43ae-b724-3107ac1c2e63",
+            "actions": [
+                {
+                    "name": "LeftHand Display Game Options",
+                    "type": "Button",
+                    "id": "0aca219a-c0fd-4cac-9af7-fd035b53fe62",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "498e06f0-39c8-4269-bae7-9eedbc9866fb",
+                    "path": "<XRController>{LeftHand}/menu",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHand Display Game Options",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

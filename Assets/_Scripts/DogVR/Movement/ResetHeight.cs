@@ -42,7 +42,7 @@ namespace DogVR.Movement
             Debug.Log("Crouching");
             }
 
-        private void Stand()
+        public void Stand()
             {
             cameraOffset.SetCameraHeightY();
             Debug.Log("Standing");
