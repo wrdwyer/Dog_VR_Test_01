@@ -28,9 +28,6 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1761965637-0
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1445718971-0
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-1465366333-0
-        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-4592956391713993908-712532302
-        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-8189171603400248655-712532302
-        - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-3462571325970164595-712532302
         - GlobalObjectId_V1-2-25cb0e2d4d92ef74f8af5acebabaec33-2999543171182741336-1068054149
         values:
         - iColor: 0
@@ -50,16 +47,28 @@ MonoBehaviour:
         - iColor: 0
           icon: AvatarMask On Icon
         - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
           icon: StandaloneInputModule Icon
       goDatasByInstanceId:
-        keys: 
-        values: []
+        keys: dacd170030d31700a8d21700aed11700fcd01700a2d1170088d01700aed0170094baf8ff
+        values:
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Rigidbody Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Terrain Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
     - goDatasByGlobalId:
         keys: []
         values: []
@@ -77,6 +86,9 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1709292848-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1243768564-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1004764315-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-9221004895212909416-939421143
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1990426256-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-606070291-0
         values:
         - iColor: 8
           icon: 
@@ -96,8 +108,14 @@ MonoBehaviour:
           icon: 
         - iColor: 4
           icon: AvatarMask On Icon
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 
       goDatasByInstanceId:
-        keys: fa370100bafe000054f10000b43f01006e2a01001ae30000462d0100fc160100480b0100
+        keys: 9c380100fefe000086f100006c400100f82a010028e30000d02d010072170100980b010058300f00184a0e0034200e00e6540f00bcf00e0010fa0d00d2fd0e00d69e0e00b6740e004a0b13000a25120026fb1100d82f1300aecb120002d51100c4d81200c8791200a84f1200780bf9ff507cf8ff7a83f8ff
         values:
         - iColor: 8
           icon: 
@@ -117,3 +135,45 @@ MonoBehaviour:
           icon: 
         - iColor: 4
           icon: AvatarMask On Icon
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 3
+          icon: 
+        - iColor: 4
+          icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 6
+          icon: 
+        - iColor: 4
+          icon: AvatarMask On Icon
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 3
+          icon: 
+        - iColor: 4
+          icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 6
+          icon: 
+        - iColor: 4
+          icon: AvatarMask On Icon
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 

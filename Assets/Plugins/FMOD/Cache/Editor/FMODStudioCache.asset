@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4937859910785996443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dogs/German Shepart Bark
+  m_EditorClassIdentifier: 
+  Path: event:/Dogs/German Shepart Bark
+  Guid:
+    Data1: -1047513666
+    Data2: 1236482434
+    Data3: 2116555912
+    Data4: -1664094995
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 56085
+--- !u!114 &-549249575386844013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/Bark
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/Bark
+  Guid:
+    Data1: 748083304
+    Data2: 1279851948
+    Data3: -1873714518
+    Data4: 777596015
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 698
 --- !u!114 &-221426105785716485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +69,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638529502065869709
+  lastModified: 638535418045397071
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -34,13 +88,15 @@ MonoBehaviour:
   - {fileID: 786194973082624831}
   - {fileID: -221426105785716485}
   EditorEvents:
-  - {fileID: 2710268564956372275}
+  - {fileID: -549249575386844013}
+  - {fileID: -4937859910785996443}
+  - {fileID: 3416396536013109844}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638529502065890410
+  cacheTime: 638535418045417067
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -57,12 +113,12 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638529502065890410
+  lastModified: 638535418045417067
   FileSizes:
   - Name: 
-    Value: 754
+    Value: 880
   Exists: 1
---- !u!114 &2710268564956372275
+--- !u!114 &3416396536013109844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,20 +128,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Bark
+  m_Name: event:/Copper/Growl_Bark
   m_EditorClassIdentifier: 
-  Path: event:/Bark
+  Path: event:/Copper/Growl_Bark
   Guid:
-    Data1: 748083304
-    Data2: 1279851948
-    Data3: -1873714518
-    Data4: 777596015
+    Data1: 22892527
+    Data2: 1167877059
+    Data3: 683028371
+    Data4: -261198866
   Banks:
   - {fileID: -221426105785716485}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 698
+  Length: 7028

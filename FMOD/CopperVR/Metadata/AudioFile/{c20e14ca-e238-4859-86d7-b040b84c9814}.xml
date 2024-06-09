@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c20e14ca-e238-4859-86d7-b040b84c9814}">
+		<property name="assetPath">
+			<value>204773__admnaismith__growling-and-barking-dog.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>56.085333333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{66fccf0c-48f1-403e-ae75-8600b9c95c9b}</destination>
+		</relationship>
+	</object>
+</objects>

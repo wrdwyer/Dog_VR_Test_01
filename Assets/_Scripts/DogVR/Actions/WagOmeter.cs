@@ -1,11 +1,18 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using DG.Tweening;
+using FMODUnity;
+using Sirenix;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace DogVR.Actions
     {
     public class WagOmeter : MonoBehaviour
         {
+        [SerializeField]
+        XRBaseController leftController;
+        [SerializeField]
+        XRBaseController rightController;
         [SerializeField]
         private string happyAnimationParameterName = "Happy";
         [SerializeField]
@@ -14,8 +21,16 @@ namespace DogVR.Actions
         private float targetSadAnimationParameter = 0f;
         [SerializeField]
         private Animator animator;
-        public CopperEmotionalState CopperEmotionalState;       
-        private CopperEmotionalState currentState;     
+        public CopperEmotionalState CopperEmotionalState;
+        private CopperEmotionalState currentState;
+        [SerializeField]
+        private StudioEventEmitter GrowlandBark;
+        [SerializeField]
+        [Range(0f, 1f)]
+        private float bbarkIntensity = 1f;
+        [Range(0f, 10f)]
+        [SerializeField]
+        private float barkDuration = 1f;
 
         private void Awake()
             {
@@ -63,19 +78,28 @@ namespace DogVR.Actions
                 }
             }
 
+        public void SendHapticFeedback(float barkIntensity, float duration)
+            {
+            rightController.SendHapticImpulse(barkIntensity, duration);
+            leftController.SendHapticImpulse(barkIntensity, duration);
+            }
+
+
         public void Idle()
             {
+            GrowlandBark.Stop();
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = 0f;
             SetParameters();
             Debug.Log("Idle");
             }
-
+        [Button("Anxious")]
         public void Anxious()
             {
             targetHappyAnimationParameter = 1f;
             targetSadAnimationParameter = -1f;
             SetParameters();
+
             Debug.Log("Anxious");
             }
 
@@ -100,6 +124,8 @@ namespace DogVR.Actions
             targetHappyAnimationParameter = -1f;
             targetSadAnimationParameter = -1f;
             SetParameters();
+            GrowlandBark.Play();
+            SendHapticFeedback(0.2f, 5f);
             Debug.Log("Threatened");
             }
 
