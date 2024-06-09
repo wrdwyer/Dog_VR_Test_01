@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VRTemplate;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -61,9 +62,11 @@ namespace DogVR.Actions
         // Enable XR components on the object to reveal.
         private void EnableXRcomponents()
             {
+            objectToReveal.SetLayerRecursively(11);          
             objectToReveal.GetComponent<XRGrabInteractable>().enabled = true;
             objectToReveal.GetComponent<RayAttachModifier>().enabled = true;
             objectToReveal.GetComponent<Rigidbody>().isKinematic = false;
+           
             }
 
         }

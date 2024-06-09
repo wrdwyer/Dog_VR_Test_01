@@ -9,6 +9,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine.XR.Interaction.Toolkit;
 using HutongGames.PlayMaker.Actions;
+using Sirenix.Utilities;
 
 namespace DogVR.Actions
     {
@@ -19,8 +20,8 @@ namespace DogVR.Actions
         [SerializeField]
         [Required("Objective Required")]
         private GameObject Objective = null;
-        //[SerializeField]
-        //[Required("Player Required")]
+        [SerializeField]
+        [Required("Player Required")]
         private GameObject Player = null;
         [SerializeField]
         [Required("Controller Input Action Required")]
@@ -29,6 +30,8 @@ namespace DogVR.Actions
         [SerializeField]
         [Required("Projectile Required")]
         private Projectile ProjectilePrefab;
+        [SerializeField]
+        private GameObject ScentPrefab;        
         [SerializeField]
         private float projectileSpeed = 10f;
 
@@ -44,8 +47,11 @@ namespace DogVR.Actions
         [SerializeField]
         [Range(0, 120)]
         private float PathUpdateSpeed = 0.25f;
+        [SerializeField]
+        private float cooldownTime = 3.0f;
         private NavMeshTriangulation Triangulation;
         private Vector3[] pathPoints;
+        private bool hasFired = false;
 
         // stack-based ObjectPool available with Unity 2021 and above
         private IObjectPool<Projectile> objectPool;
@@ -58,12 +64,12 @@ namespace DogVR.Actions
         [SerializeField] private int maxSize = 100;
 
         private void Awake()
-            {                    
+            {
             objectPool = new ObjectPool<Projectile>(CreateProjectile,
                 OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
                 collectionCheck, defaultCapacity, maxSize);
             Triangulation = NavMesh.CalculateTriangulation();
-            Player = GameObject.FindWithTag("Player");
+            //Player = GameObject.FindWithTag("Player");
             ClearSpline();
             }
 
@@ -73,16 +79,27 @@ namespace DogVR.Actions
                 {
                 if (CopperSniffInput != null)
                     {
-                    if (CopperSniffInput.action.WasPressedThisFrame())
+                    if (hasFired == false)
                         {
-                        ClearSpline();  
-                        CallDrawNavMechPath();
-                        FireProjectile();
+                        if (CopperSniffInput.action.WasPressedThisFrame())
+                            {
+                            hasFired = true;
+                            StartCooldown();
+                            //CallDrawNavMechPath();
+                            DrawNaveMeshPath(Objective, Player);
+                            FireProjectile();
+                            //FireScent();
+                            
+                            }
                         }
                     }
                 }
             }
+
         
+
+     
+
         // invoked when creating an item to populate the object pool
         private Projectile CreateProjectile()
             {
@@ -115,10 +132,6 @@ namespace DogVR.Actions
             Destroy(pooledObject.gameObject);
             }
 
-        private void Start()
-            {
-
-            }
 
         public void DrawPath()// Use if you want to draw a path on every set number of seconds
             {
@@ -154,8 +167,9 @@ namespace DogVR.Actions
         private void CallDrawNavMechPath()
             {
             ClearSpline();
-            Vector3 playerPosition = new Vector3(0, 0, 0) + Player.transform.position;
-            DrawNaveMeshPath(Objective);
+            //Player = GameObject.FindWithTag("Player");
+            //Vector3 playerPosition = new Vector3(0, 0, 0) + Player.transform.position;
+            DrawNaveMeshPath(Objective, Player);
             }
 
         [Button("Clear Spline")]
@@ -165,8 +179,10 @@ namespace DogVR.Actions
                 {
                 spline.RemoveSplineAt(0);
                 spline.Splines = null;
+                //Player = null;
+                Debug.Log("Cleared Spline");
                 }
-            
+
             }
 
         [Button("Fire Projectile")]
@@ -178,8 +194,41 @@ namespace DogVR.Actions
             if (bulletObject != null)
                 {
                 StartCoroutine(bulletObject.FireProjectileOnce(bulletObject));
+                Debug.Log("Fired Projectile");
+                ClearSpline();
                 }
             }
+        [Button("Fire Scent")]
+        private void FireScent()
+            {
+            if (ScentPrefab != null)
+                {
+                ScentPrefab.transform.position = Player.transform.position;
+                ScentPrefab.SetActive(true);
+                //SniffProjectile sniffProjectile = ScentPrefab.GetComponent<SniffProjectile>();
+                //StartCoroutine(sniffProjectile.FireSnifffOnce());
+                StartCooldown();
+                ScentPrefab.SetActive(false);
+                Debug.Log("Fired Scent");
+                }
+            }
+
+        public void StartCooldown()
+            {
+            hasFired = true;
+            if (hasFired)
+                {
+                Debug.Log("Start Cooldown");
+                StartCoroutine(Cooldown());
+                }
+            }
+
+        private IEnumerator Cooldown()
+            {
+            yield return new WaitForSeconds(cooldownTime);
+            hasFired = false;
+            }
+
 
         /*
          * private IEnumerator FireProjectileOnce(Projectile bulletObject)
@@ -195,23 +244,33 @@ namespace DogVR.Actions
             }
         */
 
-        public void DrawNaveMeshPath(GameObject Objective)
+        public void DrawNaveMeshPath(GameObject Objective, GameObject Player)
             {
-            Player = GameObject.FindWithTag("Player");
-            NavMeshPath path = new NavMeshPath();
-            if (NavMesh.CalculatePath(Player.transform.position, Objective.transform.position, NavMesh.AllAreas, path))
+            //Player = null;
+            //Player = GameObject.FindWithTag("Player");
+            if (Player != null)
                 {
-                Path.positionCount = path.corners.Length;
-                for (int i = 0; i < path.corners.Length; i++)
+                Vector3 playerPosition = new Vector3(0, 0, 0) + Player.transform.position;
+                NavMeshPath path = new NavMeshPath();
+                if (NavMesh.CalculatePath(playerPosition, Objective.transform.position, NavMesh.AllAreas, path))
                     {
-                    Path.SetPosition(i, path.corners[i] + Vector3.up * PathHeightOffset);
+                    Path.positionCount = path.corners.Length;
+                    for (int i = 0; i < path.corners.Length; i++)
+                        {
+                        Path.SetPosition(i, path.corners[i] + Vector3.up * PathHeightOffset);
+                        Debug.Log(path.corners[i] + Vector3.up * PathHeightOffset);
+                        }
                     }
+                else
+                    {
+                    Debug.LogError($"Unable to calculate a path on the NavMesh between {Player} and {Objective.transform.position}!");
+                    }
+                CreateSpline(path.corners);
                 }
             else
                 {
-                Debug.LogError($"Unable to calculate a path on the NavMesh between {Player} and {Objective.transform.position}!");
+                Debug.LogError("Player not found");
                 }
-            CreateSpline(path.corners);
             }
 
         //https://www.youtube.com/watch?v=4h4tiUzqwq8&t=68s

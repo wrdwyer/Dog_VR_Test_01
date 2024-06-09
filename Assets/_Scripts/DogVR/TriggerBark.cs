@@ -7,8 +7,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using FMODUnity;
-using Interhaptics.Core;
-using Interhaptics;
+//using Interhaptics.Core;
+//using Interhaptics;
 
 namespace DogVR.Actions
     {
@@ -19,18 +19,18 @@ namespace DogVR.Actions
         public InputActionReference hapticInput = null;
         public XRBaseController controller;
         public StudioEventEmitter audioEmitter;
-        public HapticMaterial myHapticMaterial; // Assign this in the Unity Inspector
+        //public HapticMaterial myHapticMaterial; // Assign this in the Unity Inspector
 
         private bool barking = false;
-      
+
 
         [Range(0, 2.5f)]
         public float duration;
         [Range(0, 1)]
         public float amplitude;
-       // [Range(0, 1)]
-       // public float frequency;
-        
+        // [Range(0, 1)]
+        // public float frequency;
+
 
         //public GrabInteractable grabInteractable;
         //private HapticClipPlayer clipPlayer;
@@ -38,17 +38,17 @@ namespace DogVR.Actions
         // Start is called before the first frame update
         private void Awake()
             {
-            if (HAR.Init())
+            /*if (HAR.Init())
                 {
                 Debug.Log("Haptic initialized");
-                }
+                }*/
             controller = GetComponent<XRBaseController>();
             }
 
         void Start()
             {
             //clipPlayer = new HapticClipPlayer(hapticClip);
-            
+
             //grabInteractable.WhenSelectingInteractorAdded.Action += WhenSelectingInteractorAdded_Action;
             }
 
@@ -58,9 +58,9 @@ namespace DogVR.Actions
             {
             bool barkPressed = barkInput.action.IsPressed();
             bool barkReleased = barkInput.action.WasReleasedThisFrame();
-            
 
-          
+
+
             if (barkPressed && !barking)
                 {
                 Bark();
@@ -69,27 +69,25 @@ namespace DogVR.Actions
             if (barkReleased)
                 {
                 barking = false;
-                
+
                 }
             }
 
 
         public void Bark()
             {
-            if (myHapticMaterial)
-                {
-                Debug.Log("Bark!");
-                PlayMyHapticEffect();
-                audioEmitter.Play();
-                //controller.SendHapticImpulse(amplitude, duration);
-                
-                //clipPlayer.Play();
-                }
+
+            Debug.Log("Bark!");
+            PlayMyHapticEffect();
+            audioEmitter.Play();
+            //controller.SendHapticImpulse(amplitude, duration);
+
+            //clipPlayer.Play();
             }
 
         void PlayMyHapticEffect()
             {
-            if (myHapticMaterial != null)
+            /*if (myHapticMaterial != null)
                 {
                 HAR.PlayHapticEffect(myHapticMaterial);
                 Debug.Log("Haptic effect played successfully!");
@@ -99,7 +97,7 @@ namespace DogVR.Actions
                 Debug.LogError("Haptic material is not assigned!");
                 }
             }
-        /*private void WhenSelectingInteractorAdded_Action(GrabInteractor obj)
+        private void WhenSelectingInteractorAdded_Action(GrabInteractor obj)
             {
             ControllerRef controllerRef = obj.GetComponent<ControllerRef>();
             if (controllerRef)
@@ -136,5 +134,6 @@ namespace DogVR.Actions
             OVRInput.SetControllerVibration(0, 0, controller);
             }
         */
+            }
         }
     }

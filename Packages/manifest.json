@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.interhaptics.core_sdk": "file:C:/Users/wayne/Downloads/Unity_CoreSDK-master/Unity_CoreSDK-master",
     "com.meta.xr.sdk.core": "65.0.0",
     "com.meta.xr.sdk.interaction": "65.0.0",
     "com.tripolygon.umodeler-x": "file:com.tripolygon.umodeler-x-0.19.17/com.tripolygon.umodeler-x-0.19.17.tgz",

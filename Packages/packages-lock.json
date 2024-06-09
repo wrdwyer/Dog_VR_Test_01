@@ -7,12 +7,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.interhaptics.core_sdk": {
-      "version": "file:C:/Users/wayne/Downloads/Unity_CoreSDK-master/Unity_CoreSDK-master",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.meta.xr.sdk.core": {
       "version": "65.0.0",
       "depth": 0,

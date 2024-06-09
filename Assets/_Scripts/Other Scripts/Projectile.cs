@@ -6,7 +6,7 @@ using UnityEngine.Splines;
 public class Projectile : MonoBehaviour
     {
     // deactivate after delay
-    [SerializeField] private float timeoutDelay = 3f;
+    [SerializeField] private float timeoutDelay = 5f;
 
     private IObjectPool<Projectile> objectPool;
 
@@ -32,6 +32,8 @@ public class Projectile : MonoBehaviour
         */
         // release the projectile back to the pool
         yield return new WaitForSeconds(5f);
+        bulletObject.GetComponent<ParticleSystem>().Stop(); 
+        
         objectPool.Release(bulletObject);
 
         

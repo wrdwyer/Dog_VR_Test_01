@@ -31,7 +31,6 @@ Material:
   - _MK_ENVIRONMENT_REFLECTIONS_ADVANCED
   - _MK_LIGHT_CEL
   - _MK_LIGHT_TRANSMISSION_TRANSLUCENT
-  - _MK_OUTLINE_DATA_UV7
   - _MK_RECEIVE_SHADOWS
   - _MK_WRAPPED_DIFFUSE
   m_InvalidKeywords:
@@ -284,7 +283,7 @@ Material:
     - _OcclusionStrength: 1
     - _OptionsTab: 1
     - _Outline: 1
-    - _OutlineData: 1
+    - _OutlineData: 0
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
     - _OutlineNoise: 0

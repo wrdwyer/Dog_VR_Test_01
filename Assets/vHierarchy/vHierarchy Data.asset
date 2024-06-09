@@ -76,12 +76,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-165579791-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1709292848-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1243768564-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6409799678157659721-2133471449
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-8178555892895103855-2133471449
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-8399591428280512493-2133471449
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1571159436252377544-2133471449
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1571159435874840887-2133471449
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-4878183264634875606-2133471449
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1004764315-0
         values:
         - iColor: 8
           icon: 
@@ -99,20 +94,10 @@ MonoBehaviour:
           icon: 
         - iColor: 6
           icon: 
-        - iColor: 0
-          icon: StandaloneInputModule Icon
-        - iColor: 0
-          icon: BoxCollider Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
         - iColor: 4
-          icon: StandaloneInputModule Icon
-        - iColor: 4
-          icon: StandaloneInputModule Icon
-        - iColor: 4
-          icon: StandaloneInputModule Icon
+          icon: AvatarMask On Icon
       goDatasByInstanceId:
-        keys: 50350100dcff000054f30000803c0100c2280100fae500006c2b010094160100a813ffffa613ffff120fffff8a13ffff6a11ffff0814ffff
+        keys: fa370100bafe000054f10000b43f01006e2a01001ae30000462d0100fc160100480b0100
         values:
         - iColor: 8
           icon: 
@@ -130,15 +115,5 @@ MonoBehaviour:
           icon: 
         - iColor: 6
           icon: 
-        - iColor: 0
-          icon: StandaloneInputModule Icon
-        - iColor: 0
-          icon: BoxCollider Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
         - iColor: 4
-          icon: StandaloneInputModule Icon
-        - iColor: 4
-          icon: StandaloneInputModule Icon
-        - iColor: 4
-          icon: StandaloneInputModule Icon
+          icon: AvatarMask On Icon
