@@ -5,10 +5,14 @@
         "Unity.InputSystem",
         "Unity.Mathematics",
         "Unity.XR.CoreUtils",
-        "Unity.XR.Interaction.Toolkit"
+        "Unity.XR.Interaction.Toolkit",
+        "FMODUnity"
     ],
     "includePlatforms": [],
-    "excludePlatforms": [],
+    "excludePlatforms": [
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],

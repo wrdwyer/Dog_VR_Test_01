@@ -35,3 +35,5 @@ MonoBehaviour:
   - DOG/CROUCH
   - DOG/STAND
   - DOG/JUMP
+  - PLAY ANIMATION
+  - ANMIN / SEE_SAW_START

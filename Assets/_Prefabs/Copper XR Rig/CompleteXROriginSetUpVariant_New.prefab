@@ -5470,7 +5470,9 @@ MonoBehaviour:
   sadAnimationParameterName: Sad
   animator: {fileID: 2404344146279090514}
   CopperEmotionalState: {fileID: 11400000, guid: c91f163effd5a5d4bbe48cfb9e0bb947, type: 2}
-  GrowlandBark: {fileID: 5244197526714900557}
+  growlandBark: {fileID: 0}
+  sadBark: {fileID: 0}
+  happyBark: {fileID: 0}
   bbarkIntensity: 1
   barkDuration: 2.27
 --- !u!114 &8317171927185812580
@@ -6673,7 +6675,7 @@ PrefabInstance:
       objectReference: {fileID: 1590753005090002908}
     - target: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       propertyPath: m_Name
-      value: CompleteXROriginSetUpVariant_Preb
+      value: CompleteXROriginSetUpVariant_New
       objectReference: {fileID: 0}
     - target: {fileID: 7313654230448209575, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       propertyPath: m_IsActive

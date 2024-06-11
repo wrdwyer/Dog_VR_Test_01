@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.UI;
-
+using FMODUnity;
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
     /// <summary>
@@ -12,7 +12,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
     [AddComponentMenu("XR/Action Based Controller Manager")]
     [DefaultExecutionOrder(k_UpdateOrder)]
     public class ActionBasedControllerManager : MonoBehaviour
-    {
+        {
         /// <summary>
         /// Order when instances of type <see cref="ActionBasedControllerManager"/> are updated.
         /// </summary>
@@ -75,7 +75,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [SerializeField]
         [Tooltip("If true, continuous movement will be enabled. If false, teleport will enabled.")]
         bool m_SmoothMotionEnabled;
-        
+
         [SerializeField]
         [Tooltip("If true, continuous turn will be enabled. If false, snap turn will be enabled. Note: If smooth motion is enabled and enable strafe is enabled on the continuous move provider, turn will be overriden in favor of strafe.")]
         bool m_SmoothTurnEnabled;
@@ -87,12 +87,21 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("If true, UI scrolling will be enabled.")]
         bool m_UIScrollingEnabled;
 
+
+        [Space]
+        [Header("FMOD Event Emitters")]
+        [SerializeField]
+        private FMODUnity.StudioEventEmitter m_StudioEventEmitter;
+        
         [Space]
         [Header("Mediation Events")]
         [SerializeField]
         [Tooltip("Event fired when the active ray interactor changes between interaction and teleport.")]
+        
+
         UnityEvent<IXRRayProvider> m_RayInteractorChanged;
 
+        
         public bool smoothMotionEnabled
         {
             get => m_SmoothMotionEnabled;
@@ -190,6 +199,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
         void TeardownInteractorEvents()
         {
+            
             if (m_RayInteractor != null)
             {
                 m_RayInteractor.selectEntered.RemoveListener(OnRaySelectEntered);
@@ -241,6 +251,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 m_TeleportInteractor.gameObject.SetActive(true);
 
             if (m_RayInteractor != null)
+                
                 m_RayInteractor.gameObject.SetActive(false);
 
             m_RayInteractorChanged?.Invoke(m_TeleportInteractor);
@@ -252,6 +263,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             // We delay turning off the teleport interactor in this callback so that
             // the teleport interactor has a chance to complete the teleport if needed.
             // OnAfterInteractionEvents will handle deactivating its GameObject.
+            
             m_PostponedDeactivateTeleport = true;
 
             if (m_RayInteractor != null)
@@ -418,7 +430,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 {
                     if (m_TeleportInteractor != null)
                         m_TeleportInteractor.gameObject.SetActive(false);
-
+                    //FMOD Studio event Play
+                    m_StudioEventEmitter.Play();
                     m_PostponedDeactivateTeleport = false;
                 }
             }

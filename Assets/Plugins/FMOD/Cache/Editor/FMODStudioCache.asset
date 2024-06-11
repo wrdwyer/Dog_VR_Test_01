@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5382874113046678404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/See_Saw_Finish
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/See_Saw_Finish
+  Guid:
+    Data1: -288478593
+    Data2: 1083397446
+    Data3: -1064770885
+    Data4: 904080300
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 290
+--- !u!114 &-5180339609475235499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/See_Saw_Start
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/See_Saw_Start
+  Guid:
+    Data1: -1726677992
+    Data2: 1147047151
+    Data3: -1177264475
+    Data4: -2046992298
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 280
 --- !u!114 &-4937859910785996443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +123,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638535418045397071
+  lastModified: 638537039667648849
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -91,12 +145,16 @@ MonoBehaviour:
   - {fileID: -549249575386844013}
   - {fileID: -4937859910785996443}
   - {fileID: 3416396536013109844}
+  - {fileID: 3977738914078244262}
+  - {fileID: 2877241895499576319}
+  - {fileID: -5180339609475235499}
+  - {fileID: -5382874113046678404}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638535418045417067
+  cacheTime: 638537039667673878
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -113,11 +171,38 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638535418045417067
+  lastModified: 638537039667673878
   FileSizes:
   - Name: 
-    Value: 880
+    Value: 1064
   Exists: 1
+--- !u!114 &2877241895499576319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enviroment/City
+  m_EditorClassIdentifier: 
+  Path: event:/Enviroment/City
+  Guid:
+    Data1: 2026951035
+    Data2: 1127226898
+    Data3: -1937477448
+    Data4: 1828662246
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 180000
 --- !u!114 &3416396536013109844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +230,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7028
+--- !u!114 &3977738914078244262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/Crying
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/Crying
+  Guid:
+    Data1: 1006818296
+    Data2: 1127182083
+    Data3: -55798348
+    Data4: 345028963
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42111

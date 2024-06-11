@@ -24,7 +24,11 @@ namespace DogVR.Actions
         public CopperEmotionalState CopperEmotionalState;
         private CopperEmotionalState currentState;
         [SerializeField]
-        private StudioEventEmitter GrowlandBark;
+        private StudioEventEmitter growlandBark;
+        [SerializeField]
+        private StudioEventEmitter sadBark;
+        [SerializeField]
+        private StudioEventEmitter happyBark;
         [SerializeField]
         [Range(0f, 1f)]
         private float bbarkIntensity = 1f;
@@ -87,19 +91,23 @@ namespace DogVR.Actions
 
         public void Idle()
             {
-            GrowlandBark.Stop();
+            if (growlandBark.IsPlaying()) growlandBark.Stop();
+            if (sadBark.IsPlaying()) sadBark.Stop();
+            if (happyBark.IsPlaying()) happyBark.Stop();
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = 0f;
             SetParameters();
             Debug.Log("Idle");
             }
+
         [Button("Anxious")]
         public void Anxious()
             {
             targetHappyAnimationParameter = 1f;
             targetSadAnimationParameter = -1f;
             SetParameters();
-
+            SendHapticFeedback(0.2f, 5f);
+            sadBark.Play();
             Debug.Log("Anxious");
             }
 
@@ -108,6 +116,8 @@ namespace DogVR.Actions
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = 1f;
             SetParameters();
+            SendHapticFeedback(0.2f, 5f);
+            happyBark.Play();
             Debug.Log("Happy");
             }
 
@@ -124,7 +134,7 @@ namespace DogVR.Actions
             targetHappyAnimationParameter = -1f;
             targetSadAnimationParameter = -1f;
             SetParameters();
-            GrowlandBark.Play();
+            growlandBark.Play();
             SendHapticFeedback(0.2f, 5f);
             Debug.Log("Threatened");
             }
