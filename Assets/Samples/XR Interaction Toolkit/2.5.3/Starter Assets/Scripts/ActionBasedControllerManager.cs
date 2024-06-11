@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.UI;
-using FMODUnity;
+
 namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 {
     /// <summary>
@@ -88,11 +88,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         bool m_UIScrollingEnabled;
 
 
-        [Space]
-        [Header("FMOD Event Emitters")]
-        [SerializeField]
-        private FMODUnity.StudioEventEmitter m_StudioEventEmitter;
-        
         [Space]
         [Header("Mediation Events")]
         [SerializeField]
@@ -349,7 +344,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         protected void OnDisable()
         {
             TeardownInteractorEvents();
-
+            Debug.Log("OnDisable");
             StopCoroutine(m_AfterInteractionEventsRoutine);
         }
 
@@ -425,13 +420,14 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
                 // Yield so this coroutine is resumed after the teleport interactor
                 // has a chance to process its select interaction event during Update.
                 yield return null;
+                //FMOD Studio event Play
+               
 
                 if (m_PostponedDeactivateTeleport)
                 {
                     if (m_TeleportInteractor != null)
                         m_TeleportInteractor.gameObject.SetActive(false);
-                    //FMOD Studio event Play
-                    m_StudioEventEmitter.Play();
+                  
                     m_PostponedDeactivateTeleport = false;
                 }
             }

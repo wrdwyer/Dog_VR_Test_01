@@ -81,6 +81,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 56085
+--- !u!114 &-3305581052703059019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/Teleport
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/Teleport
+  Guid:
+    Data1: -640861984
+    Data2: 1202561153
+    Data3: 2613692
+    Data4: -1917154611
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 147
 --- !u!114 &-549249575386844013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +150,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638537039667648849
+  lastModified: 638537162580019187
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -149,12 +176,13 @@ MonoBehaviour:
   - {fileID: 2877241895499576319}
   - {fileID: -5180339609475235499}
   - {fileID: -5382874113046678404}
+  - {fileID: -3305581052703059019}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638537039667673878
+  cacheTime: 638537162580048075
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -171,10 +199,10 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638537039667673878
+  lastModified: 638537162580048075
   FileSizes:
   - Name: 
-    Value: 1064
+    Value: 1104
   Exists: 1
 --- !u!114 &2877241895499576319
 MonoBehaviour:
