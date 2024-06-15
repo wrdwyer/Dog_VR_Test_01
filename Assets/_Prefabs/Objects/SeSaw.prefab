@@ -1,52 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1071219727167151283
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3661627616316922712}
-  - component: {fileID: 6453473910075310610}
-  m_Layer: 0
-  m_Name: NameContainer(EditorOnly)
-  m_TagString: EditorOnly
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3661627616316922712
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071219727167151283}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8033057553349447942}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6453473910075310610
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071219727167151283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190d9e9918d0aaf48a103a2bb6995059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameOverride: FMOD See Saw Start
-  tooltipOverride: 
-  target: {fileID: 712158068122556254}
 --- !u!1 &1472486203530203858
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2777069662343359181}
   - component: {fileID: 1941027553846311307}
+  - component: {fileID: 6384984741542143988}
+  - component: {fileID: 5652297788116552580}
   m_Layer: 0
-  m_Name: Collider 1
+  m_Name: Collider Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,6 +55,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 0.37, z: 0.64}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6384984741542143988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472486203530203858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce30674f3e460a4db2ac6dc366ed780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundEffect: {fileID: 5652297788116552580}
+  BoxColliderToEndable: {fileID: 2936628602662702943}
+  animator: {fileID: 1619426698195095144}
+  AnimationName: See_Saw_Start
+--- !u!114 &5652297788116552580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472486203530203858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1726677992
+      Data2: 1147047151
+      Data3: -1177264475
+      Data4: -2046992298
+    Path: event:/Objects/See_Saw_Start
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 0
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2368774979322384563
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,8 +116,6 @@ GameObject:
   - component: {fileID: 5125938870634846186}
   - component: {fileID: 5209327930960254920}
   - component: {fileID: 8929458927653500613}
-  - component: {fileID: 712158068122556254}
-  - component: {fileID: 5182917386275910081}
   m_Layer: 0
   m_Name: Plank
   m_TagString: Untagged
@@ -138,8 +138,6 @@ Transform:
   m_Children:
   - {fileID: 2777069662343359181}
   - {fileID: 4269970792570355794}
-  - {fileID: 3661627616316922712}
-  - {fileID: 4892221232011094518}
   m_Father: {fileID: 1660838100690448784}
   m_LocalEulerAnglesHint: {x: -31, y: 0, z: 0}
 --- !u!33 &8865393541984972334
@@ -241,7 +239,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2368774979322384563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: 
@@ -382,8 +380,8 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          typeName: FMODUnity.StudioEventEmitter
-          value: {fileID: 712158068122556254}
+          typeName: UnityEngine.Component
+          value: {fileID: 0}
         fsmVarParams:
         - variableName: 
           objectType: 
@@ -1095,7 +1093,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           typeName: FMODUnity.StudioEventEmitter
-          value: {fileID: 5182917386275910081}
+          value: {fileID: 0}
         fsmVarParams:
         - variableName: 
           objectType: 
@@ -1578,68 +1576,6 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 0
---- !u!114 &712158068122556254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2368774979322384563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1726677992
-      Data2: 1147047151
-      Data3: -1177264475
-      Data4: -2046992298
-    Path: event:/Objects/See_Saw_Start
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &5182917386275910081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2368774979322384563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -288478593
-      Data2: 1083397446
-      Data3: -1064770885
-      Data4: 904080300
-    Path: event:/Objects/See_Saw_Finish
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &2788835707578779893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,8 +1691,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4269970792570355794}
   - component: {fileID: 2936628602662702943}
+  - component: {fileID: 1829341332018488288}
+  - component: {fileID: 155554124487880076}
   m_Layer: 0
-  m_Name: Collider 2
+  m_Name: Collider Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,6 +1736,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 0.37, z: 0.64}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1829341332018488288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4696610532903982991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -288478593
+      Data2: 1083397446
+      Data3: -1064770885
+      Data4: 904080300
+    Path: event:/Objects/See_Saw_Finish
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &155554124487880076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4696610532903982991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce30674f3e460a4db2ac6dc366ed780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundEffect: {fileID: 1829341332018488288}
+  BoxColliderToEndable: {fileID: 1941027553846311307}
+  animator: {fileID: 1619426698195095144}
+  AnimationName: See_Saw_Finish
 --- !u!1 &7612937524509066463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,50 +1816,3 @@ Transform:
   - {fileID: 1689741100506576042}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &9086797537365070071
-GameObject:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4892221232011094518}
-  - component: {fileID: 8090184187920490736}
-  m_Layer: 0
-  m_Name: NameContainer(EditorOnly)
-  m_TagString: EditorOnly
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4892221232011094518
-Transform:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9086797537365070071}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8033057553349447942}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8090184187920490736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9086797537365070071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190d9e9918d0aaf48a103a2bb6995059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameOverride: FMOD See Saw Finish
-  tooltipOverride: 
-  target: {fileID: 5182917386275910081}

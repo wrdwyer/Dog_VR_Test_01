@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: VROptionsSO
   m_EditorClassIdentifier: 
   enableDogVision: 1
-  enableVignette: 0
+  enableVignette: 1
   snapTurn: 0

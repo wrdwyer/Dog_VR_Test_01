@@ -63,7 +63,6 @@ MonoBehaviour:
   m_SmoothMotionEnabled: 1
   m_SmoothTurnEnabled: 0
   m_UIScrollingEnabled: 1
-  m_StudioEventEmitter: {fileID: 0}
   m_RayInteractorChanged:
     m_PersistentCalls:
       m_Calls:
@@ -391,7 +390,6 @@ MonoBehaviour:
   m_SmoothMotionEnabled: 0
   m_SmoothTurnEnabled: 0
   m_UIScrollingEnabled: 1
-  m_StudioEventEmitter: {fileID: 0}
   m_RayInteractorChanged:
     m_PersistentCalls:
       m_Calls:

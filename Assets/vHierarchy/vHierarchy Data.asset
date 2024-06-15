@@ -49,26 +49,8 @@ MonoBehaviour:
         - iColor: 0
           icon: StandaloneInputModule Icon
       goDatasByInstanceId:
-        keys: dacd170030d31700a8d21700aed11700fcd01700a2d1170088d01700aed0170094baf8ff
-        values:
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: Rigidbody Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: Terrain Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys: []
         values: []
@@ -89,6 +71,8 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-9221004895212909416-939421143
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1990426256-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-606070291-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1531122929-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6830472379596001492-3793072167924432585
         values:
         - iColor: 8
           icon: 
@@ -113,9 +97,13 @@ MonoBehaviour:
         - iColor: 8
           icon: 
         - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 4
           icon: 
       goDatasByInstanceId:
-        keys: 9c380100fefe000086f100006c400100f82a010028e30000d02d010072170100980b010058300f00184a0e0034200e00e6540f00bcf00e0010fa0d00d2fd0e00d69e0e00b6740e004a0b13000a25120026fb1100d82f1300aecb120002d51100c4d81200c8791200a84f1200780bf9ff507cf8ff7a83f8ff
+        keys: fa39010050ff00009ef1000008420100ec2b010020e30000c82e01002e180100300c0100b083ffff223d0100b0f800003a26010028e7feff
         values:
         - iColor: 8
           icon: 
@@ -137,43 +125,11 @@ MonoBehaviour:
           icon: AvatarMask On Icon
         - iColor: 8
           icon: 
-        - iColor: 9
+        - iColor: 8
           icon: 
-        - iColor: 2
-          icon: 
-        - iColor: 1
-          icon: 
-        - iColor: 3
-          icon: 
-        - iColor: 4
-          icon: 
-        - iColor: 5
-          icon: 
-        - iColor: 6
-          icon: 
-        - iColor: 4
-          icon: AvatarMask On Icon
         - iColor: 8
           icon: 
         - iColor: 9
           icon: 
-        - iColor: 2
-          icon: 
-        - iColor: 1
-          icon: 
-        - iColor: 3
-          icon: 
         - iColor: 4
-          icon: 
-        - iColor: 5
-          icon: 
-        - iColor: 6
-          icon: 
-        - iColor: 4
-          icon: AvatarMask On Icon
-        - iColor: 8
-          icon: 
-        - iColor: 8
-          icon: 
-        - iColor: 8
           icon: 

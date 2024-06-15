@@ -2687,7 +2687,7 @@
             ]
         },
         {
-            "name": "New action map",
+            "name": "DisplayGameOptions",
             "id": "c28b08e3-b734-43ae-b724-3107ac1c2e63",
             "actions": [
                 {

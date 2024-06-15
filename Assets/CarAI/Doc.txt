@@ -1,0 +1,47 @@
+Tutorial
+
+--------------------
+How to setup the car
+--------------------
+
+Make sure your car wheels are separate from the car game model.
+Create a rigid body for the car. Make sure the mass is set high (ex: 1000).
+Create the wheel colliders for your car wheels. If you don't know how to do this watch a tutorial on youtube on how to create a car in unity.
+Go to Window -> CarAI -> Setup car
+Drag the car from your scene in the car model field.
+Drag all the wheel transforms and the wheel colliders.
+You can leave acceleration and breaking thresholds to default.
+Add a speed limit to the car (ex: 50). This speed limit will be changed by the checkpoints. The speed is measured in km/h.
+Create an empty object and make sure it is a child of the car game object. Place it at the front of the car in the middle and make sure it is placed outside of the car hitbox
+but close to it. This empty game object will be used by the ai to detect objects in front of the car and will stop. It ignores triggers.
+Drag the empty game object int the check position field.
+Press apply.
+
+-------------------------
+How to create checkpoints
+-------------------------
+Go to Window -> CarAI -> Spawn checkpoints
+Add a checkpoint speed limit. This speed limit will be applied to the car when it enters the checkpoint.
+Add the checkpoint scale. The checkpoints are cubes and you need to set it's scale. (ex: 2, 2, 2)
+Press spawn checkpoint.
+
+If you press it again and another checkpoint is selected, a new checkpoint will spawn in the front of that checkpoint. 
+If you have Gizmos visiblity on, you will see a red line that connects them. This means that the checkpoints are connected and when the car hits the first checkpoint, 
+it will be redirected to the other checkpoint. 
+You can connect them manually if you click on the checkpoint and you add another element to the other checkpoints list. You can create
+multiple connections to or from a checkpoint and the car will choose one randomly. This is esential for creating an intersection.
+
+NOTE: If you want the car to go uphill make sure to place checkpoints with wide distances between them, otherwise the car will detect the ground and will slow down.
+
+-----------------------------
+How to create an intersection
+-----------------------------
+Go to Window -> CarAI -> Create intersection
+Add the number of stops. This is basically the number of road connections your intersection haves.
+Press spawn intersection.
+Place your stops according to your intersection.
+                                                                                    | 
+For example, if you add three stops that means your intersection looks like this: __|__ . The stops indicate the ai if it can continue driving or stop.
+You can change the amount of time (in seconds) that the light stays green.
+
+
