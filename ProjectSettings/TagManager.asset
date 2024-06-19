@@ -8,6 +8,7 @@ TagManager:
   - PhysicsHand
   - Object
   - HerdChild
+  - Truck
   layers:
   - Default
   - TransparentFX

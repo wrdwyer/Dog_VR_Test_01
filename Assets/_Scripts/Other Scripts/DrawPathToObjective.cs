@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using Sirenix.OdinInspector;
@@ -18,15 +18,12 @@ namespace DogVR.Actions
     public class DrawPathToObjective : MonoBehaviour
         {
         [SerializeField]
-        [Required("Objective Required")]
         private GameObject Objective = null;
         [SerializeField]
-        [Required("Player Required")]
-        private GameObject Player = null;
+        private GameObject player = null;
         [SerializeField]
         [Required("Controller Input Action Required")]
         public InputActionReference CopperSniffInput = null;
-
         [SerializeField]
         [Required("Projectile Required")]
         private Projectile ProjectilePrefab;
@@ -34,7 +31,6 @@ namespace DogVR.Actions
         private GameObject ScentPrefab;        
         [SerializeField]
         private float projectileSpeed = 10f;
-
         [SerializeField]
         [Required("Line Renderer Required")]
         private LineRenderer Path;
@@ -65,12 +61,17 @@ namespace DogVR.Actions
 
         private void Awake()
             {
+
             objectPool = new ObjectPool<Projectile>(CreateProjectile,
                 OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
                 collectionCheck, defaultCapacity, maxSize);
-            Triangulation = NavMesh.CalculateTriangulation();
-            //Player = GameObject.FindWithTag("Player");
+            Triangulation = NavMesh.CalculateTriangulation();            
             ClearSpline();
+            }
+        private void Start()
+            {
+            player = GameManager.Instance.playerGameObjectSO.persistentObject;
+            //player = GameObject.FindWithTag("Player");
             }
 
         private void Update()
@@ -86,7 +87,7 @@ namespace DogVR.Actions
                             hasFired = true;
                             StartCooldown();
                             //CallDrawNavMechPath();
-                            DrawNaveMeshPath(Objective, Player);
+                            DrawNaveMeshPath(Objective, player);
                             FireProjectile();
                             //FireScent();
                             
@@ -95,8 +96,11 @@ namespace DogVR.Actions
                     }
                 }
             }
-
-        
+        [Button("Get Objective")]
+        public void GetCurrentObjective (GameObject game)
+            {
+            Objective = GameManager.Instance.CurrentObjective;
+            }
 
      
 
@@ -112,7 +116,7 @@ namespace DogVR.Actions
         private void OnGetFromPool(Projectile pooledObject)
             {
             pooledObject.GetComponent<SplineAnimate>().Container = GetComponent<SplineContainer>();
-            pooledObject.transform.position = Player.transform.position;
+            pooledObject.transform.position = player.transform.position;
             pooledObject.GetComponent<SplineAnimate>().Restart(true);
             pooledObject.gameObject.SetActive(true);
             }
@@ -122,7 +126,7 @@ namespace DogVR.Actions
             {
             pooledObject.gameObject.SetActive(false);
             //reset the projectile
-            pooledObject.transform.position = Player.transform.position;
+            pooledObject.transform.position = player.transform.position;
             pooledObject.transform.rotation = Quaternion.identity;
             }
 
@@ -146,7 +150,7 @@ namespace DogVR.Actions
 
             while (Objective != null)
                 {
-                if (NavMesh.CalculatePath(Player.transform.position, Objective.transform.position, NavMesh.AllAreas, path))
+                if (NavMesh.CalculatePath(player.transform.position, Objective.transform.position, NavMesh.AllAreas, path))
                     {
                     Path.positionCount = path.corners.Length;
                     for (int i = 0; i < path.corners.Length; i++)
@@ -156,7 +160,7 @@ namespace DogVR.Actions
                     }
                 else
                     {
-                    Debug.LogError($"Unable to calculate a path on the NavMesh between {Player.transform.position} and {Objective.transform.position}!");
+                    Debug.LogError($"Unable to calculate a path on the NavMesh between {player.transform.position} and {Objective.transform.position}!");
                     }
 
                 yield return Wait;
@@ -169,7 +173,7 @@ namespace DogVR.Actions
             ClearSpline();
             //Player = GameObject.FindWithTag("Player");
             //Vector3 playerPosition = new Vector3(0, 0, 0) + Player.transform.position;
-            DrawNaveMeshPath(Objective, Player);
+            DrawNaveMeshPath(Objective, player);
             }
 
         [Button("Clear Spline")]
@@ -203,7 +207,7 @@ namespace DogVR.Actions
             {
             if (ScentPrefab != null)
                 {
-                ScentPrefab.transform.position = Player.transform.position;
+                ScentPrefab.transform.position = player.transform.position;
                 ScentPrefab.SetActive(true);
                 //SniffProjectile sniffProjectile = ScentPrefab.GetComponent<SniffProjectile>();
                 //StartCoroutine(sniffProjectile.FireSnifffOnce());

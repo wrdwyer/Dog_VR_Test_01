@@ -17,6 +17,8 @@ MonoBehaviour:
     - 25cb0e2d4d92ef74f8af5acebabaec33
     - 
     - 4ad62315b266cce488d728e4feae8880
+    - df2f919765c112940b0fd29b673cc47e
+    - 8144ebfff1abed743bb476f9e59c7723
     values:
     - goDatasByGlobalId:
         keys:
@@ -64,15 +66,13 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-458124343-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-2085039294-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1644703290-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-165579791-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1709292848-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1243768564-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1004764315-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-9221004895212909416-939421143
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1990426256-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-606070291-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1531122929-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6830472379596001492-3793072167924432585
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-95083002-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-973427653-0
         values:
         - iColor: 8
           icon: 
@@ -84,10 +84,6 @@ MonoBehaviour:
           icon: 
         - iColor: 3
           icon: 
-        - iColor: 4
-          icon: 
-        - iColor: 5
-          icon: 
         - iColor: 6
           icon: 
         - iColor: 4
@@ -96,14 +92,14 @@ MonoBehaviour:
           icon: 
         - iColor: 8
           icon: 
-        - iColor: 8
-          icon: 
         - iColor: 9
           icon: 
-        - iColor: 4
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 8
           icon: 
       goDatasByInstanceId:
-        keys: fa39010050ff00009ef1000008420100ec2b010020e30000c82e01002e180100300c0100b083ffff223d0100b0f800003a26010028e7feff
+        keys: 727e010036440100a4360100788601007e700100ce5c0100fe5001009a810100943d0100f06a0100cca4fbff2090fdff
         values:
         - iColor: 8
           icon: 
@@ -115,10 +111,6 @@ MonoBehaviour:
           icon: 
         - iColor: 3
           icon: 
-        - iColor: 4
-          icon: 
-        - iColor: 5
-          icon: 
         - iColor: 6
           icon: 
         - iColor: 4
@@ -127,9 +119,83 @@ MonoBehaviour:
           icon: 
         - iColor: 8
           icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
         - iColor: 8
           icon: 
+    - goDatasByGlobalId:
+        keys:
+        - GlobalObjectId_V1-2-df2f919765c112940b0fd29b673cc47e-1017916985-0
+        - GlobalObjectId_V1-2-df2f919765c112940b0fd29b673cc47e-1709292848-0
+        - GlobalObjectId_V1-2-df2f919765c112940b0fd29b673cc47e-458124343-0
+        values:
+        - iColor: 0
+          icon: Settings Icon
         - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+      goDatasByInstanceId:
+        keys: f072e5ff64be9f00dc889f00
+        values:
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+    - goDatasByGlobalId:
+        keys:
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-458124343-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-2085039294-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-165579791-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-1709292848-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-870491009-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-1278481482-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-132514350-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-615861661-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-824290289-0
+        values:
+        - iColor: 2
+          icon: 
+        - iColor: 1
           icon: 
         - iColor: 4
           icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+      goDatasByInstanceId:
+        keys: 3adf0000c8ea0000b4ec000006dd000008e9000086f7fbfff0e50000c8dc000064daebffa0d9ebff
+        values:
+        - iColor: 2
+          icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 4
+          icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon

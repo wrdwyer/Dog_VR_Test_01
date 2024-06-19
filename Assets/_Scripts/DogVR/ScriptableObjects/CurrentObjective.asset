@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f46bf570765f714e97eef1259ab3028, type: 3}
   m_Name: CurrentObjective
   m_EditorClassIdentifier: 
-  currentObjective: {fileID: 919132149155446097, guid: d0aa89267a042694fa5fdf3002384bda, type: 3}
+  currentObjective: {fileID: 0}

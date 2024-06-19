@@ -14,6 +14,8 @@ namespace DogVR.Actions
     {
     public class TriggerBark : MonoBehaviour
         {
+
+
         //public HapticClip hapticClip;
         public InputActionReference barkInput = null;
         public InputActionReference hapticInput = null;
@@ -43,6 +45,7 @@ namespace DogVR.Actions
                 Debug.Log("Haptic initialized");
                 }*/
             controller = GetComponent<XRBaseController>();
+
             }
 
         void Start()
@@ -52,6 +55,7 @@ namespace DogVR.Actions
             //grabInteractable.WhenSelectingInteractorAdded.Action += WhenSelectingInteractorAdded_Action;
             }
 
+     
 
         void Update()
 
@@ -76,7 +80,7 @@ namespace DogVR.Actions
 
         public void Bark()
             {
-
+            EventManager.Instance.Bark();
             Debug.Log("Bark!");
             PlayMyHapticEffect();
             audioEmitter.Play();
