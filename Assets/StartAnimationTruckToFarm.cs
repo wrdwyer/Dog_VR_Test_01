@@ -11,18 +11,23 @@ public class StartAnimationTruckToFarm : MonoBehaviour
     private SplineContainer truckSpline;
     [SerializeField]
     private SplineAnimate splineAnimate;
-    private GameObject player;
+    [SerializeField]
+    private Transform snapVolume;
+    private GameObject player = null;
 
-    void Awake()
+    private void OnEnable()
         {
-        StartTruckAnimation();
+        GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(snapVolume.transform, true);
+        }
+    void Awake()
+        {        
+       
         }
 
     void Start()
         {
-        player = GameManager.Instance.playerGameObjectSO.persistentObject;
-        player.transform.SetParent(this.transform, true);
-        //player = GameObject.FindWithTag("Player");
+        //GameManager.Instance.playerGameObjectSO.persistentObject.transform.parent.SetParent(snapVolume.transform, true);
+        StartTruckAnimation();   
         }
 
     IEnumerator WaitForReverseAnimation()
@@ -36,6 +41,7 @@ public class StartAnimationTruckToFarm : MonoBehaviour
 
     private void FinishTruckAnimation()
         {
+        //player.transform.SetParent(null);
         Debug.Log("FinishTruckAnimation");
         }
 

@@ -19,6 +19,7 @@ MonoBehaviour:
     - 4ad62315b266cce488d728e4feae8880
     - df2f919765c112940b0fd29b673cc47e
     - 8144ebfff1abed743bb476f9e59c7723
+    - 2cda990e2423bbf4892e6590ba056729
     values:
     - goDatasByGlobalId:
         keys:
@@ -71,13 +72,19 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1990426256-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-606070291-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1531122929-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-95083002-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-973427653-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1069431511-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-95083002-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-870491009-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1278481482-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-132514350-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1832450856934828011-554529301
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1939193436-0
         values:
         - iColor: 8
           icon: 
         - iColor: 9
-          icon: 
+          icon: Settings Icon
         - iColor: 2
           icon: 
         - iColor: 1
@@ -95,11 +102,23 @@ MonoBehaviour:
         - iColor: 9
           icon: 
         - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
           icon: Settings Icon
-        - iColor: 8
-          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: DirectionalLight Icon
+        - iColor: 0
+          icon: BoxCollider Icon
       goDatasByInstanceId:
-        keys: 727e010036440100a4360100788601007e700100ce5c0100fe5001009a810100943d0100f06a0100cca4fbff2090fdff
+        keys: defd06000cc40600a4b60600da05070004f0060076dc0600b8d006000401070084bd060084ea06004aa4060054cf06007adf0700a8a507004098070076e70700a0d1070012be070054b20700a0e20700209f070020cc0700e6850700f0b007004ab90800787f08001072080046c1080070ab0800e2970800248c080070bc0800f0780800f0a50800b65f0800c08a0800d849eeff90e54900aeab4900469e49009aed4900b6d7490028c449005ab84900c4e8490026a5490036d24900f6b6490042bb4900ec8b4900c64f080044530800324a08001cc9fbffc6e54900
         values:
         - iColor: 8
           icon: 
@@ -125,11 +144,97 @@ MonoBehaviour:
           icon: Settings Icon
         - iColor: 8
           icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 3
+          icon: 
+        - iColor: 6
+          icon: 
+        - iColor: 4
+          icon: AvatarMask On Icon
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: Settings Icon
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 3
+          icon: 
+        - iColor: 6
+          icon: 
+        - iColor: 4
+          icon: AvatarMask On Icon
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 8
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: Settings Icon
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 3
+          icon: 
+        - iColor: 6
+          icon: 
+        - iColor: 4
+          icon: AvatarMask On Icon
+        - iColor: 8
+          icon: 
+        - iColor: 8
+          icon: 
+        - iColor: 9
+          icon: 
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: AudioSource Icon
+        - iColor: 0
+          icon: DirectionalLight Icon
+        - iColor: 0
+          icon: BoxCollider Icon
     - goDatasByGlobalId:
-        keys:
-        - GlobalObjectId_V1-2-df2f919765c112940b0fd29b673cc47e-1017916985-0
-        - GlobalObjectId_V1-2-df2f919765c112940b0fd29b673cc47e-1709292848-0
-        - GlobalObjectId_V1-2-df2f919765c112940b0fd29b673cc47e-458124343-0
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 0a4c0100d8690100e03301004c1808001a360800220008001cf20800ea0f0900f2d908008e8f0c005cad0c0064770c0030731600fe901600065b1600
         values:
         - iColor: 0
           icon: Settings Icon
@@ -137,9 +242,24 @@ MonoBehaviour:
           icon: 
         - iColor: 2
           icon: 
-      goDatasByInstanceId:
-        keys: f072e5ff64be9f00dc889f00
-        values:
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 9
+          icon: 
+        - iColor: 2
+          icon: 
         - iColor: 0
           icon: Settings Icon
         - iColor: 9
@@ -157,6 +277,8 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-132514350-0
         - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-615861661-0
         - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-824290289-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-223184583-0
+        - GlobalObjectId_V1-2-8144ebfff1abed743bb476f9e59c7723-53597134-0
         values:
         - iColor: 2
           icon: 
@@ -176,12 +298,14 @@ MonoBehaviour:
           icon: StandaloneInputModule Icon
         - iColor: 0
           icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: BoxCollider Icon
       goDatasByInstanceId:
-        keys: 3adf0000c8ea0000b4ec000006dd000008e9000086f7fbfff0e50000c8dc000064daebffa0d9ebff
+        keys: 42df0000a8ec000016dd000000e9000066e20000e4e50000d8dc00007ce00000e6e1000082a1fdffd272070038800700a0700700907c0700f675070074790700627007000c74070076750700f2700700a24c0800085a0800704a080060560800c64f080044530800324a0800dc4d0800464f0800c24a0800b65f08007afef9ff
         values:
         - iColor: 2
-          icon: 
-        - iColor: 8
           icon: 
         - iColor: 1
           icon: 
@@ -199,3 +323,55 @@ MonoBehaviour:
           icon: StandaloneInputModule Icon
         - iColor: 0
           icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 4
+          icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 2
+          icon: 
+        - iColor: 1
+          icon: 
+        - iColor: 4
+          icon: 
+        - iColor: 5
+          icon: 
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: BoxCollider Icon
+    - goDatasByGlobalId:
+        keys: []
+        values: []
+      goDatasByInstanceId:
+        keys: 
+        values: []

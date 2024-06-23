@@ -6,6 +6,7 @@ using DogVR;
 using Sisus.ComponentNames;
 using UnityEngine.Splines;
 using System;
+using Unity.VisualScripting;
 
 public class StartAnimationCarAnimation : MonoBehaviour
     {
@@ -24,7 +25,10 @@ public class StartAnimationCarAnimation : MonoBehaviour
     private BoxCollider BoxCollider;
     [SerializeField]
     private BoxCollider ExitBoxCollider;
-    private GameObject player;
+    [SerializeField]
+    private Transform snapVoluelume;
+    [SerializeField]
+    private Transform playerParent;
     
     void Awake()
         {
@@ -37,7 +41,7 @@ public class StartAnimationCarAnimation : MonoBehaviour
 
     void Start()
         {
-        player = GameManager.Instance.playerGameObjectSO.persistentObject;
+        //player = GameManager.Instance.playerGameObjectSO.persistentObject;
         //player = GameObject.FindWithTag("Player");
         }
      
@@ -47,12 +51,14 @@ public class StartAnimationCarAnimation : MonoBehaviour
             {
             if (tailGateanimator != null)
                 {
+               
                 tailGateanimator.Play("CloseTailGate");
-                other.transform.SetParent(farmerTruck.transform, true);
+                GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(snapVoluelume.transform, true);
+                //other.transform.parent.SetParent(snapVoluelume.transform, true);
                 StartCoroutine(WaitForAnimation());
-                if (other.GetComponentInChildren<DisableTeleportComponents>() != null)
+                if (GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>() != null)
                     {
-                    other.GetComponentInChildren<DisableTeleportComponents>().enabled = true;
+                    GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = true;
                     }
                 else
                     {
@@ -60,6 +66,14 @@ public class StartAnimationCarAnimation : MonoBehaviour
                     }
                 //Need to reverse this when Sceane 2 is loaded and Truck has finished animations.
                 }
+            }
+        }
+
+    private void OnDisable()
+        {
+        if (farmerTruck != null)
+            {
+            GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(playerParent,true);
             }
         }
 

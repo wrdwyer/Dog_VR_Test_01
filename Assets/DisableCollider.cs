@@ -9,7 +9,7 @@ public class DisableCollider : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
         {
-        if (other.tag == "Truck")
+        if (other.CompareTag("Truck"))
             {
             GetComponent<BoxCollider>().enabled = false;
             Debug.Log("Disabled Collider by Truck");
