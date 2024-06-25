@@ -8,10 +8,9 @@ namespace DogVR
         public static GameManager Instance { get; private set; }
 
         public GameObject playerPrefab;
-        [SerializeField]
-        private GameObject currentObjective;
+        public CurrentObjectiveSO currentObjectiveSO;
         public PlayerGameObjectSO playerGameObjectSO; // Reference to the object you want to access
-
+        public SetObjectives SetObjectivesManager;
         private void Awake()
             {
             if (Instance == null)
@@ -28,13 +27,16 @@ namespace DogVR
         private void Start()
             {
             playerGameObjectSO.persistentObject = playerPrefab;
+            currentObjectiveSO.CurrentObjective = null;
+            currentObjectiveSO.ObjectiveName = null;
+            currentObjectiveSO.ObjectiveComplete = false;
             }
-        // Property for CurrentObjective with getter and setter
-        public GameObject CurrentObjective
+        /*// Property for CurrentObjective with getter and setter
+        public CurrentObjectiveSO CurrentObjective
             {
-            get { return currentObjective; }
-            set { currentObjective = value; }
-            }
+            get { return CurrentObjective; }
+            set { CurrentObjective = value; }
+            }*/
 
         }
 

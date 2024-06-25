@@ -97,9 +97,9 @@ namespace DogVR.Actions
                 }
             }
         [Button("Get Objective")]
-        public void GetCurrentObjective (GameObject game)
+        public void UpdateCurrentObjective ()
             {
-            Objective = GameManager.Instance.CurrentObjective;
+            Objective = GameManager.Instance.currentObjectiveSO.CurrentObjective;
             }
 
      

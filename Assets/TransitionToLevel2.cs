@@ -6,6 +6,7 @@ using Sirenix;
 using Sirenix.OdinInspector;
 using DogVR;
 using Unity.XR.CoreUtils;
+using System;
 
 public class TransitionToLevel2 : MonoBehaviour
     {
@@ -19,13 +20,43 @@ public class TransitionToLevel2 : MonoBehaviour
     private Transform playerParent;
     [SerializeField]
     private Transform FarmTruckSnapVolume;
+    [SerializeField]
+    private float faderWaitTime = 2.0f; // Time to wait when fully faded to black
+    private SceneFader sceneFader;
+
+    private void Start()
+        {
+        sceneFader = FindAnyObjectByType<SceneFader>();
+        }
 
 
     private void OnTriggerEnter(Collider other)
         {
+        if (sceneFader != null)
+            {
+            StartCoroutine(FadeSequence());
+            }
+
+        }
+
+    private IEnumerator FadeSequence()
+        {
+        // Fade to black
+        yield return StartCoroutine(sceneFader.FadeIn());
+        SetPlayersNewLocation();      
+        
+        // Wait for the specified time
+        yield return new WaitForSeconds(faderWaitTime);
+
+        // Fade back in
+        yield return StartCoroutine(sceneFader.FadeOut());
+        }
+
+    private void SetPlayersNewLocation()
+        {
         parentFarmTruckObject.gameObject.SetActive(false);
         FarmTruckToFarm.SetActive(true);
-        GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(FarmTruckSnapVolume.transform, true);        
+        GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(FarmTruckSnapVolume.transform, true);
         GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetPositionAndRotation(FarmTruckSnapVolume.position, FarmTruckSnapVolume.rotation);
         GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
         XROrigin xrOrigin = FindFirstObjectByType<XROrigin>();
@@ -35,8 +66,7 @@ public class TransitionToLevel2 : MonoBehaviour
             return;
             }
         xrOrigin.gameObject.transform.localPosition = Vector3.zero;
-        
+
         Debug.Log("Transitioned");
-        Debug.Log(other);
         }
     }
