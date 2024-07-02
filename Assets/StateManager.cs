@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
     {
-
+    [SerializeField]
+    private SceneManager sceneManager;
     public enum GameState
         {
-        Initializing,
+        MainMenu,
         Playing,
         Paused,
         GameOver
@@ -17,7 +18,8 @@ public class StateManager : MonoBehaviour
 
     private void Start()
         {
-        UpdateGameState(GameState.Initializing);
+        UpdateGameState(GameState.MainMenu);
+        //sceneManager = GetComponent<SceneManager>();
         }
 
     public void UpdateGameState(GameState newState)
@@ -25,12 +27,12 @@ public class StateManager : MonoBehaviour
         currentState = newState;
         switch (currentState)
             {
-            case GameState.Initializing:
-                Debug.Log("Initializing");
-                GameManager.Instance.SetObjectivesManager.CurrentObjectiveIndex = 0;
-
+            case GameState.MainMenu:
+                Debug.Log("Main Menu");
                 break;
             case GameState.Playing:
+                sceneManager.CreatePlayer();
+                GameManager.Instance.SetObjectivesManager.CurrentObjectiveIndex = 0;
                 Debug.Log("Playing");
                 break;
             case GameState.Paused:

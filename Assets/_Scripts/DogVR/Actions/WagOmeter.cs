@@ -38,7 +38,7 @@ namespace DogVR.Actions
 
         private void Awake()
             {
-            CopperEmotionalState.currentState = CopperEmotionalState.AnimalState.Idle;
+            CopperEmotionalState.currentState = CopperEmotionalState.AnimalState.Happy;
             currentState = CopperEmotionalState;
             animator = GetComponent<Animator>();
             targetHappyAnimationParameter = 0f;

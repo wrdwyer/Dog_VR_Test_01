@@ -8,7 +8,7 @@ namespace DogVR
         {
         public Transform startLocation; // Reference to the GameObject that specifies the start location
         public Transform parentLocation;
-        void Start()
+        public void CreatePlayer()
             {
             if (GameManager.Instance != null && GameManager.Instance.playerGameObjectSO != null)
                 {

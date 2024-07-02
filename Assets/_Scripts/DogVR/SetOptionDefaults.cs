@@ -26,7 +26,7 @@ namespace DogVR
         [SerializeField]
         private ResetHeight resetHeight;
         private ColorLookup colorLookup;
-        private void Awake()
+        private void OnEnable()
             {
             if (colourSpectrum != null)
                 {

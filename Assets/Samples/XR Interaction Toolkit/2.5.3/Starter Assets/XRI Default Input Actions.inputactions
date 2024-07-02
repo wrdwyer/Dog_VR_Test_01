@@ -2704,11 +2704,39 @@
                 {
                     "name": "",
                     "id": "498e06f0-39c8-4269-bae7-9eedbc9866fb",
-                    "path": "<XRController>{LeftHand}/menu",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "LeftHand Display Game Options",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "DisplayGameObjectives",
+            "id": "1b2da9bf-d073-483d-9aba-6c196e8367cd",
+            "actions": [
+                {
+                    "name": "LeftHand Display Game Objectives",
+                    "type": "Button",
+                    "id": "120f79b2-3676-4ebd-a351-fb8e8ec6dd4a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9778fb20-9089-4ca4-b8e6-8e98468c9357",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHand Display Game Objectives",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
