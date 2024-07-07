@@ -69,8 +69,6 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-2085039294-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1243768564-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1004764315-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1990426256-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-606070291-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1531122929-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-973427653-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1069431511-0
@@ -89,28 +87,27 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1494981537-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-709074922-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1569303645-0
-        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1129518520-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1887095861-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1980014667-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1156459499-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1709292848-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-1205875738-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6344923921381936918-290813652
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-919132147532512454-0
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6344923921381936918-286462916
         values:
         - iColor: 8
           icon: 
         - iColor: 9
-          icon: Settings Icon
+          icon: AvatarMask On Icon
         - iColor: 2
           icon: 
         - iColor: 1
           icon: 
         - iColor: 6
           icon: Settings Icon
-        - iColor: 4
+        - iColor: 0
           icon: AvatarMask On Icon
-        - iColor: 8
-          icon: 
-        - iColor: 8
-          icon: 
         - iColor: 9
           icon: 
         - iColor: 0
@@ -147,7 +144,7 @@ MonoBehaviour:
           icon: BoxCollider Icon
         - iColor: 8
           icon: 
-        - iColor: 2
+        - iColor: 0
           icon: AvatarMask On Icon
         - iColor: 0
           icon: 
@@ -157,22 +154,26 @@ MonoBehaviour:
           icon: 
         - iColor: 0
           icon: Settings Icon
+        - iColor: 8
+          icon: 
+        - iColor: 0
+          icon: 
+        - iColor: 8
+          icon: 
       goDatasByInstanceId:
-        keys: 968e01004c2101009e070100f69c0100c0740100345001009839010078940100c6140100886a0100d23601008a3f010016e500006c2d0100805301008ce80000e64bfffff08e010026ec0000ee26feff1e12faff38eef9ffa4f5f9ffa811faff3805faff7000faff1e36f8ff02c6efff6c9301005cc3efff0c7a0100da90efff
+        keys: a0910100c6220100a20801001ca001008c5201008a3b01008e9701000c1601003a6d0100a43801008a41010096e50000fe2e0100d055010024e9000012a5ffff06920100b8ec00002c0a01001ee700008e9f0100ba17010096350100d66901008a1f0100687001003447010080960100e4490100007d0100344e010042acffffec1ddbff12a6010052edffff
         values:
         - iColor: 8
           icon: 
         - iColor: 9
-          icon: Settings Icon
+          icon: AvatarMask On Icon
         - iColor: 2
           icon: 
         - iColor: 1
           icon: 
-        - iColor: 3
-          icon: 
         - iColor: 6
           icon: Settings Icon
-        - iColor: 4
+        - iColor: 0
           icon: AvatarMask On Icon
         - iColor: 8
           icon: 
@@ -224,6 +225,14 @@ MonoBehaviour:
           icon: 
         - iColor: 0
           icon: Settings Icon
+        - iColor: 8
+          icon: 
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: 
+        - iColor: 8
+          icon: 
     - goDatasByGlobalId:
         keys: []
         values: []

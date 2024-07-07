@@ -56,9 +56,11 @@ public class StartAnimationCarAnimation : MonoBehaviour
                 GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(snapVoluelume.transform, true);
                 //other.transform.parent.SetParent(snapVoluelume.transform, true);
                 StartCoroutine(WaitForAnimation());
+                GetComponent<DisableXRRigMovement>().DisableMovement();
                 if (GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>() != null)
                     {
                     GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = true;
+                    
                     }
                 else
                     {

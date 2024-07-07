@@ -8,15 +8,17 @@ namespace DogVR
         {
         // List of components to disable
         public Behaviour[] componentsToDisable;
-
+        public GameObject[] gameObjectsToDisable;
         void OnEnable()
             {
             DisableComponents();
+            DisableGameObjects();
             }
 
         void OnDisable()
             {
             EnableComponents();
+            EnableGameObjects();
             }
 
         // Method to disable the components
@@ -27,6 +29,30 @@ namespace DogVR
                 if (component != null)
                     {
                     component.enabled = false;
+                    }
+                }
+            }
+
+        // Method to disable the game objects
+        void DisableGameObjects()
+            {
+            foreach (var gameObject in gameObjectsToDisable)
+                {
+                if (gameObject != null)
+                    {
+                    gameObject.SetActive(false);
+                    }
+                }
+            }
+
+        // Method to enable the game objects
+        void EnableGameObjects()
+            {
+            foreach (var gameObject in gameObjectsToDisable)
+                {
+                if (gameObject != null)
+                    {
+                    gameObject.SetActive(true);
                     }
                 }
             }

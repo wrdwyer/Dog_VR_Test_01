@@ -10,6 +10,7 @@ using Unity.VisualScripting;
 using UnityEngine.XR.Interaction.Toolkit;
 using HutongGames.PlayMaker.Actions;
 using Sirenix.Utilities;
+using Unity.XR.CoreUtils;
 
 namespace DogVR.Actions
     {
@@ -62,7 +63,7 @@ namespace DogVR.Actions
         private void Awake()
             {
 
-            objectPool = new ObjectPool<Projectile>(CreateProjectile,
+            objectPool = new UnityEngine.Pool.ObjectPool<Projectile>(CreateProjectile,
                 OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
                 collectionCheck, defaultCapacity, maxSize);
             Triangulation = NavMesh.CalculateTriangulation();            
@@ -70,7 +71,9 @@ namespace DogVR.Actions
             }
         private void Start()
             {
-            player = GameManager.Instance.playerGameObjectSO.persistentObject;
+            var xrOrigin = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<XROrigin>();
+            player = xrOrigin.gameObject;
+            //player = GameManager.Instance.playerGameObjectSO.persistentObject;
             //player = GameObject.FindWithTag("Player");
             }
 

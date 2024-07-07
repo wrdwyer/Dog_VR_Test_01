@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923ef3ec9f333764bb259236068bfaa2, type: 3}
   m_Name: CoppersEmotionalState
   m_EditorClassIdentifier: 
-  currentState: 0
+  currentState: 2

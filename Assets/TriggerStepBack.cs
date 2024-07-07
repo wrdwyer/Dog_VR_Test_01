@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Splines;
 
 
 namespace DogVR.Actions
@@ -11,7 +12,10 @@ namespace DogVR.Actions
         private Animator animator;
         [SerializeField]
         private string triggerName = "StepBack";
+        [SerializeField]
+        private SplineAnimate splineAnimate = null;
         private bool inRangeOfDog = false;
+
 
         private void Awake()
             {
@@ -37,7 +41,7 @@ namespace DogVR.Actions
             }
 
         // Start is called before the first frame update
-        private void OnEnable()
+        private void Start()
             {
             if (EventManager.Instance != null)
                 {
@@ -51,26 +55,31 @@ namespace DogVR.Actions
                 {
                 EventManager.Instance.barkTriggered -= TriggerAnim;
                 }
-
             }
 
         public void TriggerAnim()
             {
             if (inRangeOfDog)
                 {
-                if (GetComponent<NavMeshAgent>()!=null)
+                if (GetComponentInParent<NavMeshAgent>() != null)
                     {
-                    GetComponent<NavMeshAgent>().enabled = false;
+                    GetComponentInParent<NavMeshAgent>().enabled = false;
+                    }
+                if (GetComponent<SplineAnimate>() != null)
+                    {
+                    splineAnimate.Play();
+                    Debug.Log("Spline Animating");
                     }
                 animator.Play(triggerName);
-                Debug.Log("Triggering step back");
+                Debug.Log("Triggering Flying");
+
                 }
-         
-            
+
+
             }
         public void EnableNavMesh()
             {
-            if (GetComponent<NavMeshAgent>()!=null)
+            if (GetComponent<NavMeshAgent>() != null)
                 {
                 GetComponent<NavMeshAgent>().enabled = true;
                 }

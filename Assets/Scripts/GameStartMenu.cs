@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using DogVR;
 
 public class GameStartMenu : MonoBehaviour
-{
+    {
     [Header("UI Pages")]
     public GameObject mainMenu;
     public GameObject options;
@@ -23,10 +23,12 @@ public class GameStartMenu : MonoBehaviour
     private StateManager stateManager;
     [SerializeField]
     private GameObject gameUI;
+    [SerializeField]
+    SceneFader sceneFader;
 
     // Start is called before the first frame update
     void Start()
-    {
+        {
         EnableMainMenu();
 
         //Hook events
@@ -36,10 +38,10 @@ public class GameStartMenu : MonoBehaviour
         quitButton.onClick.AddListener(QuitGame);
 
         foreach (var item in returnButtons)
-        {
+            {
             item.onClick.AddListener(EnableMainMenu);
+            }
         }
-    }
 
     public void LoadLevelOne()
         {
@@ -48,41 +50,59 @@ public class GameStartMenu : MonoBehaviour
         Debug.Log("Loading Level One");
         }
     public void QuitGame()
-    {
+        {
         Application.Quit();
-    }
+        }
 
     public void StartGame()
-    {
-        HideAll();
-        LoadLevelOne();
+        {
+        StartCoroutine(StartGameFadeSequence());
+
+        //LoadLevelOne();
+        
         Debug.Log("Starting Game...");
         //SceneTransitionManager.singleton.GoToSceneAsync(1);
-    }
+        }
 
     public void HideAll()
-    {
+        {
         mainMenu.SetActive(false);
         options.SetActive(false);
         about.SetActive(false);
-    }
+        }
 
     public void EnableMainMenu()
-    {
+        {
         mainMenu.SetActive(true);
         options.SetActive(false);
         about.SetActive(false);
-    }
+        }
     public void EnableOption()
-    {
+        {
         mainMenu.SetActive(false);
         options.SetActive(true);
         about.SetActive(false);
-    }
+        }
     public void EnableAbout()
-    {
+        {
         mainMenu.SetActive(false);
         options.SetActive(false);
         about.SetActive(true);
+        }
+
+    private IEnumerator StartGameFadeSequence()
+        {
+        // Fade to black
+        yield return StartCoroutine(sceneFader.FadeIn());
+        Debug.Log("Fading in...");
+        HideAll();
+        Debug.Log("Hiding all...");
+        LoadLevelOne();
+        // Wait for the specified time
+        yield return new WaitForSeconds(0.2f);
+        // Fade back in
+        yield return StartCoroutine(sceneFader.FadeOut());
+
+        //stateManager.UpdateGameState(StateManager.GameState.Paused);
+        }
     }
-}

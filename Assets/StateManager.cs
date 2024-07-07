@@ -44,6 +44,7 @@ public class StateManager : MonoBehaviour
                 Debug.Log("Playing");
                 break;
             case GameState.Paused:
+                PauseGame();
                 Debug.Log("Paused");
                 break;
             case GameState.GameOver:
@@ -56,14 +57,15 @@ public class StateManager : MonoBehaviour
         {
         GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetPositionAndRotation(startLocation.position, startLocation.rotation);
         // Access the DynamicMoveProvider component on the GameObject
-        DynamicMoveProvider dynamicMoveProvider = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DynamicMoveProvider>();
+        //DynamicMoveProvider dynamicMoveProvider = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DynamicMoveProvider>();
 
         // Check if the DynamicMoveProvider component is not null
-        if (dynamicMoveProvider != null)
+        /*if (dynamicMoveProvider != null)
             {
             // Enable the DynamicMoveProvider component
             dynamicMoveProvider.enabled = true;
             }
+        */
         /*GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
         
         
@@ -77,5 +79,10 @@ public class StateManager : MonoBehaviour
         xrOrigin.gameObject.transform.localPosition = Vector3.zero;
 
         Debug.Log("Transitioned");*/
+        }
+
+    public void PauseGame()
+        {
+        Time.timeScale = 0f;
         }
     }

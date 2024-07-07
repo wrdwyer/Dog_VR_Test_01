@@ -28,6 +28,8 @@ namespace DogVR.Actions
         [SerializeField]
         private StudioEventEmitter sadBark;
         [SerializeField]
+        private StudioEventEmitter anxiousBark;
+        [SerializeField]
         private StudioEventEmitter happyBark;
         [SerializeField]
         [Range(0f, 1f)]
@@ -107,7 +109,7 @@ namespace DogVR.Actions
             targetSadAnimationParameter = -1f;
             SetParameters();
             SendHapticFeedback(0.2f, 5f);
-            sadBark.Play();
+            anxiousBark.Play();
             Debug.Log("Anxious");
             }
 
@@ -126,6 +128,8 @@ namespace DogVR.Actions
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = -1f;
             SetParameters();
+            sadBark.Play();
+            SendHapticFeedback(0.2f, 5f);
             Debug.Log("Sad");
             }
 

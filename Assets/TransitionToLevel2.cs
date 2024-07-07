@@ -22,11 +22,12 @@ public class TransitionToLevel2 : MonoBehaviour
     private Transform FarmTruckSnapVolume;
     [SerializeField]
     private float faderWaitTime = 2.0f; // Time to wait when fully faded to black
+    [SerializeField]
     private SceneFader sceneFader;
 
     private void Start()
         {
-        sceneFader = FindAnyObjectByType<SceneFader>();
+        ///sceneFader = FindAnyObjectByType<SceneFader>();
         }
 
 
@@ -34,6 +35,8 @@ public class TransitionToLevel2 : MonoBehaviour
         {
         if (sceneFader != null)
             {
+            sceneFader.gameObject.SetActive(true);
+            
             StartCoroutine(FadeSequence());
             }
 
@@ -67,6 +70,6 @@ public class TransitionToLevel2 : MonoBehaviour
             }
         xrOrigin.gameObject.transform.localPosition = Vector3.zero;
 
-        Debug.Log("Transitioned");
+        Debug.Log("Transitioned TO lEVEL 2");
         }
     }

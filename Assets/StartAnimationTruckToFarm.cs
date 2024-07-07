@@ -43,6 +43,7 @@ public class StartAnimationTruckToFarm : MonoBehaviour
         {
         //player.transform.SetParent(null);
         Debug.Log("FinishTruckAnimation");
+        GetComponent<EnableXRRigMovement>().EnableMovement();
         }
 
     private void StartTruckAnimation()

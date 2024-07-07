@@ -20,15 +20,22 @@ namespace DogVR
                     // Instantiate the prefab at the start location's position and rotation
                     GameObject instantiatedPlayerObject = Instantiate(prefab, startLocation.position, startLocation.rotation, parentLocation);
                     instantiatedPlayerObject.SetActive(true);
-                    
 
                     // Store the reference in the ScriptableObject for future use if needed
                     GameManager.Instance.playerGameObjectSO.persistentObject = instantiatedPlayerObject;
+                    /*DisableTeleportComponents disableTeleportComponents = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>();
+                    if (disableTeleportComponents != null)
+                        {
+                        // Enable the DisableTeleportComponents component
+                        disableTeleportComponents.enabled = true;
+                        Debug.Log("Disable Teleport Components Enabled");
+                        }
+                    }*/
                     }
                 }
-            }
-     
-        }
 
-      
+            }
+
+
+        }
     }

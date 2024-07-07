@@ -1,4 +1,6 @@
+using DogVR.Actions;
 using Sirenix.OdinInspector;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace DogVR
@@ -11,6 +13,7 @@ namespace DogVR
         public CurrentObjectiveSO currentObjectiveSO;
         public PlayerGameObjectSO playerGameObjectSO; // Reference to the object you want to access
         public SetObjectives SetObjectivesManager;
+       
         private void Awake()
             {
             if (Instance == null)
@@ -30,14 +33,16 @@ namespace DogVR
             currentObjectiveSO.CurrentObjective = null;
             currentObjectiveSO.ObjectiveName = null;
             currentObjectiveSO.ObjectiveComplete = false;
+           
+
+            /*// Property for CurrentObjective with getter and setter
+            public CurrentObjectiveSO CurrentObjective
+                {
+                get { return CurrentObjective; }
+                set { CurrentObjective = value; }
+                }*/
+
             }
-        /*// Property for CurrentObjective with getter and setter
-        public CurrentObjectiveSO CurrentObjective
-            {
-            get { return CurrentObjective; }
-            set { CurrentObjective = value; }
-            }*/
 
         }
-
     }

@@ -23,7 +23,7 @@ namespace DogVR
         public string ToDoList = "To be added to anything which can trigger Coppers Emotional state.";
 
         private void Awake()
-            {
+            {       
             Debug.Log(state.currentState);
             }
 

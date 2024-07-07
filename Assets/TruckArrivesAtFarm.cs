@@ -13,19 +13,15 @@ public class TruckArrivesAtFarm : MonoBehaviour
     [SerializeField]
     private Transform playerParent;
 
-    private void Start()
-        {
-
-        }
     private void Update()
         {
         splineAnimate.Completed += () =>
-        {
-            
+        {            
             GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(playerParent, true);
-            GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = false;
+            //GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = false;
             Debug.Log("Truck arrives at farm");
             tailGateanimator.Play("OpenTailGate");
+            GetComponent<EnableXRRigMovement>().EnableMovement();
         };
         }
     }
