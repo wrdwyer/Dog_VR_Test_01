@@ -1,30 +1,41 @@
+using DogVR.Actions;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DisableParkCollider : MonoBehaviour
     {
 
+    [SerializeField]
+    private BoxCollider boxColliderToDisable;
+    [SerializeField]
+    private GameObject[] objectToCheckStepBack;
 
-
-    void OnCollisionStay(Collision collision)
+    private void Update()
         {
-
-        foreach (ContactPoint contact in collision.contacts)
+        foreach (GameObject obj in objectToCheckStepBack)
             {
-            Debug.Log("Objects touching: " + contact.otherCollider.name);
-            if (collision.contacts.Length == 1 && collision.gameObject.tag == "Player")
+
+            if (!obj.GetComponentInChildren<TriggerStepBack>().triggeredEvent)
+                {
+
+                break;
+                }
+            else
                 {
                 DisableParkColliderWall();
-                Debug.Log("Collider is empty");
                 }
             }
-
         }
+
+
+
     public void DisableParkColliderWall()
-        {
-        GetComponent<BoxCollider>().enabled = false;
+        {            
+        boxColliderToDisable.enabled = false;
         Debug.Log("Disabled Collider by Bark");
+        gameObject.SetActive(false);
         }
 
     }

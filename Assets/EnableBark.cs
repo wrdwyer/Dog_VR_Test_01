@@ -10,6 +10,7 @@ public class EnableBark : MonoBehaviour
     public void EnableBarking()
         {
         GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentsInChildren<TriggerBark>()[0].enabled = true;
+        
         }
 
     }

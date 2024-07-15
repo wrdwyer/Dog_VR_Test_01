@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,12 @@ namespace DogVR.Actions
         {
         private Animator animator;
         [SerializeField]
-        private string triggerName = "StepBack";
+        private string animationToTrigger = "StepBack";
         [SerializeField]
-        private SplineAnimate splineAnimate = null;
-        private bool inRangeOfDog = false;
+        private SplineAnimate splineToAnimate = null;
+        public bool inRangeOfDog = false;        
+        public bool triggeredEvent = false;
+        public StudioEventEmitter audioToTrigger = null;
 
 
         private void Awake()
@@ -67,11 +70,17 @@ namespace DogVR.Actions
                     }
                 if (GetComponent<SplineAnimate>() != null)
                     {
-                    splineAnimate.Play();
+                    splineToAnimate.Play();
                     Debug.Log("Spline Animating");
                     }
-                animator.Play(triggerName);
-                Debug.Log("Triggering Flying");
+                if (audioToTrigger != null)
+                    {
+                    audioToTrigger.Play();
+                    Debug.Log("Audio Triggered");
+                    }
+                animator.Play(animationToTrigger);
+                triggeredEvent = true;
+                Debug.Log("Animation Triggered");
 
                 }
 

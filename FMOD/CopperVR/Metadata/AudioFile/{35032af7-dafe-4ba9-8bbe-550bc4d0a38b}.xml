@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{35032af7-dafe-4ba9-8bbe-550bc4d0a38b}">
+		<property name="assetPath">
+			<value>Enviroment/325677__anika11__paper-cup-falling-paper-coffee-cup-falling-onto-hard-surface-sfx.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.1216041666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{66fccf0c-48f1-403e-ae75-8600b9c95c9b}</destination>
+		</relationship>
+	</object>
+</objects>

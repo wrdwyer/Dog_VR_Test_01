@@ -95,6 +95,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6344923921381936918-290813652
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-919132147532512454-0
         - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-6344923921381936918-286462916
+        - GlobalObjectId_V1-2-4ad62315b266cce488d728e4feae8880-507199868-0
         values:
         - iColor: 8
           icon: 
@@ -157,11 +158,13 @@ MonoBehaviour:
         - iColor: 8
           icon: 
         - iColor: 0
+          icon: 
+        - iColor: 8
           icon: 
         - iColor: 8
           icon: 
       goDatasByInstanceId:
-        keys: a0910100c6220100a20801001ca001008c5201008a3b01008e9701000c1601003a6d0100a43801008a41010096e50000fe2e0100d055010024e9000012a5ffff06920100b8ec00002c0a01001ee700008e9f0100ba17010096350100d66901008a1f0100687001003447010080960100e4490100007d0100344e010042acffffec1ddbff12a6010052edffff
+        keys: 90910100d6220100bc08010014a0010086520100923b0100246d0100aa38010092410100a8e50000042f0100ca55010038e9000006e9fefff6910100ceec0000460a010030e70000869f0100cc1701009c350100ba690100a21f01004e700100f88c010076960100e6490100e87c01002e4e010046e5ffff3ca60100f255ffff1eb2f9ff
         values:
         - iColor: 8
           icon: 
@@ -175,10 +178,6 @@ MonoBehaviour:
           icon: Settings Icon
         - iColor: 0
           icon: AvatarMask On Icon
-        - iColor: 8
-          icon: 
-        - iColor: 8
-          icon: 
         - iColor: 9
           icon: 
         - iColor: 0
@@ -215,7 +214,7 @@ MonoBehaviour:
           icon: BoxCollider Icon
         - iColor: 8
           icon: 
-        - iColor: 2
+        - iColor: 0
           icon: AvatarMask On Icon
         - iColor: 0
           icon: 
@@ -228,8 +227,8 @@ MonoBehaviour:
         - iColor: 8
           icon: 
         - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
+          icon: 
+        - iColor: 8
           icon: 
         - iColor: 8
           icon: 

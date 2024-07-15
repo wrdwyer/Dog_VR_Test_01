@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.XR.CoreUtils;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using UnityEngine.XR;
+using FMODUnity;
 
 public class StateManager : MonoBehaviour
     {
@@ -11,9 +12,11 @@ public class StateManager : MonoBehaviour
     private SceneManager sceneManager;
     [SerializeField]
     private Transform startLocation;
-    private DynamicMoveProvider dynamicMoveProvider;
+    //private UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets.DynamicMoveProvider dynamicMoveProvider;
+    [SerializeField]
+    private StudioEventEmitter startEnviromentSound;
 
-
+            
     public enum GameState
         {
         MainMenu,
@@ -39,8 +42,9 @@ public class StateManager : MonoBehaviour
                 break;
             case GameState.Playing:
                 //sceneManager.Start();
-                GameManager.Instance.SetObjectivesManager.CurrentObjectiveIndex = 0;
+                //GameManager.Instance.SetObjectivesManager.CurrentObjectiveIndex = 0;
                 SetPlayerStartLocation();
+                startEnviromentSound.enabled = true;
                 Debug.Log("Playing");
                 break;
             case GameState.Paused:

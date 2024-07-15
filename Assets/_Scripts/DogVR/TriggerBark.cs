@@ -65,7 +65,7 @@ namespace DogVR.Actions
 
 
 
-            if (barkPressed && !barking)
+            if (barkPressed && !barking && audioEmitter.IsPlaying() == false)
                 {
                 Bark();
                 barking = true;
@@ -84,6 +84,7 @@ namespace DogVR.Actions
             Debug.Log("Bark!");
             PlayMyHapticEffect();
             audioEmitter.Play();
+           
             //controller.SendHapticImpulse(amplitude, duration);
 
             //clipPlayer.Play();

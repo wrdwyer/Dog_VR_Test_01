@@ -7,6 +7,7 @@ using Sisus.ComponentNames;
 using UnityEngine.Splines;
 using System;
 using Unity.VisualScripting;
+using FMODUnity;
 
 public class StartAnimationCarAnimation : MonoBehaviour
     {
@@ -29,7 +30,11 @@ public class StartAnimationCarAnimation : MonoBehaviour
     private Transform snapVoluelume;
     [SerializeField]
     private Transform playerParent;
-    
+    [SerializeField]
+    private StudioEventEmitter startEngine;
+    [SerializeField]
+    private StudioEventEmitter WaitCopperAudio;
+
     void Awake()
         {
 
@@ -51,7 +56,8 @@ public class StartAnimationCarAnimation : MonoBehaviour
             {
             if (tailGateanimator != null)
                 {
-               
+                startEngine.Play();
+                WaitCopperAudio.Play();
                 tailGateanimator.Play("CloseTailGate");
                 GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(snapVoluelume.transform, true);
                 //other.transform.parent.SetParent(snapVoluelume.transform, true);

@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Sirenix.OdinInspector;
 
+using BlazeAISpace;
+using FMODUnity;
+
 namespace DogVR
     {
     [RequireComponent(typeof(SphereCollider))]
@@ -10,6 +13,12 @@ namespace DogVR
         {
         public AnimalStateChannelSO eventChannel;
         public CopperEmotionalState state;
+        public Animator animator = null;
+        public bool useAttackAnimation = false;
+        public BlazeAI BlazeAI = null;
+        public StudioEventEmitter attackSound;
+        public bool Dog = true;
+        public bool Hoodie = false;
         public enum EncounteredAnimalState
             {
             Idle,
@@ -23,8 +32,10 @@ namespace DogVR
         public string ToDoList = "To be added to anything which can trigger Coppers Emotional state.";
 
         private void Awake()
-            {       
+            {
             Debug.Log(state.currentState);
+            animator = GetComponentInParent<Animator>();
+            BlazeAI = GetComponentInParent<BlazeAI>();
             }
 
         private void OnTriggerEnter(Collider other)
@@ -38,27 +49,21 @@ namespace DogVR
                     {
                     case EncounteredAnimalState.Idle:
                         SetStatusToIdle();
-
                         break;
                     case EncounteredAnimalState.Anxious:
                         SetStatusToAnxious();
-
                         break;
                     case EncounteredAnimalState.Happy:
                         SetStatusToHappy();
-
                         break;
                     case EncounteredAnimalState.Sad:
                         SetStatusToSad();
-
                         break;
                     case EncounteredAnimalState.Threatened:
                         SetStatusToThreatened();
-
                         break;
                     default:
-                        SetStatusToIdle();
-
+                        //SetStatusToIdle();
                         break;
                     }
 
@@ -67,7 +72,35 @@ namespace DogVR
 
         private void OnTriggerExit(Collider other)
             {
-            SetStatusToIdle();
+            if (other.CompareTag("Player"))
+                SetStatusToIdle();
+                {
+                if (animator != null && BlazeAI !=null && Dog)
+                    {
+                    Debug.Log("Trying to Idle");
+                    animator.SetBool("AttackReady_b", false);
+                    animator.SetBool("Sit_b", false);
+                    animator.SetFloat("Movement_f", 0.5f);
+                    BlazeAI.enabled = true;
+
+                    attackSound.Stop();
+                    Debug.Log("Idle Ready");
+                    }
+                if (animator != null && BlazeAI != null && Hoodie)
+                    {
+                    Debug.Log("Trying to Idle");
+                    animator.Play("Idle");
+                  
+                   
+
+                    attackSound.Stop();
+                    Debug.Log("Idle Ready");
+                    }
+                else
+                    {
+                    Debug.Log("Not Hoodie or Dog");
+                    }
+                }
             }
 
         [Button("Set Status to Happy")]
@@ -108,6 +141,24 @@ namespace DogVR
             state.currentState = CopperEmotionalState.AnimalState.Threatened;
             Debug.Log(state.currentState);
             TriggerEventChannel(state);
+            if (animator != null && BlazeAI !=null && Dog)
+                {
+                BlazeAI.enabled = false;
+                Debug.Log("Trying to Attack");
+                animator.SetFloat("Movement_f", 0.0f);
+                animator.SetBool("AttackReady_b", true);
+                attackSound.Play();
+                Debug.Log("Attack Ready");
+                }
+            if (animator != null && Hoodie)
+                {
+                //BlazeAI.enabled = false;
+                Debug.Log("Trying to Yell");
+                animator.Play("Yelling");
+                attackSound.Play();
+                Debug.Log("Yell Ready");
+                }
+
             }
 
         [Button("Trigger Copper Channel")]

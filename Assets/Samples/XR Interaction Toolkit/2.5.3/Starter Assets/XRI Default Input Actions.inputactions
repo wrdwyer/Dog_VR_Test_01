@@ -2629,7 +2629,7 @@
                     "path": "<XRController>{RightHand}/primaryButton",
                     "interactions": "Press(behavior=2)",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -2640,7 +2640,7 @@
                     "path": "<XRController>{RightHand}/secondaryButton",
                     "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -2651,7 +2651,7 @@
                     "path": "<XRController>{RightHand}/triggerButton",
                     "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "Bark",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -2676,10 +2676,10 @@
                 {
                     "name": "",
                     "id": "2f42bee5-88a8-497c-a98f-b17ce1bd69c5",
-                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
                     "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "CopperSniff",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -2732,7 +2732,7 @@
                 {
                     "name": "",
                     "id": "9778fb20-9089-4ca4-b8e6-8e98468c9357",
-                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",

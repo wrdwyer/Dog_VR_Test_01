@@ -2,6 +2,7 @@ using DogVR.Actions;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace DogVR
     {
@@ -13,6 +14,8 @@ namespace DogVR
         public CurrentObjectiveSO currentObjectiveSO;
         public PlayerGameObjectSO playerGameObjectSO; // Reference to the object you want to access
         public SetObjectives SetObjectivesManager;
+        public BonesCollectedSO BonesCollectedSO;
+        public Volume VolumePostProcessingVolume;
        
         private void Awake()
             {
@@ -25,14 +28,21 @@ namespace DogVR
                 {
                 Destroy(playerGameObjectSO);
                 }
-            }
 
-        private void Start()
-            {
             playerGameObjectSO.persistentObject = playerPrefab;
             currentObjectiveSO.CurrentObjective = null;
             currentObjectiveSO.ObjectiveName = null;
             currentObjectiveSO.ObjectiveComplete = false;
+            BonesCollectedSO.bonesCollected = 0;
+            }
+
+       // private void Start()
+           // {
+            /*playerGameObjectSO.persistentObject = playerPrefab;
+            currentObjectiveSO.CurrentObjective = null;
+            currentObjectiveSO.ObjectiveName = null;
+            currentObjectiveSO.ObjectiveComplete = false;
+            BonesCollectedSO.bonesCollected = 0;*/
            
 
             /*// Property for CurrentObjective with getter and setter
@@ -42,7 +52,12 @@ namespace DogVR
                 set { CurrentObjective = value; }
                 }*/
 
-            }
+           // }
+
+        /*private void OnDestroy()
+            {
+            Destroy(playerGameObjectSO);
+            }*/
 
         }
     }

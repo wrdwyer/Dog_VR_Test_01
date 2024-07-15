@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+
 using UnityEngine.XR.Interaction.Toolkit;
 using DogVR;
 public class DisableXRRigMovement : MonoBehaviour

@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using Sirenix.OdinInspector;
@@ -11,6 +11,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 using HutongGames.PlayMaker.Actions;
 using Sirenix.Utilities;
 using Unity.XR.CoreUtils;
+using FMODUnity;
 
 namespace DogVR.Actions
     {
@@ -29,23 +30,25 @@ namespace DogVR.Actions
         [Required("Projectile Required")]
         private Projectile ProjectilePrefab;
         [SerializeField]
-        private GameObject ScentPrefab;        
+        private GameObject ScentPrefab;
         [SerializeField]
         private float projectileSpeed = 10f;
         [SerializeField]
         [Required("Line Renderer Required")]
         private LineRenderer Path;
         [SerializeField]
-        [Range(0, 10)]
+        [Range(-5, 10)]
         private float PathHeightOffset = 1.25f;
         [SerializeField]
-        [Range(0, 10)]
+        [Range(-5, 10)]
         private float SpawnHeightOffset = 1.5f;
         [SerializeField]
         [Range(0, 120)]
         private float PathUpdateSpeed = 0.25f;
         [SerializeField]
         private float cooldownTime = 3.0f;
+        [SerializeField]
+        private StudioEventEmitter sniffSound = null;
         private NavMeshTriangulation Triangulation;
         private Vector3[] pathPoints;
         private bool hasFired = false;
@@ -66,7 +69,8 @@ namespace DogVR.Actions
             objectPool = new UnityEngine.Pool.ObjectPool<Projectile>(CreateProjectile,
                 OnGetFromPool, OnReleaseToPool, OnDestroyPooledObject,
                 collectionCheck, defaultCapacity, maxSize);
-            Triangulation = NavMesh.CalculateTriangulation();            
+            Triangulation = NavMesh.CalculateTriangulation();
+            sniffSound = GetComponent<StudioEventEmitter>();
             ClearSpline();
             }
         private void Start()
@@ -88,24 +92,29 @@ namespace DogVR.Actions
                         if (CopperSniffInput.action.WasPressedThisFrame())
                             {
                             hasFired = true;
+                            if (sniffSound != null)
+                                {
+                                Debug.Log("Play Sniff Sound");
+                                sniffSound.Play();
+                                }
                             StartCooldown();
                             //CallDrawNavMechPath();
                             DrawNaveMeshPath(Objective, player);
                             FireProjectile();
                             //FireScent();
-                            
+
                             }
                         }
                     }
                 }
             }
         [Button("Get Objective")]
-        public void UpdateCurrentObjective ()
+        public void UpdateCurrentObjective()
             {
             Objective = GameManager.Instance.currentObjectiveSO.CurrentObjective;
             }
 
-     
+
 
         // invoked when creating an item to populate the object pool
         private Projectile CreateProjectile()

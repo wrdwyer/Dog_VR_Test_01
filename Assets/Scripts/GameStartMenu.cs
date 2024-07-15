@@ -25,6 +25,8 @@ public class GameStartMenu : MonoBehaviour
     private GameObject gameUI;
     [SerializeField]
     SceneFader sceneFader;
+    [SerializeField]
+    private GameObject getCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +59,7 @@ public class GameStartMenu : MonoBehaviour
     public void StartGame()
         {
         StartCoroutine(StartGameFadeSequence());
-
+        getCamera.SetActive(true);
         //LoadLevelOne();
         
         Debug.Log("Starting Game...");

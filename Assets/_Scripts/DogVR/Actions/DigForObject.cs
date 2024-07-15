@@ -1,3 +1,4 @@
+using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,9 @@ namespace DogVR.Actions
         [SerializeField] Transform digMound;
         [SerializeField] GameObject objectToReveal;
         [SerializeField] ParticleSystem dirtParticleSystem;
+        [SerializeField] int nextObjective;
+        [SerializeField] StudioEventEmitter StudioEventEmitter;
+        [SerializeField] GameObject nextObjectiveGO;
         private int _digCount = 0;
         private float _moundPosition;
         private float _objectPosition;
@@ -31,6 +35,10 @@ namespace DogVR.Actions
             {
             if (other.CompareTag("PhysicsHand"))
                 {
+                if (StudioEventEmitter != null)
+                    {
+                    StudioEventEmitter.Play();
+                    }
                 Dig();
                 }
             }
@@ -44,6 +52,8 @@ namespace DogVR.Actions
             else
                 {
                 EnableXRcomponents();
+                GetComponent<SetNewObjective>().SetNewObjectiveGO(nextObjective);
+                nextObjectiveGO.SetActive(true);
                 }
 
             }

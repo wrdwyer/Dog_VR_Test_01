@@ -1,5 +1,167 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9128429597144380905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Click_01
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Click_01
+  Guid:
+    Data1: 1064681276
+    Data2: 1207152796
+    Data3: -823080008
+    Data4: -1804507442
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10
+--- !u!114 &-9009632035162073202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicles/Truck
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicles/Truck
+  Guid:
+    Data1: 927479423
+    Data2: 1104912685
+    Data3: -1879105392
+    Data4: -592657435
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 136416
+--- !u!114 &-8782689259162865954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/Anxious
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/Anxious
+  Guid:
+    Data1: 1006818296
+    Data2: 1127182083
+    Data3: -55798348
+    Data4: 345028963
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10500
+--- !u!114 &-8731096359553926405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/Sniff
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/Sniff
+  Guid:
+    Data1: -308305461
+    Data2: 1308782233
+    Data3: 479173765
+    Data4: -215746926
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1353
+--- !u!114 &-8064662791557529921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enviroment/Farm
+  m_EditorClassIdentifier: 
+  Path: event:/Enviroment/Farm
+  Guid:
+    Data1: -1733322189
+    Data2: 1134392654
+    Data3: 592126640
+    Data4: -1324621482
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 184000
+--- !u!114 &-6575729985255647250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lee/ReadyToGoHome
+  m_EditorClassIdentifier: 
+  Path: event:/Lee/ReadyToGoHome
+  Guid:
+    Data1: 2055776690
+    Data2: 1280193246
+    Data3: 1242163363
+    Data4: 1360384508
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2983
 --- !u!114 &-5382874113046678404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +296,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 147
+  Length: 355
 --- !u!114 &-549249575386844013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +339,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638558005233914816
+  lastModified: 638565758617051616
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -199,18 +361,38 @@ MonoBehaviour:
   - {fileID: -549249575386844013}
   - {fileID: -4937859910785996443}
   - {fileID: 3416396536013109844}
-  - {fileID: 3977738914078244262}
   - {fileID: 2877241895499576319}
   - {fileID: -5180339609475235499}
   - {fileID: -5382874113046678404}
   - {fileID: -3305581052703059019}
   - {fileID: -5259241487908117101}
+  - {fileID: -8782689259162865954}
+  - {fileID: 4455527511120301281}
+  - {fileID: 4171723742835268061}
+  - {fileID: -8064662791557529921}
+  - {fileID: -9009632035162073202}
+  - {fileID: -9128429597144380905}
+  - {fileID: 1177634720578090146}
+  - {fileID: 3764256808149349881}
+  - {fileID: 7455515703526440917}
+  - {fileID: 4433725531828314359}
+  - {fileID: 1493422140945872047}
+  - {fileID: 5998388531575789339}
+  - {fileID: 2429572720984549205}
+  - {fileID: 7075702875588639093}
+  - {fileID: -8731096359553926405}
+  - {fileID: 5816922630591587720}
+  - {fileID: 5867215091766533355}
+  - {fileID: -6575729985255647250}
+  - {fileID: 9077535459222441917}
+  - {fileID: 7020757289298867384}
+  - {fileID: 4680837028098060752}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638558005233943529
+  cacheTime: 638565758617082352
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -227,11 +409,92 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638558005233943529
+  lastModified: 638565758617082352
   FileSizes:
   - Name: 
-    Value: 1150
+    Value: 2034
   Exists: 1
+--- !u!114 &1177634720578090146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/Click_02
+  m_EditorClassIdentifier: 
+  Path: event:/UI/Click_02
+  Guid:
+    Data1: 101197146
+    Data2: 1170870507
+    Data3: 222154427
+    Data4: 1387030165
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10
+--- !u!114 &1493422140945872047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enviroment/Kids
+  m_EditorClassIdentifier: 
+  Path: event:/Enviroment/Kids
+  Guid:
+    Data1: 252461376
+    Data2: 1082805236
+    Data3: 1919413123
+    Data4: -1330304373
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 31242
+--- !u!114 &2429572720984549205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/Digging
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/Digging
+  Guid:
+    Data1: 1062923896
+    Data2: 1080885460
+    Data3: 1724199592
+    Data4: -552528554
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 310
 --- !u!114 &2877241895499576319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +549,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7028
---- !u!114 &3977738914078244262
+--- !u!114 &3764256808149349881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,20 +559,317 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Copper/Crying
+  m_Name: event:/UI/Click_03
   m_EditorClassIdentifier: 
-  Path: event:/Copper/Crying
+  Path: event:/UI/Click_03
   Guid:
-    Data1: 1006818296
-    Data2: 1127182083
-    Data3: -55798348
-    Data4: 345028963
+    Data1: -1108944989
+    Data2: 1299310426
+    Data3: 934653117
+    Data4: -269677942
   Banks:
   - {fileID: -221426105785716485}
-  IsStream: 1
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 191
+--- !u!114 &4171723742835268061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/HappyPanting
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/HappyPanting
+  Guid:
+    Data1: -498049963
+    Data2: 1193799373
+    Data3: 660339378
+    Data4: 371581213
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 42111
+  Length: 20000
+--- !u!114 &4433725531828314359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bird/Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Bird/Idle
+  Guid:
+    Data1: 1237615594
+    Data2: 1250607889
+    Data3: 125270953
+    Data4: 927132715
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12786
+--- !u!114 &4455527511120301281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/Sad
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/Sad
+  Guid:
+    Data1: 949118524
+    Data2: 1322280615
+    Data3: -1485791358
+    Data4: 1553308683
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8998
+--- !u!114 &4680837028098060752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/GetOutOfHere
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/GetOutOfHere
+  Guid:
+    Data1: -882220731
+    Data2: 1161155980
+    Data3: -2090183259
+    Data4: -1579923215
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2598
+--- !u!114 &5816922630591587720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lee/FetchSomeBones
+  m_EditorClassIdentifier: 
+  Path: event:/Lee/FetchSomeBones
+  Guid:
+    Data1: -2062848221
+    Data2: 1247430253
+    Data3: -1316308339
+    Data4: -1349258403
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4818
+--- !u!114 &5867215091766533355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lee/WrongTruck
+  m_EditorClassIdentifier: 
+  Path: event:/Lee/WrongTruck
+  Guid:
+    Data1: 1865639017
+    Data2: 1310567699
+    Data3: -1130848859
+    Data4: 518516965
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4655
+--- !u!114 &5998388531575789339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enviroment/PaperCup
+  m_EditorClassIdentifier: 
+  Path: event:/Enviroment/PaperCup
+  Guid:
+    Data1: -1321039862
+    Data2: 1191040402
+    Data3: 1877773483
+    Data4: 1668956293
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 620
+--- !u!114 &7020757289298867384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/GirlLaugh
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/GirlLaugh
+  Guid:
+    Data1: 1261109738
+    Data2: 1160894159
+    Data3: -2026125381
+    Data4: -1331913125
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1428
+--- !u!114 &7075702875588639093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Vehicles/CarHorn
+  m_EditorClassIdentifier: 
+  Path: event:/Vehicles/CarHorn
+  Guid:
+    Data1: -1436395685
+    Data2: 1306098536
+    Data3: -928701548
+    Data4: 172363636
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 948
+--- !u!114 &7455515703526440917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bird/Flying
+  m_EditorClassIdentifier: 
+  Path: event:/Bird/Flying
+  Guid:
+    Data1: 1520297373
+    Data2: 1335787413
+    Data3: -809321032
+    Data4: -605867720
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5634
+--- !u!114 &9077535459222441917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Copper/CrunchBones
+  m_EditorClassIdentifier: 
+  Path: event:/Copper/CrunchBones
+  Guid:
+    Data1: 1685685990
+    Data2: 1205609911
+    Data3: -635855201
+    Data4: 1863673390
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2148

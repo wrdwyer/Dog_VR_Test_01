@@ -4,6 +4,8 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using DogVR;
 using DogVR.Actions;
+using TMPro;
+using UnityEngine.UI;
 
 public class SetObjectives : MonoBehaviour
     {
@@ -12,6 +14,9 @@ public class SetObjectives : MonoBehaviour
     private int currentObjectiveIndex = 0;
     public List<GameObject> objectivesList;
     public DrawPathToObjective drawPathToObjective;
+    public GameObject currentObjectiveUIToEnable;
+    //public TMP_Text objectiveText;
+    //public Toggle Toggle;
 
    
     public int CurrentObjectiveIndex
@@ -36,6 +41,7 @@ public class SetObjectives : MonoBehaviour
         currentObjectiveSO.CurrentObjective = objectivesList[currentObjectiveIndex];
         currentObjectiveSO.ObjectiveName = objectivesList[currentObjectiveIndex].GetComponent<Objective>().ObjectiveName;
         currentObjectiveSO.ObjectiveComplete = objectivesList[currentObjectiveIndex].GetComponent<Objective>().ObjectiveComplete;
+        currentObjectiveUIToEnable.SetActive(true);
     }
 
     /*[Button("Set Objective")]

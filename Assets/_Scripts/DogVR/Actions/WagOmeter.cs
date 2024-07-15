@@ -4,6 +4,7 @@ using DG.Tweening;
 using FMODUnity;
 using Sirenix;
 using UnityEngine.XR.Interaction.Toolkit;
+using System;
 
 namespace DogVR.Actions
     {
@@ -24,6 +25,8 @@ namespace DogVR.Actions
         public CopperEmotionalState CopperEmotionalState;
         private CopperEmotionalState currentState;
         [SerializeField]
+        private StudioEventEmitter idleBark;
+        [SerializeField]
         private StudioEventEmitter growlandBark;
         [SerializeField]
         private StudioEventEmitter sadBark;
@@ -31,14 +34,26 @@ namespace DogVR.Actions
         private StudioEventEmitter anxiousBark;
         [SerializeField]
         private StudioEventEmitter happyBark;
+
         [SerializeField]
         [Range(0f, 1f)]
-        private float bbarkIntensity = 1f;
+        private float hapticIntensity = 1f;
         [Range(0f, 10f)]
         [SerializeField]
-        private float barkDuration = 1f;
+        private float hapticDuration = 1f;
 
-        private void Awake()
+
+        
+        [Range(0f, 1f)]
+        [SerializeField]
+        private float AggressivehapticIntensity = 1f;
+        [Range(0f, 10f)]
+        [SerializeField]
+        private float AggressivehapticDuration = 10f;
+
+        public event Action <float,float>OnTriggerHaptic;
+
+                private void Awake()
             {
             CopperEmotionalState.currentState = CopperEmotionalState.AnimalState.Happy;
             currentState = CopperEmotionalState;
@@ -47,6 +62,8 @@ namespace DogVR.Actions
             targetSadAnimationParameter = 0f;
             SetParameters();
             }
+
+       
         private void SetParameters()
             {
             DOTween.To(() => animator.GetFloat(happyAnimationParameterName), x => animator.SetFloat(happyAnimationParameterName, x), targetHappyAnimationParameter, 2f);
@@ -84,27 +101,40 @@ namespace DogVR.Actions
                 }
             }
 
-        public void SendHapticFeedback(float barkIntensity, float duration)
+        public void TriggerHaptic(XRBaseController controller)
             {
-            rightController.SendHapticImpulse(barkIntensity, duration);
-            leftController.SendHapticImpulse(barkIntensity, duration);
+            controller.SendHapticImpulse(hapticIntensity, hapticDuration);
+            }
+
+        public void SendHapticFeedback(float Intensity, float Duration)
+            {
+            if (Intensity > 0f)
+                {
+                rightController.SendHapticImpulse(Intensity, Duration);
+                leftController.SendHapticImpulse(Intensity, Duration);
+                }
+            
+           
             }
 
 
         public void Idle()
             {
-            if (growlandBark.IsPlaying()) growlandBark.Stop();
-            if (sadBark.IsPlaying()) sadBark.Stop();
-            if (happyBark.IsPlaying()) happyBark.Stop();
+            
+            SendHapticFeedback(0.0f, 0f);
+            StopAudio();
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = 0f;
             SetParameters();
+            SendHapticFeedback(0.0f, 0f);      
+            idleBark.Play();
             Debug.Log("Idle");
             }
 
         [Button("Anxious")]
         public void Anxious()
             {
+            StopAudio();
             targetHappyAnimationParameter = 1f;
             targetSadAnimationParameter = -1f;
             SetParameters();
@@ -115,16 +145,19 @@ namespace DogVR.Actions
 
         public void Happy()
             {
+            StopAudio();
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = 1f;
             SetParameters();
-            SendHapticFeedback(0.2f, 5f);
+           
+            SendHapticFeedback(0.2f, 1000f);
             happyBark.Play();
             Debug.Log("Happy");
             }
 
         public void Sad()
             {
+            StopAudio();
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = -1f;
             SetParameters();
@@ -135,13 +168,28 @@ namespace DogVR.Actions
 
         public void Threatened()
             {
+            StopAudio();
             targetHappyAnimationParameter = -1f;
             targetSadAnimationParameter = -1f;
             SetParameters();
             growlandBark.Play();
-            SendHapticFeedback(0.2f, 5f);
+            SendHapticFeedback(AggressivehapticIntensity, AggressivehapticDuration);
             Debug.Log("Threatened");
             }
 
+        public void StopAudio()
+            {
+            if (idleBark.IsPlaying()) idleBark.Stop();
+            if (growlandBark.IsPlaying()) growlandBark.Stop();
+            if (sadBark.IsPlaying()) sadBark.Stop();
+            if (happyBark.IsPlaying()) happyBark.Stop();
+            if (anxiousBark.IsPlaying()) anxiousBark.Stop();
+            }
+
+        [Button("Test Haptics")]
+        public void TestHaptics(float hapticIntensity, float hapticDuration)
+            {
+           OnTriggerHaptic?.Invoke(hapticIntensity, hapticDuration);
+            }
         }
     }

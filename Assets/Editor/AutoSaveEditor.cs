@@ -16,7 +16,7 @@ public class AutoSaveEditor
 
     private static void Update()
         {
-        if (EditorApplication.timeSinceStartup >= nextSaveTime && EditorApplication.isPlaying == false)
+        if (EditorApplication.timeSinceStartup >= nextSaveTime && !EditorApplication.isPlaying)
             {
             SaveAll();
             nextSaveTime = EditorApplication.timeSinceStartup + saveInterval;

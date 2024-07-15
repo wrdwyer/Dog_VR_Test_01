@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 using DogVR;
 using Unity.XR.CoreUtils;
 using System;
+using FMODUnity;
 
 public class TransitionToLevel2 : MonoBehaviour
     {
@@ -24,6 +25,10 @@ public class TransitionToLevel2 : MonoBehaviour
     private float faderWaitTime = 2.0f; // Time to wait when fully faded to black
     [SerializeField]
     private SceneFader sceneFader;
+    [SerializeField]
+    private StudioEventEmitter stopCityEnviromentSound;
+    [SerializeField]
+    private StudioEventEmitter startFramEnviromentSound;
 
     private void Start()
         {
@@ -57,6 +62,8 @@ public class TransitionToLevel2 : MonoBehaviour
 
     private void SetPlayersNewLocation()
         {
+        stopCityEnviromentSound.enabled = false;
+        startFramEnviromentSound.enabled = true;
         parentFarmTruckObject.gameObject.SetActive(false);
         FarmTruckToFarm.SetActive(true);
         GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(FarmTruckSnapVolume.transform, true);

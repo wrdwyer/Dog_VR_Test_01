@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CurrentObjective
   m_EditorClassIdentifier: 
   currentObjective: {fileID: 0}
-  objectiveName: Ball
+  objectiveName: Find Coppers Ball
   objectiveComplete: 0

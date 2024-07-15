@@ -1,3 +1,4 @@
+using DogVR;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class StartTriggerAnimation : MonoBehaviour
             Debug.Log("Start Animation");
             StartAnimation();
             triggered = true;
+            GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<SetCameraYOffset>().enabled = true;
+            GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<SetCameraYOffset>().enabled = false;
             }
         }
 

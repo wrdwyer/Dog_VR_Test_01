@@ -20,14 +20,17 @@ namespace DogVR
         [SerializeField]
         private GameObject vignetteObject = null;
         [SerializeField]
-        private Toggle snapTunrn = null;
-        [SerializeField]
+        private Toggle snapTunrn = null;        
         private Volume volume;
         [SerializeField]
         private ResetHeight resetHeight;
         private ColorLookup colorLookup;
         private void OnEnable()
             {
+            if (volume == null)
+                {
+                volume = GameManager.Instance.VolumePostProcessingVolume;
+                }
             if (colourSpectrum != null)
                 {
                 colourSpectrum.isOn = options.enableDogVision;

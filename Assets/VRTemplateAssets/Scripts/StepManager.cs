@@ -4,25 +4,26 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.XR.Interaction.Toolkit;
+using DogVR;
 
 namespace Unity.VRTemplate
-{
+    {
     /// <summary>
     /// Controls the steps in the in coaching card.
     /// </summary>
-    
+
 
     public class StepManager : MonoBehaviour
-    {
+        {
         [Serializable]
         class Step
-        {
+            {
             [SerializeField]
             public GameObject stepObject;
 
             [SerializeField]
             public string buttonText;
-        }
+            }
         private bool disableOnNextStep = false;
 
         [SerializeField]
@@ -40,18 +41,25 @@ namespace Unity.VRTemplate
         private DisableXRRigMovement disableXRRigMovement;
 
         [SerializeField]
+        private SetNewObjective SetNewObjective;
+
+        [SerializeField]
         private PlayableDirector playableDirector;
 
         int m_CurrentStepIndex = 0;
 
+
         private void Start()
             {
-            GetComponent<DisableXRRigMovement>().DisableMovement();
+            if (TryGetComponent<DisableXRRigMovement>(out disableXRRigMovement))
+                {
+                disableXRRigMovement.DisableMovement();
+                }
             }
 
 
         public void Next()
-        {
+            {
             if (!disableOnNextStep)
                 {
                 m_StepList[m_CurrentStepIndex].stepObject.SetActive(false);
@@ -67,15 +75,23 @@ namespace Unity.VRTemplate
                 {
                 DisbaleGUI();
                 }
-            
-        }
+
+            }
 
         public void DisbaleGUI()
             {
             if (gameObjectToDisable != null)
                 {
                 gameObjectToDisable.SetActive(false);
+
                 EnableXrRigMovement();
+                if (SetNewObjective != null)
+                    {
+                    GameManager.Instance.SetObjectivesManager.CurrentObjectiveIndex = 0;
+                    }
+
+
+
                 }
             }
 
@@ -95,5 +111,5 @@ namespace Unity.VRTemplate
                 playableDirector.enabled = true;
                 }
             }
+        }
     }
-}

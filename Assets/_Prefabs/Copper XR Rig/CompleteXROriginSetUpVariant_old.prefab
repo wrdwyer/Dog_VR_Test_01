@@ -5046,10 +5046,12 @@ MonoBehaviour:
   sadAnimationParameterName: Sad
   animator: {fileID: 1499328361670887571}
   CopperEmotionalState: {fileID: 11400000, guid: c91f163effd5a5d4bbe48cfb9e0bb947, type: 2}
+  idleBark: {fileID: 0}
   growlandBark: {fileID: 0}
   sadBark: {fileID: 0}
+  anxiousBark: {fileID: 0}
   happyBark: {fileID: 0}
-  bbarkIntensity: 1
+  barkIntensity: 1
   barkDuration: 1
 --- !u!114 &5696332263652052274
 MonoBehaviour:
