@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3de17c75-2264-4907-8d84-5d75f2c5be05}">
+		<property name="assetPath">
+			<value>Cat/274151__darcydunes__cat-meow-short.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2133560090702948</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{66fccf0c-48f1-403e-ae75-8600b9c95c9b}</destination>
+		</relationship>
+	</object>
+</objects>

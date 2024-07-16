@@ -19,6 +19,7 @@ namespace DogVR
         public StudioEventEmitter attackSound;
         public bool Dog = true;
         public bool Hoodie = false;
+        public bool Happy = false;
         public enum EncounteredAnimalState
             {
             Idle,
@@ -75,26 +76,40 @@ namespace DogVR
             if (other.CompareTag("Player"))
                 SetStatusToIdle();
                 {
-                if (animator != null && BlazeAI !=null && Dog)
+                if (animator != null && BlazeAI != null && Dog)
                     {
                     Debug.Log("Trying to Idle");
                     animator.SetBool("AttackReady_b", false);
                     animator.SetBool("Sit_b", false);
                     animator.SetFloat("Movement_f", 0.5f);
                     BlazeAI.enabled = true;
-
-                    attackSound.Stop();
+                    if (attackSound != null) attackSound.Stop();
                     Debug.Log("Idle Ready");
+                    }
+                if (animator != null && BlazeAI != null && Dog && Happy)
+                    {
+                    Debug.Log("Trying to Walk");
+                    animator.Play("Locomotion");
+                    animator.SetFloat("Movement_f", 0.5f);
+                   
+                    BlazeAI.enabled = true;
+                    if (attackSound != null) attackSound.Stop();
+                    Debug.Log("Walk Ready");
                     }
                 if (animator != null && BlazeAI != null && Hoodie)
                     {
                     Debug.Log("Trying to Idle");
                     animator.Play("Idle");
-                  
-                   
-
-                    attackSound.Stop();
+                    if (attackSound != null) attackSound.Stop();
                     Debug.Log("Idle Ready");
+                    }
+                if (animator == null && BlazeAI != null && Happy)
+                    {
+                    Debug.Log("Trying to Walk");
+                    animator.Play("Walking");
+                    if (attackSound != null) attackSound.Stop();
+                    Debug.Log("Walk Ready");
+
                     }
                 else
                     {
@@ -109,6 +124,15 @@ namespace DogVR
             state.currentState = CopperEmotionalState.AnimalState.Happy;
             Debug.Log(state.currentState);
             TriggerEventChannel(state);
+            if (animator != null && BlazeAI != null && Dog && Happy)
+                {
+                BlazeAI.enabled = false;
+                Debug.Log("Trying to Be Happy");
+                animator.SetFloat("Movement_f", 0.0f);
+                animator.Play("TailWag");
+                //attackSound.Play();
+                Debug.Log("Happy Ready");
+                }
             }
 
         [Button("Set Status to Sad")]
@@ -117,6 +141,14 @@ namespace DogVR
             state.currentState = CopperEmotionalState.AnimalState.Sad;
             Debug.Log(state.currentState);
             TriggerEventChannel(state);
+            if (animator != null && BlazeAI != null && Happy)
+                {
+                BlazeAI.enabled = false;
+                Debug.Log("Trying to Wave");
+                animator.Play("Waving");
+                attackSound.Play();
+                Debug.Log("Attack Ready");
+                }
             }
 
         [Button("Set Status to Anxious")]
@@ -141,7 +173,7 @@ namespace DogVR
             state.currentState = CopperEmotionalState.AnimalState.Threatened;
             Debug.Log(state.currentState);
             TriggerEventChannel(state);
-            if (animator != null && BlazeAI !=null && Dog)
+            if (animator != null && BlazeAI != null && Dog)
                 {
                 BlazeAI.enabled = false;
                 Debug.Log("Trying to Attack");

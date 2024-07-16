@@ -54,10 +54,10 @@ namespace DogVR
 
            // }
 
-        /*private void OnDestroy()
+        private void OnDisable()
             {
-            Destroy(playerGameObjectSO);
-            }*/
+            if (playerGameObjectSO != null) playerGameObjectSO.persistentObject = null;
+            }
 
         }
     }

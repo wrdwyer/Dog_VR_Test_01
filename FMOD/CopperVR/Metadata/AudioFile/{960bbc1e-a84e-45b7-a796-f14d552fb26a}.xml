@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{960bbc1e-a84e-45b7-a796-f14d552fb26a}">
+		<property name="assetPath">
+			<value>716510__robinhood76__12320-labrador-single-bark.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.56580498866213147</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{66fccf0c-48f1-403e-ae75-8600b9c95c9b}</destination>
+		</relationship>
+	</object>
+</objects>

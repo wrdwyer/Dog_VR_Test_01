@@ -135,6 +135,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 184000
+--- !u!114 &-7717744329873408054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dogs/LabradorBark
+  m_EditorClassIdentifier: 
+  Path: event:/Dogs/LabradorBark
+  Guid:
+    Data1: 1855302270
+    Data2: 1327262428
+    Data3: -501771640
+    Data4: -1905240216
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 170
 --- !u!114 &-6575729985255647250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +366,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638565758617051616
+  lastModified: 638567559907793756
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -387,12 +414,14 @@ MonoBehaviour:
   - {fileID: 9077535459222441917}
   - {fileID: 7020757289298867384}
   - {fileID: 4680837028098060752}
+  - {fileID: 6635404223563438299}
+  - {fileID: -7717744329873408054}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638565758617082352
+  cacheTime: 638567559907822579
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -409,10 +438,10 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638565758617082352
+  lastModified: 638567559907822579
   FileSizes:
   - Name: 
-    Value: 2034
+    Value: 2126
   Exists: 1
 --- !u!114 &1177634720578090146
 MonoBehaviour:
@@ -765,6 +794,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 620
+--- !u!114 &6635404223563438299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/CatMeow
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/CatMeow
+  Guid:
+    Data1: -909490364
+    Data2: 1200086737
+    Data3: -1198787163
+    Data4: 1110509570
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &7020757289298867384
 MonoBehaviour:
   m_ObjectHideFlags: 0
