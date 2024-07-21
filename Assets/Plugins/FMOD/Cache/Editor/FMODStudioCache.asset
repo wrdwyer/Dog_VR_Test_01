@@ -366,7 +366,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638567559907793756
+  lastModified: 638568005852915682
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -416,12 +416,14 @@ MonoBehaviour:
   - {fileID: 4680837028098060752}
   - {fileID: 6635404223563438299}
   - {fileID: -7717744329873408054}
+  - {fileID: 1163524475467967716}
+  - {fileID: 7584993784256315360}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638567559907822579
+  cacheTime: 638568005852945233
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -438,11 +440,38 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638567559907822579
+  lastModified: 638568005852945233
   FileSizes:
   - Name: 
-    Value: 2126
+    Value: 2222
   Exists: 1
+--- !u!114 &1163524475467967716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lee/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/Lee/Walking
+  Guid:
+    Data1: -1766353121
+    Data2: 1248303670
+    Data3: 1165550775
+    Data4: 743677648
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 220
 --- !u!114 &1177634720578090146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,6 +931,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5634
+--- !u!114 &7584993784256315360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/Steam
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/Steam
+  Guid:
+    Data1: -733209342
+    Data2: 1172534686
+    Data3: 911308694
+    Data4: -555021181
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5475
 --- !u!114 &9077535459222441917
 MonoBehaviour:
   m_ObjectHideFlags: 0

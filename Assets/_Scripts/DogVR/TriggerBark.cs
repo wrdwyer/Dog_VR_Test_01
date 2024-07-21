@@ -1,5 +1,3 @@
-using Oculus.Interaction;
-using Oculus.Interaction.Input;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,10 +1,12 @@
 using DogVR.Movement;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.XR.LegacyInputHelpers;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+
 
 
 namespace DogVR
@@ -24,6 +26,9 @@ namespace DogVR
         private Volume volume;
         [SerializeField]
         private ResetHeight resetHeight;
+
+        [SerializeField]
+        private CameraOffset cameraOffset;
         private ColorLookup colorLookup;
         private void OnEnable()
             {
@@ -96,7 +101,9 @@ namespace DogVR
             }
         public void ResetCamerHeight()
             {
-            resetHeight.Stand();
+            cameraOffset.enabled = false;
+            cameraOffset.enabled = true;
+            //resetHeight.Stand();
             Debug.Log("Resetting Camera Height");
             }
 

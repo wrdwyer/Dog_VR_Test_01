@@ -20,6 +20,7 @@ namespace DogVR
         public bool Dog = true;
         public bool Hoodie = false;
         public bool Happy = false;
+        public bool Anxious = false;
         public enum EncounteredAnimalState
             {
             Idle,

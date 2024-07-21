@@ -104,7 +104,7 @@ MonoBehaviour:
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
   m_Loaders:
-  - {fileID: 11400000, guid: 28fe04729daeb2345bebc951fad25769, type: 2}
+  - {fileID: 11400000, guid: afc0d0781714e7c4bb6f646ba15ba00e, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: Lumin Settings
   m_EditorClassIdentifier: 
   m_LoaderManagerInstance: {fileID: 4897379186331661704}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0
 --- !u!114 &3428388118024481725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +155,6 @@ MonoBehaviour:
   m_AutomaticRunning: 0
   m_Loaders:
   - {fileID: 11400000, guid: 28fe04729daeb2345bebc951fad25769, type: 2}
-  - {fileID: 11400000, guid: f04dfb92206e68a45a733dcf8a21704f, type: 2}
 --- !u!114 &4897379186331661704
 MonoBehaviour:
   m_ObjectHideFlags: 0

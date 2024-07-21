@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.XR.Interaction.Toolkit;
 using DogVR;
+using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+
 
 namespace Unity.VRTemplate
     {
@@ -47,6 +51,9 @@ namespace Unity.VRTemplate
         private PlayableDirector playableDirector;
 
         int m_CurrentStepIndex = 0;
+        private XROrigin m_XROrigin;
+        private GameObject m_RightController;
+        private GameObject m_LeftController;
 
 
         private void Start()
@@ -55,6 +62,10 @@ namespace Unity.VRTemplate
                 {
                 disableXRRigMovement.DisableMovement();
                 }
+            m_XROrigin = GameManager.Instance.playerGameObjectSO.persistentObject.gameObject.GetComponentInChildren<XROrigin>();
+            m_RightController = m_XROrigin.GetComponent<XRInputModalityManager>().rightController;
+            m_LeftController = m_XROrigin.GetComponent<XRInputModalityManager>().leftController;
+           
             }
 
 
@@ -89,9 +100,6 @@ namespace Unity.VRTemplate
                     {
                     GameManager.Instance.SetObjectivesManager.CurrentObjectiveIndex = 0;
                     }
-
-
-
                 }
             }
 
@@ -99,6 +107,9 @@ namespace Unity.VRTemplate
             {
             if (enableXRRigMovement != null)
                 {
+                m_RightController.GetComponent<ActionBasedControllerManager>().enabled = true;
+                m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = true;
+                Debug.Log("Enable Input Actions Right Controller");
                 enableXRRigMovement.EnableMovement();
                 EnablePlayableDirector();
                 }

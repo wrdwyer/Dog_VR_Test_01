@@ -69,6 +69,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChannel: {fileID: 11400000, guid: 21511d4bc9fe1fd49beb3bf0b97b76e7, type: 2}
   state: {fileID: 11400000, guid: c91f163effd5a5d4bbe48cfb9e0bb947, type: 2}
+  animator: {fileID: 0}
+  useAttackAnimation: 0
+  BlazeAI: {fileID: 0}
+  attackSound: {fileID: 0}
+  Dog: 1
+  Hoodie: 0
+  Happy: 0
+  Anxious: 0
   currentAnimalState: 1
   ToDoList: To be added to anything which can trigger Coppers Emotional state.
 --- !u!114 &629221247039863217
@@ -83,8 +91,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b2875f3198dbc47bd86b268292522e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerName: StepBack
-  splineAnimate: {fileID: 0}
+  animationToTrigger: StepBack
+  splineToAnimate: {fileID: 0}
+  inRangeOfDog: 0
+  triggeredEvent: 0
+  audioToTrigger: {fileID: 0}
+  animationBoolTriggerName: 
+  animationParameterName: 
+  animationInt: 0
+  useAnimationParamamters: 0
 --- !u!1 &3090019983107254069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,9 +2521,6 @@ PrefabInstance:
       addedObject: {fileID: 2362200311751835361}
     - targetCorrespondingSourceObject: {fileID: 100008, guid: a890656eebef5d94ab6c86843cebd735, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4824286688536837038}
-    - targetCorrespondingSourceObject: {fileID: 100008, guid: a890656eebef5d94ab6c86843cebd735, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4435568419083916127}
     - targetCorrespondingSourceObject: {fileID: 100008, guid: a890656eebef5d94ab6c86843cebd735, type: 3}
       insertIndex: -1
@@ -2558,22 +2570,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!208 &4824286688536837038
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2384751073261660458}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.26, y: 0.7, z: 0.26}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.65, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!114 &4435568419083916127
 MonoBehaviour:
   m_ObjectHideFlags: 0
