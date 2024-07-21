@@ -162,6 +162,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 170
+--- !u!114 &-6986805823728899691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MainMenu/Music
+  m_EditorClassIdentifier: 
+  Path: event:/MainMenu/Music
+  Guid:
+    Data1: -1317336045
+    Data2: 1270578213
+    Data3: -1878113603
+    Data4: 190774542
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 338200
 --- !u!114 &-6575729985255647250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +324,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 56085
+--- !u!114 &-4328012936490421929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/DropBall
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/DropBall
+  Guid:
+    Data1: -1606443599
+    Data2: 1173511925
+    Data3: -182813778
+    Data4: -607239208
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-3305581052703059019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +420,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638568005852915682
+  lastModified: 638571868273636267
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -418,12 +472,16 @@ MonoBehaviour:
   - {fileID: -7717744329873408054}
   - {fileID: 1163524475467967716}
   - {fileID: 7584993784256315360}
+  - {fileID: 2459646969354598120}
+  - {fileID: -4328012936490421929}
+  - {fileID: 7463695006509335542}
+  - {fileID: -6986805823728899691}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638568005852945233
+  cacheTime: 638571868273668925
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -440,10 +498,10 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638568005852945233
+  lastModified: 638571868273668925
   FileSizes:
   - Name: 
-    Value: 2222
+    Value: 2392
   Exists: 1
 --- !u!114 &1163524475467967716
 MonoBehaviour:
@@ -553,6 +611,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 310
+--- !u!114 &2459646969354598120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/SeedBag
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/SeedBag
+  Guid:
+    Data1: 1360526649
+    Data2: 1076495343
+    Data3: 1300876981
+    Data4: -252654085
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 625
 --- !u!114 &2877241895499576319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,6 +1016,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5634
+--- !u!114 &7463695006509335542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dogs/DogPaws
+  m_EditorClassIdentifier: 
+  Path: event:/Dogs/DogPaws
+  Guid:
+    Data1: 338682561
+    Data2: 1281194381
+    Data3: 987950780
+    Data4: 124517666
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &7584993784256315360
 MonoBehaviour:
   m_ObjectHideFlags: 0

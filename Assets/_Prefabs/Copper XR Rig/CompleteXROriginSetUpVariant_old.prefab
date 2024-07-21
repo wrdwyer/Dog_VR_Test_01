@@ -5051,8 +5051,10 @@ MonoBehaviour:
   sadBark: {fileID: 0}
   anxiousBark: {fileID: 0}
   happyBark: {fileID: 0}
-  barkIntensity: 1
-  barkDuration: 1
+  hapticIntensity: 1
+  hapticDuration: 1
+  AggressivehapticIntensity: 1
+  AggressivehapticDuration: 10
 --- !u!114 &5696332263652052274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9168,6 +9170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1063bd321098744f800ca9a17021a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOffset: {fileID: 0}
 --- !u!4 &1571159435874840886 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9014170783705847996, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
@@ -10835,7 +10838,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   jumpHeight: 1
   characterController: {fileID: 4878183265078119005}
   groundLAyer:
@@ -10853,7 +10856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de041228864140540a8d483cf22b333a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpButton: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  jumpButton: {fileID: 0}
   jumpHeight: 1
   gravityValue: -9.81
   characterController: {fileID: 4878183265078119005}
@@ -10899,7 +10902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee73a76e47b2bd4eb7eb15b151ce31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpButton: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  jumpButton: {fileID: 0}
   charController: {fileID: 4878183265078119005}
   jumpHeight: 1
   jumpButtonReleased: 0
@@ -10915,7 +10918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9038332624aaed46a1c105ee92d95a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standCrouchInputAction: {fileID: -6360503040121214334, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  standCrouchInputAction: {fileID: 0}
   cameraOffset: {fileID: 4358141049595469137}
   crouchOffsetY: 0.3
 --- !u!143 &4878183265078119005 stripped

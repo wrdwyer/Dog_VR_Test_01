@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{0675811e-6617-4a4c-9866-b9eddf425278}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{0b3fd16d-83b7-4f86-bb50-0d936ebc79b8}</destination>
 		</relationship>
@@ -254,7 +257,7 @@
 			<value>Reverb Send</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>5</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-60.000000)(1.000000,-40.000000)(2.000000,-20.000000)(3.000000,-12.000000)(4.000000,-6.000000)(5.000000,-2.000000)(6.000000,0.000000)(7.000000,2.000000)(8.000000,6.000000)(9.000000,12.000000)(10.000000,20.000000)}</value>
@@ -276,7 +279,7 @@
 			<value>V. Radius</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>15</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)(2.000000,4.000000)(3.000000,11.000000)(4.000000,25.000000)(5.000000,100.000000)(6.000000,1000.000000)}</value>

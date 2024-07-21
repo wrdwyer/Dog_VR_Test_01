@@ -8707,8 +8707,10 @@ MonoBehaviour:
   sadBark: {fileID: 5852415544431770335}
   anxiousBark: {fileID: 0}
   happyBark: {fileID: 4459871994917477586}
-  barkIntensity: 1
-  barkDuration: 2.27
+  hapticIntensity: 1
+  hapticDuration: 1
+  AggressivehapticIntensity: 1
+  AggressivehapticDuration: 10
 --- !u!114 &8317171927185812580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11811,7 +11813,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   jumpHeight: 1
   characterController: {fileID: 627582044399651647}
   groundLAyer:
@@ -11829,7 +11831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de041228864140540a8d483cf22b333a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpButton: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  jumpButton: {fileID: 0}
   jumpHeight: 1
   gravityValue: -9.81
   characterController: {fileID: 627582044399651647}
@@ -11875,7 +11877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee73a76e47b2bd4eb7eb15b151ce31e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpButton: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  jumpButton: {fileID: 0}
   charController: {fileID: 627582044399651647}
   jumpHeight: 1
   jumpButtonReleased: 0
@@ -11891,7 +11893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9038332624aaed46a1c105ee92d95a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standCrouchInputAction: {fileID: -6360503040121214334, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  standCrouchInputAction: {fileID: 0}
   cameraOffset: {fileID: 1978418286833502215}
   crouchOffsetY: 0.3
 --- !u!4 &627582044841930678 stripped
@@ -12237,7 +12239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43dacf66f0e62dd49a2c064e76cf3cb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barkInput: {fileID: -5029577029357391713, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  barkInput: {fileID: 0}
   hapticInput: {fileID: 0}
   controller: {fileID: 6830472379483091025}
   audioEmitter: {fileID: 2644736993119853422}
@@ -12291,6 +12293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1063bd321098744f800ca9a17021a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOffset: {fileID: 0}
 --- !u!1 &6830472379596001492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9014170783809206332, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
@@ -15923,7 +15926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cdf3ac8ad57f74e96dbdb0ccbeeed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButton: {fileID: 3234087822463966843, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  menuButton: {fileID: 0}
   VRUIMenu: {fileID: 9032774791284563822}
 --- !u!4 &7850586707571743865 stripped
 Transform:
@@ -16617,8 +16620,8 @@ MonoBehaviour:
   vignette: {fileID: 4677527680996303254}
   vignetteObject: {fileID: 4129781069390139710}
   snapTunrn: {fileID: 8743026529555874547}
-  volume: {fileID: 0}
   resetHeight: {fileID: 0}
+  cameraOffset: {fileID: 0}
 --- !u!1001 &8567699676225207594
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DogVR;
+using FMODUnity;
 
 public class GameStartMenu : MonoBehaviour
     {
@@ -28,12 +29,19 @@ public class GameStartMenu : MonoBehaviour
     [SerializeField]
     private GameObject getCamera;
     private bool gameStarted = false;
+      
+    public string backgroundMusicEvent;
+
+    private FMOD.Studio.EventInstance backgroundMusicInstance;
+
 
     // Start is called before the first frame update
     void Start()
         {
-        EnableMainMenu();
 
+        EnableMainMenu();
+        backgroundMusicInstance = RuntimeManager.CreateInstance(backgroundMusicEvent);
+        backgroundMusicInstance.start();
         //Hook events
         startButton.onClick.AddListener(StartGame);
         optionButton.onClick.AddListener(EnableOption);
@@ -54,7 +62,14 @@ public class GameStartMenu : MonoBehaviour
         }
     public void QuitGame()
         {
+#if UNITY_STANDALONE
         Application.Quit();
+#endif
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+
         }
 
     public void StartGame()
@@ -103,6 +118,8 @@ public class GameStartMenu : MonoBehaviour
         {
         // Fade to black
         yield return StartCoroutine(sceneFader.FadeIn());
+        backgroundMusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        backgroundMusicInstance.release();
         Debug.Log("Fading in...");
         HideAll();
         Debug.Log("Hiding all...");

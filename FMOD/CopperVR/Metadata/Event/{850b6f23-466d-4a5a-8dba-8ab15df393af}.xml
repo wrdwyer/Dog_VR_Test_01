@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{81679141-6822-4243-884e-dd0164292ce7}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{edfb60d1-4194-46f9-8f2b-6ad4a25a6761}</destination>
 		</relationship>
@@ -161,7 +164,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -170,7 +172,6 @@
 		<property name="name">
 			<value>Atten. Range</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -179,7 +180,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -255,7 +255,7 @@
 			<value>V. Radius</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>13.5</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)(2.000000,4.000000)(3.000000,11.000000)(4.000000,25.000000)(5.000000,100.000000)(6.000000,1000.000000)}</value>
@@ -277,7 +277,7 @@
 			<value>Directivity</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>

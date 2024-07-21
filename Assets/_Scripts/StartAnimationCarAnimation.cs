@@ -7,6 +7,9 @@ using DogVR;
 using UnityEngine.Splines;
 
 using FMODUnity;
+using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class StartAnimationCarAnimation : MonoBehaviour
     {
@@ -34,6 +37,10 @@ public class StartAnimationCarAnimation : MonoBehaviour
     [SerializeField]
     private StudioEventEmitter WaitCopperAudio;
 
+    private XROrigin m_XROrigin;
+    private GameObject m_RightController;
+    private GameObject m_LeftController;
+
     void Awake()
         {
 
@@ -45,6 +52,9 @@ public class StartAnimationCarAnimation : MonoBehaviour
 
     void Start()
         {
+        m_XROrigin = GameManager.Instance.playerGameObjectSO.persistentObject.gameObject.GetComponentInChildren<XROrigin>();
+        m_RightController = m_XROrigin.GetComponent<XRInputModalityManager>().rightController;
+        m_LeftController = m_XROrigin.GetComponent<XRInputModalityManager>().leftController;
         //player = GameManager.Instance.playerGameObjectSO.persistentObject;
         //player = GameObject.FindWithTag("Player");
         }
@@ -60,17 +70,19 @@ public class StartAnimationCarAnimation : MonoBehaviour
                 tailGateanimator.Play("CloseTailGate");
                 GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(snapVoluelume.transform, true);
                 //other.transform.parent.SetParent(snapVoluelume.transform, true);
+                m_RightController.GetComponent<ActionBasedControllerManager>().enabled = false;
+                m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = false;
                 StartCoroutine(WaitForAnimation());
-                GetComponent<DisableXRRigMovement>().DisableMovement();
-                if (GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>() != null)
-                    {
-                    GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = true;
+                //GetComponent<DisableXRRigMovement>().DisableMovement();
+                //if (GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>() != null)
+                //    {
+                //    GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = true;
                     
-                    }
-                else
-                    {
-                    Debug.Log("DisableTeleportComponents not found");
-                    }
+                //    }
+                //else
+                //    {
+                //    Debug.Log("DisableTeleportComponents not found");
+                //    }
                 //Need to reverse this when Sceane 2 is loaded and Truck has finished animations.
                 }
             }

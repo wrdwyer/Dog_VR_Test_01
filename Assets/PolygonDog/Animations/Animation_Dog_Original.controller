@@ -53,7 +53,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 9100000}
   - m_Name: Jump_tr
     m_Type: 9
@@ -8737,7 +8737,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 528, y: -444, z: 0}
   m_ExitPosition: {x: 528, y: -516, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102692432482195122}
+  m_DefaultState: {fileID: 1102298750320508464}
 --- !u!1107 &1107998931517771542
 AnimatorStateMachine:
   serializedVersion: 6

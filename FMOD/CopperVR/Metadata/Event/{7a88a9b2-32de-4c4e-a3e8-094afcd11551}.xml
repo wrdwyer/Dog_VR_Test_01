@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{fe5d3369-1a98-4953-96e4-66fc6575532f}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{5cacb087-23e9-4fc4-85fe-4756ebb54966}</destination>
 		</relationship>
@@ -98,7 +101,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{45ec20e5-1266-4140-9685-fb022e3b4b53}">
 		<property name="volume">
-			<value>7</value>
+			<value>10</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -161,7 +164,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -170,7 +172,6 @@
 		<property name="name">
 			<value>Atten. Range</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>
@@ -179,7 +180,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -233,7 +233,7 @@
 			<value>Reverb Send</value>
 		</property>
 		<property name="value">
-			<value>5.5</value>
+			<value>19</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,-60.000000)(1.000000,-40.000000)(2.000000,-20.000000)(3.000000,-12.000000)(4.000000,-6.000000)(5.000000,-2.000000)(6.000000,0.000000)(7.000000,2.000000)(8.000000,6.000000)(9.000000,12.000000)(10.000000,20.000000)}</value>
@@ -255,7 +255,7 @@
 			<value>V. Radius</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>13.5</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)(2.000000,4.000000)(3.000000,11.000000)(4.000000,25.000000)(5.000000,100.000000)(6.000000,1000.000000)}</value>
@@ -277,7 +277,7 @@
 			<value>Directivity</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>

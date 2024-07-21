@@ -29,7 +29,7 @@ public class TransitionToLevel2 : MonoBehaviour
     private StudioEventEmitter stopCityEnviromentSound;
     [SerializeField]
     private StudioEventEmitter startFramEnviromentSound;
-
+    private bool isFading = false;
     private void Start()
         {
         ///sceneFader = FindAnyObjectByType<SceneFader>();
@@ -38,10 +38,10 @@ public class TransitionToLevel2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
         {
-        if (sceneFader != null)
+        if (sceneFader != null && !isFading)
             {
+            isFading = true;
             sceneFader.gameObject.SetActive(true);
-            
             StartCoroutine(FadeSequence());
             }
 
