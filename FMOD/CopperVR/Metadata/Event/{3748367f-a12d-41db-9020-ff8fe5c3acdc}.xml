@@ -107,7 +107,7 @@
 			<value>Audio 1</value>
 		</property>
 		<relationship name="modulators">
-			<destination>{a1d7b1f1-436f-4f3c-98b7-1d2946aeeb57}</destination>
+			<destination>{2e39cb6c-d88b-4de2-9533-340d3f7edbb7}</destination>
 		</relationship>
 		<relationship name="effectChain">
 			<destination>{e8764af7-6f38-4b7d-be78-f2326579e1a2}</destination>
@@ -142,12 +142,15 @@
 			<destination>{6a9b81cb-597f-4e0c-bbba-cc6438664700}</destination>
 		</relationship>
 	</object>
-	<object class="ADSRModulator" id="{a1d7b1f1-436f-4f3c-98b7-1d2946aeeb57}">
+	<object class="ADSRModulator" id="{2e39cb6c-d88b-4de2-9533-340d3f7edbb7}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
 		</property>
 		<property name="initialValue">
 			<value>-80</value>
+		</property>
+		<property name="releaseShape">
+			<value>-0.403587967</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>

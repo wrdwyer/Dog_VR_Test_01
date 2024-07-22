@@ -420,7 +420,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638571868273636267
+  lastModified: 638572596152089610
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -476,12 +476,13 @@ MonoBehaviour:
   - {fileID: -4328012936490421929}
   - {fileID: 7463695006509335542}
   - {fileID: -6986805823728899691}
+  - {fileID: 1608742105128163735}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638571868273668925
+  cacheTime: 638572596152125017
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -498,10 +499,10 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638571868273668925
+  lastModified: 638572596152125017
   FileSizes:
   - Name: 
-    Value: 2392
+    Value: 2440
   Exists: 1
 --- !u!114 &1163524475467967716
 MonoBehaviour:
@@ -584,6 +585,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 31242
+--- !u!114 &1608742105128163735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/DropStick
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/DropStick
+  Guid:
+    Data1: -657175450
+    Data2: 1123477020
+    Data3: 491789496
+    Data4: -1698989952
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 920
 --- !u!114 &2429572720984549205
 MonoBehaviour:
   m_ObjectHideFlags: 0

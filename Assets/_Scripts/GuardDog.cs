@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -17,6 +18,8 @@ namespace DogVR.Actions
         private SplineAnimate splineAnimate = null;
         [SerializeField]
         private bool inRangeOfDog = false;
+        [SerializeField]
+        private StudioEventEmitter studioEventEmitter;
 
         private void Start()
             {
@@ -32,19 +35,28 @@ namespace DogVR.Actions
                 inRangeOfDog = true;
                 animator.SetBool(sitName, false);
                 animator.SetBool(attackName, true);
+                if (studioEventEmitter != null)
+                    {
+                    studioEventEmitter.Play();
+                    }
                 }
             }
 
         private void OnTriggerExit(Collider other)
             {
-            if ( other.gameObject.CompareTag("Player"))
-            {
+            if (other.gameObject.CompareTag("Player"))
+                {
                 inRangeOfDog = false;
                 animator.SetBool(sitName, true);
                 animator.SetBool(attackName, false);
+                if (studioEventEmitter != null)
+                    {
+                    studioEventEmitter.Stop();
+                    }
                 }
-           
             }
 
         }
+
     }
+

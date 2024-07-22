@@ -16,24 +16,22 @@ public class TruckArrivesAtFarm : MonoBehaviour
     private SplineAnimate splineAnimate;
     [SerializeField]
     private Transform playerParent;
-    //[SerializeField]
-    //private StudioEventEmitter stopTruckEmitter;
     private XROrigin m_XROrigin;
     private GameObject m_RightController;
     private GameObject m_LeftController;
+    public StudioEventEmitter truckEngine;
+    public SceneFader sceneFader;
 
-    public string stopTruckEvent;
-    private FMOD.Studio.EventInstance stopTruckEmitter;
 
  private void Start()
         {
-        stopTruckEmitter = FMODUnity.RuntimeManager.CreateInstance(stopTruckEvent);
-        stopTruckEmitter.start();
+        truckEngine.Play();
         m_XROrigin = GameManager.Instance.playerGameObjectSO.persistentObject.gameObject.GetComponentInChildren<XROrigin>();
         m_RightController = m_XROrigin.GetComponent<XRInputModalityManager>().rightController;
         m_LeftController = m_XROrigin.GetComponent<XRInputModalityManager>().leftController;
         m_RightController.GetComponent<ActionBasedControllerManager>().enabled = false;
         m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = false;
+        sceneFader.isFarmTruck = true;
         }
 
     private void Update()
@@ -43,13 +41,12 @@ public class TruckArrivesAtFarm : MonoBehaviour
             GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(playerParent, true);
             //GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = false;
             Debug.Log("Truck arrives at farm");
+            sceneFader.SetVignetteForDriveStop();
             tailGateanimator.Play("OpenTailGate");
             m_RightController.GetComponent<ActionBasedControllerManager>().enabled = true;
-            m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = true;
-            stopTruckEmitter.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            stopTruckEmitter.release();
-            //stopTruckEmitter.Stop();
-            GetComponent<EnableXRRigMovement>().EnableMovement();
+            m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = true;           
+            truckEngine.Stop();           
+            //GetComponent<EnableXRRigMovement>().EnableMovement();
         };
         }
     }

@@ -14,6 +14,7 @@ public class SceneFader : MonoBehaviour
     public float fadeDuration = 1.0f;
     private FadeTunnelingVignette fadeTunnelingVignette;
     private Renderer _renderer;
+    public bool isFarmTruck = false;
 
     private void Start()
         {
@@ -30,6 +31,18 @@ public class SceneFader : MonoBehaviour
             _renderer.sharedMaterial.SetFloat("_ApertureSize", 1f);
             }
         }
+    [Button("FadeInDrive")]
+    public void SetVignetteForDrive()
+        {
+        _renderer.sharedMaterial.SetFloat("_ApertureSize", 0.8f);
+        }
+
+    [Button("FadeOutDrive")]
+    public void SetVignetteForDriveStop()
+        {
+        _renderer.sharedMaterial.SetFloat("_ApertureSize", 1f);
+        }
+
     [Button ("FadeIn")]
     public IEnumerator FadeIn()
         {
@@ -76,6 +89,10 @@ public class SceneFader : MonoBehaviour
             _renderer.sharedMaterial.SetFloat("_ApertureSize", newValue);
             //gameObject.GetComponent<Renderer>().sharedMaterial.SetFloat("_YourParameter", someValue);
             // Set your vignette opacity to newValue here
+            if (isFarmTruck)
+                {
+                SetVignetteForDrive();
+                }
             yield return null;
             }
         }

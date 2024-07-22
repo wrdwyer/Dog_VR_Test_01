@@ -44,7 +44,7 @@ public class StateManager : MonoBehaviour
                 //sceneManager.Start();
                 //GameManager.Instance.SetObjectivesManager.CurrentObjectiveIndex = 0;
                 SetPlayerStartLocation();
-                startEnviromentSound.enabled = true;
+                startEnviromentSound.Play();
                 Debug.Log("Playing");
                 break;
             case GameState.Paused:

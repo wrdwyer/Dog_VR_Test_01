@@ -36,6 +36,8 @@ public class StartAnimationCarAnimation : MonoBehaviour
     private StudioEventEmitter startEngine;
     [SerializeField]
     private StudioEventEmitter WaitCopperAudio;
+    [SerializeField]
+    private SceneFader sceneFader;
 
     private XROrigin m_XROrigin;
     private GameObject m_RightController;
@@ -72,6 +74,7 @@ public class StartAnimationCarAnimation : MonoBehaviour
                 //other.transform.parent.SetParent(snapVoluelume.transform, true);
                 m_RightController.GetComponent<ActionBasedControllerManager>().enabled = false;
                 m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = false;
+                sceneFader.SetVignetteForDrive();
                 StartCoroutine(WaitForAnimation());
                 //GetComponent<DisableXRRigMovement>().DisableMovement();
                 //if (GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>() != null)
@@ -92,6 +95,7 @@ public class StartAnimationCarAnimation : MonoBehaviour
         {
         if (farmerTruck != null)
             {
+            startEngine.Stop();
             if (GameManager.Instance.playerGameObjectSO.persistentObject != null) GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(playerParent,true);
             }
         }
@@ -108,6 +112,7 @@ public class StartAnimationCarAnimation : MonoBehaviour
 
     public void FinishedTailGateAnimation()
         {
+
         animatruckReverse.enabled = true;
         StartCoroutine(WaitForReverseAnimation());
         //animatruckReverse.Play("ReverseTruck");

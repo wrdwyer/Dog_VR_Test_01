@@ -19,6 +19,7 @@ namespace DogVR
         public StudioEventEmitter attackSound;
         public bool Dog = true;
         public bool Hoodie = false;
+        public bool girl = false;
         public bool Happy = false;
         public bool Anxious = false;
         public enum EncounteredAnimalState
@@ -104,6 +105,14 @@ namespace DogVR
                     if (attackSound != null) attackSound.Stop();
                     Debug.Log("Idle Ready");
                     }
+                if (animator != null && BlazeAI != null && girl)
+                    {
+                    Debug.Log("Trying to Idle");
+                    animator.Play("Walking");
+                    if (attackSound != null) attackSound.Stop();
+                    BlazeAI.enabled = true;
+                    Debug.Log("Idle Ready");
+                    }
                 if (animator == null && BlazeAI != null && Happy)
                     {
                     Debug.Log("Trying to Walk");
@@ -131,6 +140,14 @@ namespace DogVR
                 Debug.Log("Trying to Be Happy");
                 animator.SetFloat("Movement_f", 0.0f);
                 animator.Play("TailWag");
+                //attackSound.Play();
+                Debug.Log("Happy Ready");
+                }
+            if (animator != null && BlazeAI != null && girl && Happy)
+                {
+                BlazeAI.enabled = false;
+                Debug.Log("Trying to Be Happy");
+                animator.Play("Waving");
                 //attackSound.Play();
                 Debug.Log("Happy Ready");
                 }

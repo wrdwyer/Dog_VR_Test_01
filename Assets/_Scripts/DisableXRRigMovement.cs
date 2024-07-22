@@ -8,12 +8,12 @@ public class DisableXRRigMovement : MonoBehaviour
     {
     public void DisableMovement()
         {
-        DisableTeleportComponents disableTeleportComponents = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>();
-        if (disableTeleportComponents != null)
-            {
-            disableTeleportComponents.enabled = true;
-            Debug.Log("DisableTeleportComponents is disabled");
-            }
+        //DisableTeleportComponents disableTeleportComponents = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>();
+        //if (disableTeleportComponents != null)
+        //    {
+        //    disableTeleportComponents.enabled = true;
+        //    Debug.Log("DisableTeleportComponents is disabled");
+        //    }
 
         /*DynamicMoveProvider dynamicMoveProvider = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DynamicMoveProvider>();
         TeleportationProvider teleportationProvider = GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<TeleportationProvider>();
