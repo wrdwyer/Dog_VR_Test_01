@@ -8,15 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: smoke
-  m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _COLORADDSUBDIFF_ON
+  - _DISTORTION_ON
+  - _EMISSION
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords:
   - EFFECT_BUMP
   - _ALPHABLEND_ON
-  - _COLORADDSUBDIFF_ON
-  m_InvalidKeywords:
   - _ALPHACLIPPING_ON
+  - _FLIPBOOKBLENDING_OFF
   - _MK_ALBEDO_MAP
   - _MK_ALPHA_CLIPPING
   - _MK_ARTISTIC_ANIMATION_STUTTER
@@ -50,6 +54,10 @@ Material:
     m_TexEnvs:
     - _AlbedoMap:
         m_Texture: {fileID: 2800000, guid: 5b303ff28ad9368468a2edd759cf458d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: fe0d5931658632646812060f699f2f36, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -206,8 +214,10 @@ Material:
     - _AdvancedTab: 1
     - _AlbedoMapIntensity: 1
     - _AlembicMotionVectors: 0
+    - _AlphaClip: 0
     - _AlphaClipping: 1
     - _AlphaCutoff: 0.5
+    - _AlphaToMask: 0
     - _Anisotropy: 0
     - _Artistic: 1
     - _ArtisticFrequency: 1
@@ -251,9 +261,11 @@ Material:
     - _DrawnClampMin: 0
     - _DrawnMapScale: 1
     - _DstBlend: 10
+    - _DstBlendAlpha: 10
     - _EmissionEnabled: 0
     - _EnvironmentReflections: 0
     - _Flipbook: 0
+    - _FlipbookBlending: 0
     - _FlipbookMode: 0
     - _FresnelHighlights: 0
     - _Glossiness: 0.5
@@ -292,6 +304,7 @@ Material:
     - _OutlineTab: 1
     - _Parallax: 0.02
     - _ParticlesTab: 1
+    - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RenderFace: 2
     - _RenderPriority: 0
@@ -314,6 +327,7 @@ Material:
     - _SpecularSmoothness: 0
     - _SpecularThresholdOffset: 0.25
     - _SrcBlend: 5
+    - _SrcBlendAlpha: 1
     - _Stencil: 2
     - _StencilComp: 8
     - _StencilFail: 0
@@ -335,6 +349,8 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
@@ -355,7 +371,19 @@ Material:
     - _TintColor: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 0.491}
     - _VertexAnimationFrequency: {r: 2.5, g: 2.5, b: 2.5, a: 1}
   m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
+--- !u!114 &2201966761903316607
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

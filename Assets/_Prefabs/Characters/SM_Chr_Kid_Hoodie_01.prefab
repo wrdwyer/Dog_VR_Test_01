@@ -75,6 +75,7 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   Dog: 1
   Hoodie: 0
+  girl: 0
   Happy: 0
   Anxious: 0
   currentAnimalState: 1
@@ -2603,9 +2604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 0.5
-  wps:
-  - {fileID: 0}
-  - {fileID: 0}
+  wps: []
 --- !u!95 &2384751073269078754 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: a890656eebef5d94ab6c86843cebd735, type: 3}

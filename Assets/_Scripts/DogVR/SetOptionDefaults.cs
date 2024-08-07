@@ -22,7 +22,7 @@ namespace DogVR
         [SerializeField]
         private GameObject vignetteObject = null;
         [SerializeField]
-        private Toggle snapTunrn = null;        
+        private Toggle snapTunrn = null;
         private Volume volume;
         [SerializeField]
         private ResetHeight resetHeight;
@@ -89,7 +89,7 @@ namespace DogVR
                 else
                     {
                     vignetteObject.SetActive(false);
-                    }               
+                    }
                 }
             }
         public void SetSnapTunrn()
@@ -109,6 +109,13 @@ namespace DogVR
 
         public void QuitToMenu()
             {
+#if UNITY_STANDALONE
+        Application.Quit();
+#endif
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
             Debug.Log("Quitting to Menu");
             }
         }

@@ -9055,7 +9055,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   jumpHeight: 1
   characterController: {fileID: 2395200309594792009}
   groundLAyer:
@@ -9073,7 +9073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de041228864140540a8d483cf22b333a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpButton: {fileID: -3659972619685180911, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  jumpButton: {fileID: 0}
   jumpHeight: 1
   gravityValue: -9.81
   characterController: {fileID: 2395200309594792009}
@@ -18264,11 +18264,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199508834110206841, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
       propertyPath: m_text
-      value: Quit to Main Menu
+      value: Quit Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177224348222286912, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177224348222286912, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177224348222286912, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7529250078957648234}
+    - target: {fileID: 6177224348222286912, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177224348222286912, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DogVR.SetOptionDefaults, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177224348222286912, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177224348222286912, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7416854950060669345, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753147258609537286, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
+      propertyPath: m_Interactable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7753147258609537286, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -18310,7 +18342,8 @@ PrefabInstance:
       propertyPath: m_PokeFillMaxSizeY
       value: 60
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5443163050158697355, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18964,6 +18997,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e5cb816c3ebb9134a949b40ebf9b0d1e, type: 3}
       propertyPath: m_Layer
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5cb816c3ebb9134a949b40ebf9b0d1e, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21544,7 +21581,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3437781290462245351}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3fb9a73e3a8b82458f2094db6afa926, type: 3}
   m_Name: 
@@ -22693,15 +22730,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6233600418098557749, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.000003516674
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6477512983158778462, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
       propertyPath: m_Size
-      value: 0.9999965
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6477512983158778462, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
       propertyPath: m_Value
-      value: 4.7934785
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8072890477496077224, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
       propertyPath: m_Pivot.x

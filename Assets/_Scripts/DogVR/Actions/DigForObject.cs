@@ -76,7 +76,8 @@ namespace DogVR.Actions
             objectToReveal.GetComponent<XRGrabInteractable>().enabled = true;
             objectToReveal.GetComponent<RayAttachModifier>().enabled = true;
             objectToReveal.GetComponent<Rigidbody>().isKinematic = false;
-           
+            this.enabled = false;
+            StudioEventEmitter.Stop();
             }
 
         }

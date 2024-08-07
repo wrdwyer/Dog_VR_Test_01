@@ -1,0 +1,16 @@
+{
+  "name": "com.meta.xr.sdk.acoustics",
+  "version": "67.0.0-mainline.0",
+  "displayName": "Meta XR Acoustics SDK",
+  "description": "Advanced acoustic simulation features for MetaXRAudio",
+  "unity": "2021.3",
+  "unityRelease": "26f1",
+  "keywords": [
+    "oculus",
+    "meta"
+  ],
+  "author": {
+    "name": "Meta Platforms, Inc.",
+    "url": "https://developer.oculus.com/"
+  }
+}

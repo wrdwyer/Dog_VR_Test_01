@@ -21,6 +21,7 @@ Material:
   - _MK_LIGHT_CEL
   - _MK_NORMAL_MAP
   - _MK_OUTLINE_HULL_CLIP
+  - _MK_OUTLINE_NOISE
   - _MK_PBS_MAP_0
   - _MK_RECEIVE_SHADOWS
   - _MK_SPECULAR_ISOTROPIC
@@ -33,7 +34,7 @@ Material:
   - _NORMALMAP
   - _RECEIVESHADOWS_ON
   - _WRAPPEDLIGHTING_ON
-  m_LightmapFlags: 1
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
@@ -284,7 +285,7 @@ Material:
     - _OutlineData: 0
     - _OutlineFadeMax: 2
     - _OutlineFadeMin: 0.25
-    - _OutlineNoise: 0
+    - _OutlineNoise: 0.17
     - _OutlineSize: 15
     - _OutlineTab: 1
     - _Parallax: 0.02

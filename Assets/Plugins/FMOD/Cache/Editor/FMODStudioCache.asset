@@ -378,6 +378,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 355
+--- !u!114 &-880879422112744209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Objects/DrinkWater
+  m_EditorClassIdentifier: 
+  Path: event:/Objects/DrinkWater
+  Guid:
+    Data1: 846724825
+    Data2: 1264895510
+    Data3: 1946976184
+    Data4: 277336167
+  Banks:
+  - {fileID: -221426105785716485}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-549249575386844013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +447,7 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638572596152089610
+  lastModified: 638576199450425964
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -477,12 +504,13 @@ MonoBehaviour:
   - {fileID: 7463695006509335542}
   - {fileID: -6986805823728899691}
   - {fileID: 1608742105128163735}
+  - {fileID: -880879422112744209}
   EditorParameters: []
   MasterBanks:
   - {fileID: -221426105785716485}
   StringsBanks:
   - {fileID: 786194973082624831}
-  cacheTime: 638572596152125017
+  cacheTime: 638576199450457217
   cacheVersion: 131618
 --- !u!114 &786194973082624831
 MonoBehaviour:
@@ -499,10 +527,10 @@ MonoBehaviour:
   Path: FMOD/CopperVR/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638572596152125017
+  lastModified: 638576199450457217
   FileSizes:
   - Name: 
-    Value: 2440
+    Value: 2490
   Exists: 1
 --- !u!114 &1163524475467967716
 MonoBehaviour:

@@ -7,6 +7,7 @@ using FMODUnity;
 using Unity.XR.CoreUtils;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using System;
 
 public class TruckArrivesAtFarm : MonoBehaviour
     {
@@ -21,9 +22,10 @@ public class TruckArrivesAtFarm : MonoBehaviour
     private GameObject m_LeftController;
     public StudioEventEmitter truckEngine;
     public SceneFader sceneFader;
+    public GameObject endOfDemoText;
 
 
- private void Start()
+    private void Start()
         {
         truckEngine.Play();
         m_XROrigin = GameManager.Instance.playerGameObjectSO.persistentObject.gameObject.GetComponentInChildren<XROrigin>();
@@ -37,16 +39,23 @@ public class TruckArrivesAtFarm : MonoBehaviour
     private void Update()
         {
         splineAnimate.Completed += () =>
-        {            
+        {
             GameManager.Instance.playerGameObjectSO.persistentObject.transform.SetParent(playerParent, true);
             //GameManager.Instance.playerGameObjectSO.persistentObject.GetComponentInChildren<DisableTeleportComponents>().enabled = false;
             Debug.Log("Truck arrives at farm");
             sceneFader.SetVignetteForDriveStop();
             tailGateanimator.Play("OpenTailGate");
-            m_RightController.GetComponent<ActionBasedControllerManager>().enabled = true;
-            m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = true;           
-            truckEngine.Stop();           
+            DisplayMessage();
+            //m_RightController.GetComponent<ActionBasedControllerManager>().enabled = true;
+            //m_LeftController.GetComponent<ActionBasedControllerManager>().smoothMotionEnabled = true;           
+            truckEngine.Stop();
             //GetComponent<EnableXRRigMovement>().EnableMovement();
         };
+        }
+
+
+    private void DisplayMessage()
+        {
+        endOfDemoText.SetActive(true);
         }
     }

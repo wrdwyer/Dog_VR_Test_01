@@ -69,7 +69,7 @@ PluginImporter:
   - first:
       Windows Store Apps: WindowsStoreApps
     second:
-      enabled: 0
+      enabled: 1
       settings:
         CPU: X64
         DontProcess: False
