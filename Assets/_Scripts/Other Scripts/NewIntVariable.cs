@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Unity6Test
@@ -7,5 +8,9 @@ namespace Unity6Test
         {
         public int value;
 
+        public static implicit operator NewIntVariable(int v)
+            {
+            throw new NotImplementedException();
+            }
         }
     }

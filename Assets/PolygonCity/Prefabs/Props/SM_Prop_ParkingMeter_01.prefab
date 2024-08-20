@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 3348192}
   - component: {fileID: 2335810}
   - component: {fileID: 64238885372011034}
-  - component: {fileID: 66181466302165785}
+  - component: {fileID: 8272473248325369203}
   m_Layer: 0
   m_Name: SM_Prop_ParkingMeter_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &434866
 Transform:
@@ -107,7 +107,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43437773302094732, guid: 73b8147a244d60548aadbde24799118f, type: 2}
---- !u!208 &66181466302165785
+--- !u!208 &8272473248325369203
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,7 +117,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.01, y: 0.72700006, z: 0.01}
+  m_Extents: {x: 0.31, y: 0.72700006, z: 0.31}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1

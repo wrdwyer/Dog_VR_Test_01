@@ -5,15 +5,14 @@ using FMODUnity;
 using Sirenix;
 using UnityEngine.XR.Interaction.Toolkit;
 using System;
+using System.Collections;
 
 namespace DogVR.Actions
     {
     public class WagOmeter : MonoBehaviour
         {
-        [SerializeField]
-        XRBaseController leftController;
-        [SerializeField]
-        XRBaseController rightController;
+        public XRBaseController leftController;
+        public XRBaseController rightController;
         [SerializeField]
         private string happyAnimationParameterName = "Happy";
         [SerializeField]
@@ -34,6 +33,8 @@ namespace DogVR.Actions
         private StudioEventEmitter anxiousBark;
         [SerializeField]
         private StudioEventEmitter happyBark;
+        [SerializeField]
+        private GameObject pawLocatorGameObject;
 
         [SerializeField]
         [Range(0f, 1f)]
@@ -41,9 +42,9 @@ namespace DogVR.Actions
         [Range(0f, 10f)]
         [SerializeField]
         private float hapticDuration = 1f;
+        [SerializeField]
+        private float timerDuration = 5f;
 
-
-        
         [Range(0f, 1f)]
         [SerializeField]
         private float AggressivehapticIntensity = 1f;
@@ -51,9 +52,9 @@ namespace DogVR.Actions
         [SerializeField]
         private float AggressivehapticDuration = 10f;
 
-        public event Action <float,float>OnTriggerHaptic;
+        public event Action<float, float> OnTriggerHaptic;
 
-                private void Awake()
+        private void Awake()
             {
             CopperEmotionalState.currentState = CopperEmotionalState.AnimalState.Happy;
             currentState = CopperEmotionalState;
@@ -63,7 +64,7 @@ namespace DogVR.Actions
             SetParameters();
             }
 
-       
+
         private void SetParameters()
             {
             DOTween.To(() => animator.GetFloat(happyAnimationParameterName), x => animator.SetFloat(happyAnimationParameterName, x), targetHappyAnimationParameter, 2f);
@@ -103,30 +104,43 @@ namespace DogVR.Actions
 
         public void TriggerHaptic(XRBaseController controller)
             {
+
             controller.SendHapticImpulse(hapticIntensity, hapticDuration);
+
+
+            }
+        private IEnumerator DisableAfterTime(float duration)
+            {
+            // Wait for the specified duration
+            yield return new WaitForSeconds(duration);
+
+            // Disable the GameObject
+            pawLocatorGameObject.SetActive(false);
             }
 
         public void SendHapticFeedback(float Intensity, float Duration)
             {
             if (Intensity > 0f)
                 {
+                pawLocatorGameObject.SetActive(true);
+                StartCoroutine(DisableAfterTime(timerDuration));
                 rightController.SendHapticImpulse(Intensity, Duration);
                 leftController.SendHapticImpulse(Intensity, Duration);
                 }
-            
-           
+
+
             }
 
-
+        [Button("Idle")]
         public void Idle()
             {
-            
+
             SendHapticFeedback(0.0f, 0f);
             StopAudio();
             targetHappyAnimationParameter = 0f;
             targetSadAnimationParameter = 0f;
             SetParameters();
-            SendHapticFeedback(0.0f, 0f);      
+            SendHapticFeedback(0.0f, 0f);
             idleBark.Play();
             Debug.Log("Idle");
             }
@@ -142,7 +156,7 @@ namespace DogVR.Actions
             anxiousBark.Play();
             Debug.Log("Anxious");
             }
-
+        [Button("Happy")]
         public void Happy()
             {
             StopAudio();
@@ -154,7 +168,7 @@ namespace DogVR.Actions
             happyBark.Play();
             Debug.Log("Happy");
             }
-
+        [Button("Sad")]
         public void Sad()
             {
             StopAudio();
@@ -165,7 +179,7 @@ namespace DogVR.Actions
             SendHapticFeedback(0.2f, 5f);
             Debug.Log("Sad");
             }
-
+        [Button("Threatened")]
         public void Threatened()
             {
             StopAudio();

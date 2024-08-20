@@ -10373,15 +10373,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1124436076008352029, guid: 118ed47ed48e10d4fa489565927e9dd8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.035
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1124436076008352029, guid: 118ed47ed48e10d4fa489565927e9dd8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.035
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1124436076008352029, guid: 118ed47ed48e10d4fa489565927e9dd8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.035
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1124436076008352029, guid: 118ed47ed48e10d4fa489565927e9dd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14692,8 +14692,10 @@ MonoBehaviour:
   sadBark: {fileID: 6648667498403597946}
   anxiousBark: {fileID: 4717523964522585857}
   happyBark: {fileID: 5629713508875434075}
+  pawLocatorGameObject: {fileID: 0}
   hapticIntensity: 0.653
   hapticDuration: 1.19
+  timerDuration: 5
   AggressivehapticIntensity: 1
   AggressivehapticDuration: 3.3
 --- !u!114 &4274651227626646253

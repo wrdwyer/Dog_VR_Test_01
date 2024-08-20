@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using DogVR;
 using FMODUnity;
+using Unity6Test;
+using TMPro;
 
 public class GameStartMenu : MonoBehaviour
     {
@@ -28,6 +30,10 @@ public class GameStartMenu : MonoBehaviour
     SceneFader sceneFader;
     [SerializeField]
     private GameObject getCamera;
+    [SerializeField]
+    private NewIntVariable levelMaxBones;
+    [SerializeField]
+    private TextMeshProUGUI maxBonesScoreText;
     private bool gameStarted = false;
       
     public string backgroundMusicEvent;
@@ -56,6 +62,8 @@ public class GameStartMenu : MonoBehaviour
 
     public void LoadLevelOne()
         {
+        levelMaxBones.value = 6;
+        maxBonesScoreText.text = levelMaxBones.value.ToString();
         stateManager.UpdateGameState(StateManager.GameState.Playing);
         gameUI.SetActive(false);
         Debug.Log("Loading Level One");
